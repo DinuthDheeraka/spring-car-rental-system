@@ -1,5 +1,5 @@
 body{
-    overflow-y: hidden;
+    /*overflow-y: hidden;*/
 }
 main{
     height: 640px;
@@ -25,5 +25,5 @@ main{
     bottom: 0;
     background-size: cover;
     background-position: center;
-    background-image: url("../../images/1.png");
+    /*background-image: url("../../images/1.png");*/
 }
