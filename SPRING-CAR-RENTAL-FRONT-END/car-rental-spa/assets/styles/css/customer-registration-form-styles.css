@@ -33,7 +33,7 @@ label{
     margin-top: 40px;
     width: 100%;
     height: 40px;
-    background-color: #9c26e7;
+    /*background-color: #9c26e7;*/
     border: transparent;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -51,6 +51,7 @@ label{
     margin-top: 10px;
 }
 
+
 #customer-reg-image{
     /*border: 1px solid red;*/
     width: 535px;
@@ -63,5 +64,5 @@ label{
     /*border-radius: 100%;*/
     background-position: center;
     background-size: cover;
-    background-image: url("../../images/Fill out-amico (1).png");
+    background-image: url("../../images/Fill out-pana.png");
 }
