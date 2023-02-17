@@ -6,6 +6,23 @@ body{
     overflow-x: scroll;
 }
 
+#all-customer-topic{
+    position: absolute;
+    margin: auto;
+    /*border: 1px solid red;*/
+    left: 0;
+    top: 20px;
+}
+
+#all-customer-search-bar{
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 200px;
+    width: 98%;
+}
+
 table{
     font-family: 'Poppins', sans-serif;
 }
@@ -18,7 +35,7 @@ table th{
 #customer-table-section{
     position: absolute;
     margin: auto;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     width: 100%;
     left: 0;
     right: 0;
