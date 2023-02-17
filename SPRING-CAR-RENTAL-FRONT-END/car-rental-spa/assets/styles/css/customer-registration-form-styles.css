@@ -1,6 +1,18 @@
 #customer-register-section{
 }
 
+.liner{
+    position: absolute;
+    margin: auto;
+    height: 70%;
+    width: 1px;
+    border: 1px solid #c6c6c6;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
 h3{
     font-family: 'Poppins', sans-serif;
 }
@@ -33,7 +45,7 @@ label{
     margin-top: 40px;
     width: 100%;
     height: 40px;
-    background-color: #8804db;
+    background-color: #9c26e7;
     border: transparent;
     color: white;
     font-family: 'Poppins', sans-serif;
@@ -53,15 +65,15 @@ label{
 
 #customer-reg-image{
     /*border: 1px solid red;*/
-    width: 600px;
+    width: 535px;
     height: 500px;
     position: absolute;
     right: 100px;
-    top: 0;
+    top: 40px;
     bottom: 0;
     margin: auto;
     /*border-radius: 100%;*/
     background-position: center;
     background-size: cover;
-    background-image: url("../../images/Fill out-amico (2).png");
+    background-image: url("../../images/Fill out-amico (1).png");
 }
