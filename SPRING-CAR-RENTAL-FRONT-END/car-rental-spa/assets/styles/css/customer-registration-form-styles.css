@@ -39,13 +39,13 @@ label{
     font-family: 'Poppins', sans-serif;
 }
 
-#flex{
+.flex-container{
     /*border: 1px solid black;*/
     display: flex;
     flex-direction: column;
 }
 
-#flex>section{
+.flex-container>section{
     /*border: 1px solid black;*/
     height: 60px;
     margin-top: 10px;
@@ -53,15 +53,15 @@ label{
 
 #customer-reg-image{
     /*border: 1px solid red;*/
-    width: 500px;
+    width: 600px;
     height: 500px;
     position: absolute;
     right: 100px;
     top: 0;
     bottom: 0;
     margin: auto;
-    border-radius: 100%;
+    /*border-radius: 100%;*/
     background-position: center;
     background-size: cover;
-    background-image: url("../../images/Wavy_Tech-28_Single-10.jpg");
+    background-image: url("../../images/Fill out-amico (2).png");
 }

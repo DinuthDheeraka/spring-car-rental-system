@@ -1,0 +1,51 @@
+#login-btn{
+    margin-top: 40px;
+    width: 100%;
+    height: 40px;
+    background-color: #8804db;
+    border: transparent;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#login-text{
+    /*border:1px solid red;*/
+    font-family: 'Poppins', sans-serif;
+    margin-top: 60px;
+    text-align: center;
+}
+
+#sign-btn{
+    margin-top: 7px;
+    width: 100%;
+    height: 40px;
+    background-color: #047edb;
+    border: transparent;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#customer-login-details-section{
+    /*border: 1px solid red;*/
+    width: 40%;
+    /*height: 80%;*/
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 50px;
+}
+
+#customer-login-image{
+    /*border: 1px solid red;*/
+    width: 600px;
+    height: 500px;
+    position: absolute;
+    right: 100px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    /*border-radius: 100%;*/
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../images/Sign in-pana.png");
+}
