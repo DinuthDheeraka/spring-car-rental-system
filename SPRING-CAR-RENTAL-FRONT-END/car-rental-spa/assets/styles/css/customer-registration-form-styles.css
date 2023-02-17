@@ -1,13 +1,18 @@
 #customer-register-section{
 }
 
+h3{
+    font-family: 'Poppins', sans-serif;
+}
+
 #customer-details-section{
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     width: 40%;
-    height: 80%;
+    /*height: 80%;*/
     position: absolute;
     margin: auto;
     left: 0;
+    bottom: 80px;
 }
 
 .customer-detail-row{
@@ -20,10 +25,18 @@
     margin-top: 20px;
 }
 
+label{
+    font-family: 'Poppins', sans-serif;
+}
+
 #create-account-btn{
     margin-top: 40px;
     width: 100%;
     height: 40px;
+    background-color: #8804db;
+    border: transparent;
+    color: white;
+    font-family: 'Poppins', sans-serif;
 }
 
 #flex{
@@ -36,4 +49,19 @@
     /*border: 1px solid black;*/
     height: 60px;
     margin-top: 10px;
+}
+
+#customer-reg-image{
+    /*border: 1px solid red;*/
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: 100px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 100%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../images/Wavy_Tech-28_Single-10.jpg");
 }
