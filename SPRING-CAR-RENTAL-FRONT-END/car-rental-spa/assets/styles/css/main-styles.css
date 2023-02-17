@@ -1,0 +1,10 @@
+/*body{*/
+/*    overflow-x: hidden;*/
+/*}*/
+main{
+    /*border: 1px solid red;*/
+    width: 99.98vw;
+    background-color: #d3d3d4;
+    height: 734px;
+    position: absolute;
+}

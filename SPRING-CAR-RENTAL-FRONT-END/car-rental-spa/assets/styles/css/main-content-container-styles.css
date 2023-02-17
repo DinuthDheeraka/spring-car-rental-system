@@ -1,0 +1,21 @@
+#main-content-container{
+    position: absolute;
+    height: 658px;
+    background-color: #660ce7;
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.main-content{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    margin: auto;
+    background-color: #fdfdfd;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
