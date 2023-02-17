@@ -1,0 +1,158 @@
+.main-section{
+    height: 640px;
+    /*border: 1px solid #9d14c2;*/
+    background-color: #ffffff;
+    width: 99.90vw;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#customer-registration-form-inner{
+    /*border: 1px solid black;*/
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 98%;
+    width: 98%;
+    /*overflow-y: scroll;*/
+}
+
+#customer-reg-topic{
+    /*border: 1px solid red;*/
+    width: 420px;
+    font-size: 30px;
+    position: absolute;
+    margin: auto;
+    top: 18px;
+    right: 0;
+    left: 0;
+}
+
+#customer-reg-topic>h1{
+    font-size: 01em;
+    color: #136aee;
+    font-family: 'Poppins', sans-serif;
+}
+
+label{
+    font-family: 'Poppins', sans-serif;
+}
+
+#customer-personal-details-section{
+    /*border: 1px solid black;*/
+    position: absolute;
+    margin: auto;
+    left: 0;
+    /*right: 0;*/
+    width: 50%;
+    /*height: 300px;*/
+    top: 75px;
+}
+
+#customer-login-details-section{
+    /*border: 1px solid black;*/
+    position: absolute;
+    margin: auto;
+    left: 0;
+    /*right: 0;*/
+    width: 50%;
+    /*height: 300px;*/
+    top: 500px;
+}
+
+#customer-nic-section{
+    /*border: 1px solid black;*/
+    position: absolute;
+    margin: auto;
+    left: 75%;
+    /*right: 0;*/
+    width: 25%;
+    height: 220px;
+    top: 113px;
+    /*border-radius: 10px;*/
+}
+
+#customer-license-section{
+    /*border: 1px solid black;*/
+    position: absolute;
+    margin: auto;
+    left: 49.7%;
+    /*right: 0;*/
+    width: 25%;
+    height: 220px;
+    top: 113px;
+}
+
+#customer-file-choosers{
+    border: 1px solid black;
+    position: absolute;
+    margin: auto;
+    left: 49.7%;
+    /*right: 0;*/
+    width: 50%;
+    height: 40px;
+    top: 362px;
+}
+
+#customer-nic-input{
+    /*border: 1px solid black;*/
+    position: absolute;
+    margin: auto;
+    left: 76%;
+    top: 347px;
+}
+
+#customer-license-input{
+    /*border: 1px solid black;*/
+    position: absolute;
+    margin: auto;
+    left: 50.7%;
+    top: 347px;
+}
+
+#customer-register-btn{
+    position: absolute;
+    margin: auto;
+    right: 2px;
+    bottom: 50px;
+    width: 24%;
+    height: 40px;
+    border: transparent;
+    background-color: #08e337;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+input{
+    font-family: 'Poppins', sans-serif;
+}
+
+#customer-register-cancel-btn{
+    position: absolute;
+    margin: auto;
+    right: 380px;
+    bottom: 49.5px;
+    width: 24%;
+    height: 40px;
+    /*border: 1px solid black;*/
+    border:transparent;
+    /*background-color: transparent;*/
+    background-color: #2eb9f1;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+/*#customer-login-details-section{*/
+/*    border: 1px solid #b60f9a;*/
+/*    position: absolute;*/
+/*    margin: auto;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    height: 300px;*/
+/*    top: 110px;*/
+/*}*/

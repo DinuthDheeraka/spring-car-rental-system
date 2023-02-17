@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SPRING-CAR-RENTAL-FRONT-END/SPRING-CAR-RENTAL-FRONT-END.iml" filepath="$PROJECT_DIR$/SPRING-CAR-RENTAL-FRONT-END/SPRING-CAR-RENTAL-FRONT-END.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SPRING-CAR-RENTAL-SYSTEM-BACK-END/SPRING-CAR-RENTAL-SYSTEM-BACK-END.iml" filepath="$PROJECT_DIR$/SPRING-CAR-RENTAL-SYSTEM-BACK-END/SPRING-CAR-RENTAL-SYSTEM-BACK-END.iml" />
+    </modules>
+  </component>
+</project>

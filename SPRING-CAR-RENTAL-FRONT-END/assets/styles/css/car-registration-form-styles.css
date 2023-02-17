@@ -1,0 +1,215 @@
+
+#car-registration-form-inner{
+    /*border: 1px solid black;*/
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 98%;
+    width: 98%;
+    /*overflow-y: scroll;*/
+}
+
+/*.car-section{*/
+/*    border-radius: 5px;*/
+/*    border: 1px solid white;*/
+/*    !*background-color: #dedada;*!*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    !*background-image: url("../../images/1.png");*!*/
+/*}*/
+.car-section-inner{
+    height: 200px;
+    border: 1px solid white;
+}
+
+.car-section>section>h1{
+    font-family: 'Poppins', sans-serif;
+    color: #181717;
+    font-size: 20px;
+}
+
+#car-reg-topic{
+    /*border: 1px solid red;*/
+    width: 328px;
+    font-size: 30px;
+    position: absolute;
+    margin: auto;
+    top: 18px;
+    right: 0;
+    left: 0;
+}
+
+#car-reg-topic>h1{
+    font-size: 01em;
+    color: #136aee;
+    font-family: 'Poppins', sans-serif;
+}
+
+label{
+    font-family: 'Poppins', sans-serif;
+}
+
+#car-personal-details-section{
+    /*border: 1px solid black;*/
+    position: absolute;
+    margin: auto;
+    left: 0;
+    /*right: 0;*/
+    width: 100%;
+    /*height: 300px;*/
+    top: 65px;
+}
+
+#car-login-details-section{
+    /*border: 1px solid black;*/
+    position: absolute;
+    margin: auto;
+    left: 0;
+    /*right: 0;*/
+    width: 50%;
+    /*height: 300px;*/
+    top: 500px;
+}
+
+#car-register-btn-section{
+    position: absolute;
+    margin: auto;
+    bottom: 10px;
+}
+
+#car-register-btn-section button{
+    width: 100%;
+    height: 35px;
+    border: transparent;
+}
+
+#car-section-container{
+    position: absolute;
+    margin: auto;
+    bottom: 110px;
+}
+
+.car-section-row{
+    /*border: 1px solid red;*/
+}
+
+#car-register-btn-section button{
+    color: white;
+}
+
+#car-reg-btn{
+    background-color: #03c203;
+}
+
+#car-update-btn{
+    background-color: #9610ea;
+}
+
+#car-delete-btn{
+    background-color: orangered;
+}
+
+button{
+    font-family: 'Poppins', sans-serif;
+}
+
+/*#car-front-section{*/
+/*    !*border: 1px solid black;*!*/
+/*    position: absolute;*/
+/*    margin: auto;*/
+/*    left: 75%;*/
+/*    !*right: 0;*!*/
+/*    width: 25%;*/
+/*    height: 210px;*/
+/*    top: 103px;*/
+/*    !*border-radius: 10px;*!*/
+/*}*/
+
+/*#car-back-section{*/
+/*    !*border: 1px solid black;*!*/
+/*    position: absolute;*/
+/*    margin: auto;*/
+/*    left: 49.7%;*/
+/*    !*right: 0;*!*/
+/*    width: 25%;*/
+/*    height: 210px;*/
+/*    top: 103px;*/
+/*}*/
+
+/*#car-side-section{*/
+/*    !*border: 1px solid black;*!*/
+/*    position: absolute;*/
+/*    margin: auto;*/
+/*    left: 49.7%;*/
+/*    !*right: 0;*!*/
+/*    width: 25%;*/
+/*    height: 210px;*/
+/*    top: 360px;*/
+/*}*/
+
+/*#car-interior-section{*/
+/*    !*border: 1px solid black;*!*/
+/*    position: absolute;*/
+/*    margin: auto;*/
+/*    left: 75%;*/
+/*    !*right: 0;*!*/
+/*    width: 25%;*/
+/*    height: 210px;*/
+/*    top: 360px;*/
+/*    !*border-radius: 10px;*!*/
+/*}*/
+
+#car-file-choosers{
+    border: 1px solid black;
+    position: absolute;
+    margin: auto;
+    left: 49.7%;
+    /*right: 0;*/
+    width: 50%;
+    height: 40px;
+    top: 362px;
+}
+
+#car-register-btn{
+    position: absolute;
+    margin: auto;
+    left: 2px;
+    top: 570px;
+    width: 24%;
+    height: 40px;
+    border: transparent;
+    background-color: #08e337;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+input{
+    font-family: 'Poppins', sans-serif;
+}
+
+#car-register-cancel-btn{
+    position: absolute;
+    margin: auto;
+    left: 380px;
+    top: 570px;
+    width: 24%;
+    height: 40px;
+    /*border: 1px solid black;*/
+    border:transparent;
+    /*background-color: transparent;*/
+    background-color: #2eb9f1;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+/*#customer-login-details-section{*/
+/*    border: 1px solid #b60f9a;*/
+/*    position: absolute;*/
+/*    margin: auto;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    height: 300px;*/
+/*    top: 110px;*/
+/*}*/
