@@ -1,0 +1,33 @@
+#customer-register-section{
+}
+
+#customer-details-section{
+    border: 1px solid red;
+    width: 40%;
+    height: 80%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+}
+
+.customer-detail-row{
+    position: relative;
+    width: 100%;
+    /*position: absolute;*/
+    border: 1px solid #9e1212;
+    height: 40px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#flex{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+#flex>section{
+    border: 1px solid black;
+    height: 60px;
+    margin-top: 10px;
+}
