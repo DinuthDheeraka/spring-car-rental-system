@@ -8,3 +8,16 @@ main{
     height: 734px;
     position: absolute;
 }
+
+#login-section .liner{
+    position: absolute;
+    margin: auto;
+    height: 70%;
+    width: 3px;
+    /*border-left-color: black;*/
+    border: 1px solid #2a2a2a;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}

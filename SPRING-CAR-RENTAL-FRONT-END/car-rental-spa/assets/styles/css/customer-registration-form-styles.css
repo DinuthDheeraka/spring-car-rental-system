@@ -1,18 +1,6 @@
 #customer-register-section{
 }
 
-.liner{
-    position: absolute;
-    margin: auto;
-    height: 70%;
-    width: 1px;
-    border: 1px solid #c4c3c3;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
 h3{
     font-family: 'Poppins', sans-serif;
 }

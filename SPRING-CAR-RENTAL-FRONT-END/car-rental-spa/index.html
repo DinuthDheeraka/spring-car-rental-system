@@ -10,6 +10,7 @@
     <link href="assets/styles/css/customer-login-form-styles.css" rel="stylesheet">
     <link href="assets/styles/css/all-customer-form-styles.css" rel="stylesheet">
     <link href="assets/styles/css/all-driver-form-styles.css" rel="stylesheet">
+    <link href="assets/styles/css/register-car-form.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/css/normalize.css" rel="stylesheet">
 
@@ -47,7 +48,8 @@
     <header class="container-fluid">
         <button id="register-cus">register</button>
         <button id="login-btn-1">login</button>
-        <button id="all-cus">login</button>
+        <button id="all-cus">all-cus</button>
+        <button id="all-dri">all-dri</button>
     </header>
 
     <section class="container-fluid" id="main-content-container">
@@ -207,7 +209,7 @@
 
         <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
-        <section class="main-content" id="all-customer-section">
+        <section class="main-content" id="all-customer-section" style="visibility: hidden">
 
             <section class="container" id="all-customer-topic">
                 <h3>Customers</h3>
@@ -216,10 +218,10 @@
             <section class="container-fluid" id="all-customer-search-bar">
                 <div class="input-group">
                     <div class="form-outline">
-                        <input type="search" id="form1" class="form-control" />
+                        <input class="form-control" id="form1" type="search"/>
                         <label class="form-label" for="form1">Search</label>
                     </div>
-                    <button type="button" class="btn btn-primary">
+                    <button class="btn btn-primary" type="button">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
@@ -464,10 +466,10 @@
 
         </section>
 
-<!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+        <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
 
-        <section class="main-content" id="all-driver-section">
+        <section class="main-content" id="all-driver-section" style="visibility: hidden">
 
             <section class="container" id="all-driver-topic">
                 <h3>Drivers</h3>
@@ -476,10 +478,10 @@
             <section class="container-fluid" id="all-driver-search-bar">
                 <div class="input-group">
                     <div class="form-outline">
-                        <input type="search" id="form2" class="form-control" />
+                        <input class="form-control" id="form2" type="search"/>
                         <label class="form-label" for="form1">Search</label>
                     </div>
-                    <button type="button" class="btn btn-primary">
+                    <button class="btn btn-primary" type="button">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
@@ -723,6 +725,183 @@
             </section>
 
         </section>
+
+        <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+        <section class="main-content" id="register-car-section">
+            <section class="container" id="register-car-topic"><h3>Register Car</h3></section>
+            <section class="container" id="car-details-section">
+                <section class="container-fluid flex-container">
+<!--                    <section class="row">-->
+<!--                        <section class="col-6">-->
+<!--                            <h3>Register Car</h3>-->
+<!--                        </section>-->
+<!--                    </section>-->
+
+                    <section class="row">
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="form16">Registered Number</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <select aria-label="Default select example" class="form-select">
+                                <option selected>Brand</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </section>
+                    </section>
+
+
+                    <section class="row">
+                        <section class="col-6">
+                            <select aria-label="Default select example" class="form-select">
+                                <option selected>Type</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </section>
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="form16">Number of Passengers</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                    </section>
+
+
+                    <section class="row">
+                        <section class="col-6">
+                            <select aria-label="Default select example" class="form-select">
+                                <option selected>Fuel Type</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </section>
+                        <section class="col-6">
+                            <select aria-label="Default select example" class="form-select">
+                                <option selected>Transmission Type</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </section>
+                    </section>
+
+
+                    <section class="row">
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="form16">Daily Km</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="form16">Monthly Km</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="row">
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="form16">Daily Rate</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="form16">Monthly Rate</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                    </section>
+
+
+
+                    <section class="row">
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="form16">Price for extra Km</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <select aria-label="Default select example" class="form-select">
+                                <option selected>Current Status</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </section>
+                    </section>
+
+
+
+                    <section class="row">
+                        <section class="col-6">
+                            <label class="form-label" for="customFile1">Front view of the car</label>
+                            <input class="form-control" id="customFile1" type="file"/>
+                        </section>
+                        <section class="col-6">
+                            <label class="form-label" for="customFile1">Back view of the car</label>
+                            <input class="form-control" id="customFile1" type="file"/>
+                        </section>
+                    </section>
+
+
+                    <section class="row">
+                        <section class="col-6">
+                            <label class="form-label" style="margin-top: 18px" for="customFile1">Side view of the car</label>
+                            <input class="form-control" id="customFile1" type="file"/>
+                        </section>
+                        <section class="col-6">
+                            <label class="form-label" style="margin-top: 18px" for="customFile1">Interior view of the car</label>
+                            <input class="form-control" id="customFile1" type="file"/>
+                        </section>
+                    </section>
+
+
+                    <section class="row">
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <label class="form-label" for="form16">Select Vehicle Colour</label>
+                                <input  id="r1" style="margin-top: 40px" type="color"/>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                    </section>
+
+<!--                    <section class="row">-->
+<!--                        <section class="col-12">-->
+<!--                            <button id="register-car-btn">Create Account</button>-->
+<!--                        </section>-->
+<!--                    </section>-->
+                </section>
+            </section>
+        </section>
+
 
     </section>
 
