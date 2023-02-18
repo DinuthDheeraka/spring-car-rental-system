@@ -47,14 +47,14 @@ function registerCar() {
         priceForExtraKm:$('#inp-extra-price').val(),
         fuelType:selectedFuelType,
         transmissionType:selectedTransmissionType,
-        currentStatu:$('').val()
+        currentStatus:selectedCurrentStatus
     };
 
     $.ajax({
-        url:baseUrl+'customer/register',
+        url:baseUrl+'car/register',
         dataType:'json',
         contentType:'application/json',
-        data:JSON.stringify(customer),
+        data:JSON.stringify(car),
         async:false,
         method:'post',
         success:function (resp) {
