@@ -1,10 +1,9 @@
 let baseUrl = "http://localhost:8080/SPRING_CAR_RENTAL_SYSTEM_BACKEND_war_exploded/";
 
 $('#create-account-btn').click(function () {
-    // registerCustomer();
+    registerCustomer();
     uploadCustomerNicAndDrivingLicense();
 });
-
 function uploadCustomerNicAndDrivingLicense(){
     let nicImage = $("#inpNicImage").prop('files')[0];
     let drivingLicenseImage = $("#inpDrivingLicenseImage").prop('files')[0];

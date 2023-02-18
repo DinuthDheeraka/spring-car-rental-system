@@ -29,11 +29,11 @@ public class CustomerController {
         byte[] bytes = new byte[0];
         try {
             bytes = nic.getBytes();
-            Path nicPath = Paths.get("E:\\upload\\" + customerId +"-"+"nic.png");
+            Path nicPath = Paths.get("E:\\upload\\"+customerId +"-"+"nic.png");
             Files.write(nicPath, bytes);
 
             bytes = drivingLicense.getBytes();
-            Path drivingLicensePath = Paths.get("E:\\upload\\" + customerId +"-" +"license.png");
+            Path drivingLicensePath = Paths.get("E:\\upload\\"+customerId +"-" +"license.png");
             Files.write(drivingLicensePath, bytes);
 
         } catch (IOException ioException) {
