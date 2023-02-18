@@ -30,7 +30,31 @@ $('#register-car-btn').click(function () {
 });
 
 function uploadCarViews() {
+    let carFrontView = $("#inp-car-front-view").prop('files')[0];
+    let carSideView = $("#inp-car-side-view").prop('files')[0];
+    let carBackView = $("#inp-car-back-view").prop('files')[0];
+    let carInteriorView = $("#inp-car-interior-view").prop('files')[0];
 
+    let formData = new FormData();
+    formData.append("front_view", carFrontView);
+    formData.append("side_view", carSideView);
+    formData.append("back_view", carBackView);
+    formData.append("interior_view", carInteriorView);
+
+    $.ajax({
+        url: baseUrl+'/car/upload/CR-00001',
+        data: formData,
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        async:false,
+        success: function (data) {
+            // console.log('Image uploaded successfully.');
+        },
+        error: function (error) {
+            // console.error(error);
+        }
+    });
 }
 
 function registerCar() {

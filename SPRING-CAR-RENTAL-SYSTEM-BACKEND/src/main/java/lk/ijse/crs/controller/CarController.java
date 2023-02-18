@@ -24,27 +24,34 @@ public class CarController {
     }
 
     @PostMapping(path = {"/register"}, consumes = {"application/json"})
-    public void addCustomer(@RequestBody CarDTO carDTO) {
+    public void addCar(@RequestBody CarDTO carDTO) {
         System.out.println("car");
         System.out.println(carDTO);
     }
 
-//    @PostMapping(path = {"/upload/{carId}"})
-//    public void uploadCustomerNicAndDrivingLicense(@RequestParam("nic") MultipartFile nic, @RequestParam("drivingLicense") MultipartFile drivingLicense, @PathVariable("customerId") String customerId) {
-//
-//        byte[] bytes = new byte[0];
-//        try {
-//            bytes = nic.getBytes();
-//            Path nicPath = Paths.get("E:\\upload\\"+customerId +"-"+"nic.png");
-//            Files.write(nicPath, bytes);
-//
-//            bytes = drivingLicense.getBytes();
-//            Path drivingLicensePath = Paths.get("E:\\upload\\"+customerId +"-" +"license.png");
-//            Files.write(drivingLicensePath, bytes);
-//
-//        } catch (IOException ioException) {
-//            ioException.printStackTrace();
-//        }
-//
-//    }
+    @PostMapping(path = {"/upload/{carId}"})
+    public void uploadCarViews(@RequestParam("front_view") MultipartFile frontView, @RequestParam("side_view") MultipartFile sideView, @RequestParam("back_view") MultipartFile backView, @RequestParam("interior_view") MultipartFile interiorView, @PathVariable("carId") String carId) {
+
+        byte[] bytes = new byte[0];
+        try {
+            bytes = frontView.getBytes();
+            Path frontViewPath = Paths.get("E:\\carViews\\"+carId +"-"+"frontView.png");
+            Files.write(frontViewPath, bytes);
+
+            bytes = sideView.getBytes();
+            Path sideViewPath = Paths.get("E:\\carViews\\"+carId +"-"+"sideView.png");
+            Files.write(sideViewPath, bytes);
+
+            bytes = backView.getBytes();
+            Path backViewPath = Paths.get("E:\\carViews\\"+carId +"-"+"backView.png");
+            Files.write(backViewPath, bytes);
+
+            bytes = interiorView.getBytes();
+            Path interiorPath = Paths.get("E:\\carViews\\"+carId +"-"+"interiorView.png");
+            Files.write(interiorPath, bytes);
+
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+    }
 }
