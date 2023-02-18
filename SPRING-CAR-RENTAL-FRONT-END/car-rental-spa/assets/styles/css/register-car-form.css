@@ -26,6 +26,10 @@ label{
     top: 10px;
 }
 
+h3{
+    color: #848383;
+}
+
 select option{
     font-family: 'Poppins', sans-serif;
 }
