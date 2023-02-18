@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="SPRING-CAR-RENTAL-SYSTEM-BACKEND:war">
+    <output-path>$PROJECT_DIR$/SPRING-CAR-RENTAL-SYSTEM-BACKEND/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>SPRING-CAR-RENTAL-SYSTEM-BACKEND</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="SPRING-CAR-RENTAL-SYSTEM-BACKEND-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="SPRING-CAR-RENTAL-SYSTEM-BACKEND:war exploded" />
+    </root>
+  </artifact>
+</component>

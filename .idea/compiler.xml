@@ -7,11 +7,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="SPRING-CAR-RENTAL-BACKEND" />
+        <module name="SPRING-CAR-RENTAL-SYSTEM-BACKEND" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SPRING-CAR-RENTAL-BACKEND" target="8" />
+      <module name="SPRING-CAR-RENTAL-SYSTEM-BACKEND" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

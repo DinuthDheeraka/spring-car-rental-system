@@ -2,11 +2,12 @@
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/../SPRING-CAR-RENTAL-BACKEND" />
+    <file type="web" url="file://$PROJECT_DIR$/SPRING-CAR-RENTAL-SYSTEM-BACKEND" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
-        <option value="$PROJECT_DIR$/../SPRING-CAR-RENTAL-BACKEND/pom.xml" />
+        <option value="$PROJECT_DIR$/SPRING-CAR-RENTAL-SYSTEM-BACKEND/pom.xml" />
       </list>
     </option>
   </component>
