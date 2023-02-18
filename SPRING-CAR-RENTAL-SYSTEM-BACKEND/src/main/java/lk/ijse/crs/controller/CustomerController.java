@@ -24,16 +24,16 @@ public class CustomerController {
     public void addCustomer(@RequestBody CustomerDTO customerDTO){
         System.out.println(customerDTO);
     }
-
-    @PostMapping(path = {"/upload"})
-    public void uploadCustomerNicAndDrivingLicense(@RequestParam("nic") MultipartFile nic,@RequestParam("drivingLicense") MultipartFile drivingLicense){
-        System.out.println("upload");
-        System.out.println(nic.getOriginalFilename());
-        System.out.println(drivingLicense.getOriginalFilename());
+//@RequestParam("nic") MultipartFile nic,@RequestParam("drivingLicense") MultipartFile drivingLicense
+    @PostMapping(path = {"/upload/{customerId}"})
+    public void uploadCustomerNicAndDrivingLicense(@RequestParam("file") List<MultipartFile> images,@PathVariable("customerId")String customerId){
+        System.out.println("upload"+customerId);
+//        System.out.println(nic.getOriginalFilename());
+//        System.out.println(drivingLicense.getOriginalFilename());
         // Perform the image upload operation.
-//        for(MultipartFile multipartFile : images){
-//            System.out.println(multipartFile.getOriginalFilename());
-//        }
+        for(MultipartFile multipartFile : images){
+            System.out.println(multipartFile.getOriginalFilename());
+        }
 //        byte[] bytes = new byte[0];
 //        try {
 //            bytes = image.getBytes();
