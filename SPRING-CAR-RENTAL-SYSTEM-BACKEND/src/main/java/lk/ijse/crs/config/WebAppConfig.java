@@ -1,6 +1,6 @@
 /**
  * @author :  Dinuth Dheeraka
- * Created : 2/8/2023 8:44 PM
+ * Created : 2/18/2023 3:22 PM
  */
 package lk.ijse.crs.config;
 
@@ -12,4 +12,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @EnableWebMvc
 @ComponentScan(basePackages = {"lk.ijse.crs.controller"})
 public class WebAppConfig {
+
+    public WebAppConfig(){
+        System.out.println("CREATED WEB APP CONFIG");
+    }
 }

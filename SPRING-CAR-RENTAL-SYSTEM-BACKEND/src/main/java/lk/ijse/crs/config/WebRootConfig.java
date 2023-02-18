@@ -1,13 +1,15 @@
 /**
  * @author :  Dinuth Dheeraka
- * Created : 2/8/2023 8:44 PM
+ * Created : 2/18/2023 3:25 PM
  */
 package lk.ijse.crs.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 
 @Configuration
-@Import(JPAConfig.class)
 public class WebRootConfig {
+
+    public WebRootConfig(){
+        System.out.println("CREATED WEB ROOT CONFIG");
+    }
 }
