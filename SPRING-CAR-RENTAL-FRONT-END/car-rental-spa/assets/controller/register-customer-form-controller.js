@@ -5,11 +5,23 @@ $('#create-account-btn').click(function () {
 });
 
 function registerCustomer() {
+
+    let customer = {
+        nicNumber:$('#inpNicNo').val(),
+        drivingLicenseNumber:$('#inpDrivingLicenseNo').val(),
+        fullName:$('#inpFullName').val(),
+        homeAddress:$('#inpHomeAddress').val(),
+        telephoneNumber:$('#inpTeleNo').val(),
+        emailAddress:$('#inpEmail').val()
+    };
+
     $.ajax({
-        url:baseUrl+'customer',
+        url:baseUrl+'customer/register',
         dataType:'json',
+        contentType:'application/json',
+        data:JSON.stringify(customer),
         async:false,
-        method:'get',
+        method:'post',
         success:function (resp) {
         }
     });

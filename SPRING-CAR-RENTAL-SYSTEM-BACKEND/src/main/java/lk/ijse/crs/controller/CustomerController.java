@@ -4,18 +4,17 @@
  */
 package lk.ijse.crs.controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import lk.ijse.crs.dto.CustomerDTO;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @CrossOrigin
 @RequestMapping("/customer")
 public class CustomerController {
 
-    @GetMapping
-    public void get(){
+    @PostMapping(path = {"/register"},consumes = {"application/json"})
+    public void addCustomer(@RequestBody CustomerDTO customerDTO){
+        System.out.println(customerDTO);
         System.out.println("Customer");
     }
 }
