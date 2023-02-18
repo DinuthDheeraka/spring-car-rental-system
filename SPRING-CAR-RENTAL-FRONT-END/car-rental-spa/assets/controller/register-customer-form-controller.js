@@ -10,8 +10,8 @@ function uploadCustomerNicAndDrivingLicense(){
     let drivingLicenseImage = $("#inpDrivingLicenseImage").prop('files')[0];
 
     let formData = new FormData();
-    formData.append("file", nicImage);
-    formData.append("file", drivingLicenseImage);
+    formData.append("nic", nicImage);
+    formData.append("drivingLicense", drivingLicenseImage);
 
 
     $.ajax({
