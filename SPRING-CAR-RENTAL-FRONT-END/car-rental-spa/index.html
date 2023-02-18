@@ -162,14 +162,14 @@
                     <form>
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="form2Example1" class="form-control" />
-                            <label class="form-label" for="form2Example1">Email address</label>
+                            <input type="email" id="inp-sign-in-userName" class="form-control" />
+                            <label class="form-label" for="inp-sign-in-userName">User Name</label>
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
-                            <input type="password" id="form2Example2" class="form-control" />
-                            <label class="form-label" for="form2Example2">Password</label>
+                            <input type="password" id="inp-sign-in-password" class="form-control" />
+                            <label class="form-label" for="inp-sign-in-password">Password</label>
                         </div>
 
                         <!-- 2 column grid layout for inline styling -->
@@ -189,7 +189,7 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+                        <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
 
                         <!-- Register buttons -->
                         <div class="text-center">
@@ -276,8 +276,8 @@
             <section class="container-fluid" id="all-customer-search-bar">
                 <div class="input-group">
                     <div class="form-outline">
-                        <input class="form-control" id="form1" type="search"/>
-                        <label class="form-label" for="form1">Search</label>
+                        <input class="form-control" id="inp-all-customer-search-bar" type="search"/>
+                        <label class="form-label" for="inp-all-customer-search-bar">Search</label>
                     </div>
                     <button class="btn btn-primary" type="button">
                         <i class="fas fa-search"></i>
@@ -287,7 +287,7 @@
 
             <section class="container-fluid" id="customer-table-section">
                 <section class="container-fluid flex-container" id="customer-table-section-inner">
-                    <table class="table align-middle mb-0 bg-white">
+                    <table class="table align-middle mb-0 bg-white" id="all-customer-table">
                         <thead class="bg-light">
                         <tr>
                             <th class="font-weight-bolder">Name</th>
@@ -300,7 +300,7 @@
                             <th class="font-weight-bold">Action</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="all-customer-table-body">
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center">
@@ -536,8 +536,8 @@
             <section class="container-fluid" id="all-driver-search-bar">
                 <div class="input-group">
                     <div class="form-outline">
-                        <input class="form-control" id="form2" type="search"/>
-                        <label class="form-label" for="form1">Search</label>
+                        <input class="form-control" id="inp-all-driver-search-bar" type="search"/>
+                        <label class="form-label" for="inp-all-driver-search-bar">Search</label>
                     </div>
                     <button class="btn btn-primary" type="button">
                         <i class="fas fa-search"></i>
@@ -547,7 +547,7 @@
 
             <section class="container-fluid" id="driver-table-section">
                 <section class="container-fluid flex-container" id="driver-table-section-inner">
-                    <table class="table align-middle mb-0 bg-white">
+                    <table class="table align-middle mb-0 bg-white" id="all-driver-table">
                         <thead class="bg-light">
                         <tr>
                             <th class="font-weight-bolder">Name</th>
@@ -560,7 +560,7 @@
                             <th class="font-weight-bold">Action</th>
                         </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="all-driver-table-body">
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center">
@@ -799,26 +799,28 @@
                     <section class="row">
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-car-registered-number" maxlength="20"
                                        type="text"/>
-                                <label class="form-label" for="form16">Registered Number</label>
+                                <label class="form-label" for="inp-car-registered-number">Registered Number</label>
                                 <div class="form-helper"></div>
                             </div>
                         </section>
                         <section class="col-4">
-                            <select aria-label="Default select example" class="form-select">
+                            <select aria-label="Default select example" class="form-select" id="select-car-brand">
                                 <option selected>Brand</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="BMW">BMW</option>
+                                <option value="Volvo">Volvo</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Suzuki">Suzuki</option>
                             </select>
                         </section>
                         <section class="col-4">
-                            <select aria-label="Default select example" class="form-select">
+                            <select aria-label="Default select example" class="form-select" id="select-car-type">
                                 <option selected>Type</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="Mini">General</option>
+                                <option value="Premium">Premium</option>
+                                <option value="Luxury">Luxury</option>
                             </select>
                         </section>
                     </section>
@@ -826,27 +828,25 @@
 
                     <section class="row">
                         <section class="col-4">
-                            <select aria-label="Default select example" class="form-select">
+                            <select aria-label="Default select example" class="form-select" id="select-transmission-type">
                                 <option selected>Transmission Type</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="Auto">Auto</option>
+                                <option value="Manual">Manual</option>
                             </select>
                         </section>
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-passenger-count" maxlength="20"
                                        type="text"/>
-                                <label class="form-label" for="form16">Number of Passengers</label>
+                                <label class="form-label" for="inp-passenger-count">Number of Passengers</label>
                                 <div class="form-helper"></div>
                             </div>
                         </section>
                         <section class="col-4">
-                            <select aria-label="Default select example" class="form-select">
+                            <select aria-label="Default select example" class="form-select" id="select-fuel-type">
                                 <option selected>Fuel Type</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="Petrol">Petrol</option>
+                                <option value="Diesel">Diesel</option>
                             </select>
                         </section>
                     </section>
@@ -854,25 +854,25 @@
                     <section class="row">
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-daily-km" maxlength="20"
                                        type="text"/>
-                                <label class="form-label" for="form16">Daily Km</label>
+                                <label class="form-label" for="inp-daily-km">Daily Km</label>
                                 <div class="form-helper"></div>
                             </div>
                         </section>
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-monthly-km" maxlength="20"
                                        type="text"/>
-                                <label class="form-label" for="form16">Monthly Km</label>
+                                <label class="form-label" for="inp-monthly-km">Monthly Km</label>
                                 <div class="form-helper"></div>
                             </div>
                         </section>
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-daily-rate" maxlength="20"
                                        type="text"/>
-                                <label class="form-label" for="form16">Daily Rate</label>
+                                <label class="form-label" for="inp-daily-rate">Daily Rate</label>
                                 <div class="form-helper"></div>
                             </div>
                         </section>
@@ -881,17 +881,17 @@
                     <section class="row">
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-monthly-rate" maxlength="20"
                                        type="text"/>
-                                <label class="form-label" for="form16">Monthly Rate</label>
+                                <label class="form-label" for="inp-monthly-rate">Monthly Rate</label>
                                 <div class="form-helper"></div>
                             </div>
                         </section>
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="r1" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-extra-price" maxlength="20"
                                        type="text"/>
-                                <label class="form-label" for="form16">Price for extra Km</label>
+                                <label class="form-label" for="inp-extra-price">Price for extra Km</label>
                                 <div class="form-helper"></div>
                             </div>
                         </section>
@@ -907,26 +907,26 @@
 
                     <section class="row">
                         <section class="col-6">
-                            <label class="form-label" for="customFile1">Front view of the car</label>
-                            <input class="form-control" id="customFile1" type="file"/>
+                            <label class="form-label" for="inp-car-front-view">Front view of the car</label>
+                            <input class="form-control" id="inp-car-front-view" type="file"/>
                         </section>
                         <section class="col-6">
-                            <label class="form-label" for="customFile1">Back view of the car</label>
-                            <input class="form-control" id="customFile1" type="file"/>
+                            <label class="form-label" for="inp-car-back-view">Back view of the car</label>
+                            <input class="form-control" id="inp-car-back-view" type="file"/>
                         </section>
                     </section>
 
 
                     <section class="row">
                         <section class="col-6">
-                            <label class="form-label" for="customFile1" style="margin-top: 18px">Side view of the
+                            <label class="form-label" for="inp-car-side-view" style="margin-top: 18px">Side view of the
                                 car</label>
-                            <input class="form-control" id="customFile1" type="file"/>
+                            <input class="form-control" id="inp-car-side-view" type="file"/>
                         </section>
                         <section class="col-6">
-                            <label class="form-label" for="customFile1" style="margin-top: 18px">Interior view of the
+                            <label class="form-label" for="inp-car-interior-view" style="margin-top: 18px">Interior view of the
                                 car</label>
-                            <input class="form-control" id="customFile1" type="file"/>
+                            <input class="form-control" id="inp-car-interior-view" type="file"/>
                         </section>
                     </section>
 
@@ -934,8 +934,8 @@
                     <section class="row">
                         <section class="col-6">
                             <div class="form-outline">
-                                <label class="form-label" for="form16">Select Vehicle Colour</label>
-                                <input id="r1" style="margin-top: 45px" type="color"/>
+                                <label class="form-label" for="select-vehicle-colour">Select Vehicle Colour</label>
+                                <input id="select-vehicle-colour" style="margin-top: 45px" type="color"/>
                                 <div class="form-helper"></div>
                             </div>
                         </section>
