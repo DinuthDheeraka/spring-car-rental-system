@@ -54,12 +54,12 @@ label{
 
 #customer-reg-image{
     /*border: 1px solid red;*/
-    width: 535px;
-    height: 500px;
+    width: 700px;
+    height: 700px;
     position: absolute;
     right: 100px;
     top: 40px;
-    bottom: 0;
+    bottom: 30px;
     margin: auto;
     /*border-radius: 100%;*/
     background-position: center;

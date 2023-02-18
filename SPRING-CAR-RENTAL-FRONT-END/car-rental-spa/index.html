@@ -11,6 +11,7 @@
     <link href="assets/styles/css/all-customer-form-styles.css" rel="stylesheet">
     <link href="assets/styles/css/all-driver-form-styles.css" rel="stylesheet">
     <link href="assets/styles/css/register-car-form.css" rel="stylesheet">
+    <link href="assets/styles/css/register-driver-form-styles.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/css/normalize.css" rel="stylesheet">
 
@@ -51,6 +52,7 @@
         <button id="all-cus">all-cus</button>
         <button id="all-dri">all-dri</button>
         <button id="car-reg">car-reg</button>
+        <button id="dri-reg">dri-reg</button>
     </header>
 
     <section class="container-fluid" id="main-content-container">
@@ -61,7 +63,7 @@
                 <section class="container-fluid flex-container">
                     <section class="row">
                         <section class="col-6">
-                            <h3 style="font-weight: bold">Create Account</h3>
+                            <h3>Create Account</h3>
                         </section>
                     </section>
 
@@ -76,7 +78,8 @@
                         </section>
                         <section class="col-6">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="inpDrivingLicenseNo" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inpDrivingLicenseNo"
+                                       maxlength="20"
                                        type="text"/>
                                 <label class="form-label" for="inpDrivingLicenseNo">Driving License Number</label>
                                 <div class="form-helper"></div>
@@ -98,7 +101,8 @@
                     <section class="row">
                         <section class="col-12">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="inpHomeAddress" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inpHomeAddress"
+                                       maxlength="20"
                                        type="text"/>
                                 <label class="form-label" for="inpHomeAddress">Home Address</label>
                                 <div class="form-helper"></div>
@@ -107,7 +111,7 @@
                     </section>
 
                     <section class="row">
-                        <section class="col-12">
+                        <section class="col-6">
                             <div class="form-outline">
                                 <input class="form-control" data-mdb-showcounter="true" id="inpTeleNo" maxlength="20"
                                        type="text"/>
@@ -115,13 +119,30 @@
                                 <div class="form-helper"></div>
                             </div>
                         </section>
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="inpEmail" maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="inpEmail">E-mail Address</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
                     </section>
 
                     <section class="row">
-                        <section class="col-12">
+                        <section class="col-6">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="inpEmail" maxlength="20" type="text"/>
-                                <label class="form-label" for="inpEmail">E-mail Address</label>
+                                <input class="form-control" data-mdb-showcounter="true" id="inpUserName" maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="inpUserName">User Name</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="inpPassword" maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="inpPassword">Password</label>
                                 <div class="form-helper"></div>
                             </div>
                         </section>
@@ -140,8 +161,9 @@
 
                     <section class="row">
                         <section class="col-12">
-                            <button class="btn btn-primary btn-block mb-4" id="create-account-btn">Register Customer</button>
-<!--                            <button id="create-account-btn">Create Account</button>-->
+                            <button class="btn btn-primary btn-block mb-4" id="create-account-btn">Register Customer
+                            </button>
+                            <!--                            <button id="create-account-btn">Create Account</button>-->
                         </section>
                     </section>
                 </section>
@@ -157,18 +179,18 @@
             <section class="container" id="customer-login-details-section">
                 <section class="container-fluid flex-container">
                     <section class="container">
-                        <h3 style="font-weight: bold">Sign in</h3>
+                        <h3>Sign in</h3>
                     </section>
                     <form>
                         <!-- Email input -->
                         <div class="form-outline mb-4">
-                            <input type="email" id="inp-sign-in-userName" class="form-control" />
+                            <input class="form-control" id="inp-sign-in-userName" type="email"/>
                             <label class="form-label" for="inp-sign-in-userName">User Name</label>
                         </div>
 
                         <!-- Password input -->
                         <div class="form-outline mb-4">
-                            <input type="password" id="inp-sign-in-password" class="form-control" />
+                            <input class="form-control" id="inp-sign-in-password" type="password"/>
                             <label class="form-label" for="inp-sign-in-password">Password</label>
                         </div>
 
@@ -177,7 +199,8 @@
                             <div class="col d-flex justify-content-center">
                                 <!-- Checkbox -->
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="form2Example34" checked />
+                                    <input checked class="form-check-input" id="form2Example34" type="checkbox"
+                                           value=""/>
                                     <label class="form-check-label" for="form2Example34"> Remember me </label>
                                 </div>
                             </div>
@@ -189,78 +212,78 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+                        <button class="btn btn-primary btn-block mb-4" type="button">Sign in</button>
 
                         <!-- Register buttons -->
                         <div class="text-center">
                             <p>Not a member? <a href="#!">Register</a></p>
                             <p>or sign up with:</p>
-                            <button type="button" class="btn btn-secondary btn-floating mx-1">
+                            <button class="btn btn-secondary btn-floating mx-1" type="button">
                                 <i class="fab fa-facebook-f"></i>
                             </button>
 
-                            <button type="button" class="btn btn-secondary btn-floating mx-1">
+                            <button class="btn btn-secondary btn-floating mx-1" type="button">
                                 <i class="fab fa-google"></i>
                             </button>
 
-                            <button type="button" class="btn btn-secondary btn-floating mx-1">
+                            <button class="btn btn-secondary btn-floating mx-1" type="button">
                                 <i class="fab fa-twitter"></i>
                             </button>
 
-                            <button type="button" class="btn btn-secondary btn-floating mx-1">
+                            <button class="btn btn-secondary btn-floating mx-1" type="button">
                                 <i class="fab fa-github"></i>
                             </button>
                         </div>
                     </form>
-<!--                    <section class="row">-->
-<!--                        <section class="col-6">-->
-<!--                            <h3>Login</h3>-->
-<!--                        </section>-->
-<!--                    </section>-->
+                    <!--                    <section class="row">-->
+                    <!--                        <section class="col-6">-->
+                    <!--                            <h3>Login</h3>-->
+                    <!--                        </section>-->
+                    <!--                    </section>-->
 
-<!--                    <section class="row">-->
-<!--                        <section class="col-12">-->
-<!--                            <div class="form-outline">-->
-<!--                                <input class="form-control" data-mdb-showcounter="true" id="inpUserName" maxlength="20"-->
-<!--                                       type="text"/>-->
-<!--                                <label class="form-label" for="form16">User Name</label>-->
-<!--                                <div class="form-helper"></div>-->
-<!--                            </div>-->
-<!--                        </section>-->
-<!--                    </section>-->
+                    <!--                    <section class="row">-->
+                    <!--                        <section class="col-12">-->
+                    <!--                            <div class="form-outline">-->
+                    <!--                                <input class="form-control" data-mdb-showcounter="true" id="inpUserName" maxlength="20"-->
+                    <!--                                       type="text"/>-->
+                    <!--                                <label class="form-label" for="form16">User Name</label>-->
+                    <!--                                <div class="form-helper"></div>-->
+                    <!--                            </div>-->
+                    <!--                        </section>-->
+                    <!--                    </section>-->
 
-<!--                    <section class="row">-->
-<!--                        <section class="col-12">-->
-<!--                            <div class="form-outline">-->
-<!--                                <input class="form-control" data-mdb-showcounter="true" id="inpPassword" maxlength="20"-->
-<!--                                       type="text"/>-->
-<!--                                <label class="form-label" for="form16">Password</label>-->
-<!--                                <div class="form-helper"></div>-->
-<!--                            </div>-->
-<!--                        </section>-->
-<!--                    </section>-->
+                    <!--                    <section class="row">-->
+                    <!--                        <section class="col-12">-->
+                    <!--                            <div class="form-outline">-->
+                    <!--                                <input class="form-control" data-mdb-showcounter="true" id="inpPassword" maxlength="20"-->
+                    <!--                                       type="text"/>-->
+                    <!--                                <label class="form-label" for="form16">Password</label>-->
+                    <!--                                <div class="form-helper"></div>-->
+                    <!--                            </div>-->
+                    <!--                        </section>-->
+                    <!--                    </section>-->
 
-<!--                    <section class="row">-->
-<!--                        <section class="col-12">-->
-<!--                            <button id="login-btn">Login</button>-->
-<!--                        </section>-->
-<!--                    </section>-->
+                    <!--                    <section class="row">-->
+                    <!--                        <section class="col-12">-->
+                    <!--                            <button id="login-btn">Login</button>-->
+                    <!--                        </section>-->
+                    <!--                    </section>-->
 
-<!--                    <section class="row" id="login-text">-->
-<!--                        <section class="col-12">-->
-<!--                            <h6 style="font-weight: bold">Don't have an Account</h6>-->
-<!--                        </section>-->
-<!--                    </section>-->
+                    <!--                    <section class="row" id="login-text">-->
+                    <!--                        <section class="col-12">-->
+                    <!--                            <h6 style="font-weight: bold">Don't have an Account</h6>-->
+                    <!--                        </section>-->
+                    <!--                    </section>-->
 
-<!--                    <section class="row">-->
-<!--                        <section class="col-12">-->
-<!--                            <button id="sign-btn">Sign Up</button>-->
-<!--                        </section>-->
-<!--                    </section>-->
+                    <!--                    <section class="row">-->
+                    <!--                        <section class="col-12">-->
+                    <!--                            <button id="sign-btn">Sign Up</button>-->
+                    <!--                        </section>-->
+                    <!--                    </section>-->
                 </section>
             </section>
 
-<!--            <section class="liner"></section>-->
+            <!--            <section class="liner"></section>-->
 
             <section id="customer-login-image"></section>
         </section>
@@ -270,7 +293,7 @@
         <section class="main-content" id="all-customer-section" style="visibility: hidden">
 
             <section class="container" id="all-customer-topic">
-                <h3 style="font-weight: bold">Customers</h3>
+                <h3>Customers</h3>
             </section>
 
             <section class="container-fluid" id="all-customer-search-bar">
@@ -530,7 +553,7 @@
         <section class="main-content" id="all-driver-section" style="visibility: hidden">
 
             <section class="container" id="all-driver-topic">
-                <h3 style="font-weight: bold">Drivers</h3>
+                <h3>Drivers</h3>
             </section>
 
             <section class="container-fluid" id="all-driver-search-bar">
@@ -787,19 +810,14 @@
         <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
         <section class="main-content" id="register-car-section">
-            <section class="container" id="register-car-topic"><h3 style="font-weight: bold">Register Car</h3></section>
+            <section class="container" id="register-car-topic"><h3>Register Car</h3></section>
             <section class="container" id="car-details-section">
                 <section class="container-fluid flex-container">
-                    <!--                    <section class="row">-->
-                    <!--                        <section class="col-6">-->
-                    <!--                            <h3>Register Car</h3>-->
-                    <!--                        </section>-->
-                    <!--                    </section>-->
-
                     <section class="row">
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="inp-car-registered-number" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-car-registered-number"
+                                       maxlength="20"
                                        type="text"/>
                                 <label class="form-label" for="inp-car-registered-number">Registered Number</label>
                                 <div class="form-helper"></div>
@@ -828,7 +846,8 @@
 
                     <section class="row">
                         <section class="col-4">
-                            <select aria-label="Default select example" class="form-select" id="select-transmission-type">
+                            <select aria-label="Default select example" class="form-select"
+                                    id="select-transmission-type">
                                 <option selected>Transmission Type</option>
                                 <option value="Auto">Auto</option>
                                 <option value="Manual">Manual</option>
@@ -836,7 +855,8 @@
                         </section>
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="inp-passenger-count" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-passenger-count"
+                                       maxlength="20"
                                        type="text"/>
                                 <label class="form-label" for="inp-passenger-count">Number of Passengers</label>
                                 <div class="form-helper"></div>
@@ -862,7 +882,8 @@
                         </section>
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="inp-monthly-km" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-monthly-km"
+                                       maxlength="20"
                                        type="text"/>
                                 <label class="form-label" for="inp-monthly-km">Monthly Km</label>
                                 <div class="form-helper"></div>
@@ -870,7 +891,8 @@
                         </section>
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="inp-daily-rate" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-daily-rate"
+                                       maxlength="20"
                                        type="text"/>
                                 <label class="form-label" for="inp-daily-rate">Daily Rate</label>
                                 <div class="form-helper"></div>
@@ -881,7 +903,8 @@
                     <section class="row">
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="inp-monthly-rate" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-monthly-rate"
+                                       maxlength="20"
                                        type="text"/>
                                 <label class="form-label" for="inp-monthly-rate">Monthly Rate</label>
                                 <div class="form-helper"></div>
@@ -889,18 +912,20 @@
                         </section>
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="inp-extra-price" maxlength="20"
+                                <input class="form-control" data-mdb-showcounter="true" id="inp-extra-price"
+                                       maxlength="20"
                                        type="text"/>
                                 <label class="form-label" for="inp-extra-price">Price for extra Km</label>
                                 <div class="form-helper"></div>
                             </div>
                         </section>
                         <section class="col-4">
-                            <select aria-label="Default select example" class="form-select" id="select-car-current-status">
+                            <select aria-label="Default select example" class="form-select"
+                                    id="select-car-current-status">
                                 <option selected>Current Status</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
+                                <option value="1">Maintaining</option>
+                                <option value="2">Booked</option>
+                                <option value="3">Available</option>
                             </select>
                         </section>
                     </section>
@@ -924,7 +949,8 @@
                             <input class="form-control" id="inp-car-side-view" type="file"/>
                         </section>
                         <section class="col-6">
-                            <label class="form-label" for="inp-car-interior-view" style="margin-top: 18px">Interior view of the
+                            <label class="form-label" for="inp-car-interior-view" style="margin-top: 18px">Interior view
+                                of the
                                 car</label>
                             <input class="form-control" id="inp-car-interior-view" type="file"/>
                         </section>
@@ -952,8 +978,294 @@
             <section id="car-register-image"></section>
         </section>
 
+        <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
-    </section>
+        <section class="main-content" id="driver-register-section">
+
+            <section class="container" id="driver-details-section">
+                <section class="container-fluid flex-container">
+                    <section class="row">
+                        <section class="col-6" style="width: 100%">
+                            <h3>Create Account for Driver</h3>
+                        </section>
+                    </section>
+
+                    <section class="row">
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="inpNicNoDriver"
+                                       maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="inpNicNo">NIC Number</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="inpDrivingLicenseNoDriver"
+                                       maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="inpDrivingLicenseNo">Driving License Number</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="row">
+                        <section class="col-12">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="inpFullNameDriver"
+                                       maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="inpFullName">Full Name</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="row">
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="inpHomeAddressDriver"
+                                       maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="inpHomeAddress">Home Address</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <select aria-label="Default select example" class="form-select" id="select-driver-status">
+                                <option selected>Active</option>
+                                <option value="BMW">Inactive</option>
+                            </select>
+                        </section>
+                    </section>
+
+                    <section class="row">
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="inpTeleNoDriver"
+                                       maxlength="20"
+                                       type="text"/>
+                                <label class="form-label" for="inpTeleNo">Telephone Number</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="inpEmailDriver"
+                                       maxlength="20" type="text"/>
+                                <label class="form-label" for="inpEmail">E-mail Address</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="row">
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="inpUserNameDriver"
+                                       maxlength="20" type="text"/>
+                                <label class="form-label" for="inpUserName">User Name</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                        <section class="col-6">
+                            <div class="form-outline">
+                                <input class="form-control" data-mdb-showcounter="true" id="inpPasswordDriver"
+                                       maxlength="20" type="text"/>
+                                <label class="form-label" for="inpPassword">Password</label>
+                                <div class="form-helper"></div>
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="row" id="file-chooser-row-driver">
+                        <section class="col-6">
+                            <label class="form-label" for="inpNicImage">Image of National Identity Card</label>
+                            <input class="form-control" id="inpNicImageDriver" type="file"/>
+                        </section>
+                        <section class="col-6">
+                            <label class="form-label" for="inpDrivingLicenseImage">Image of Driving License</label>
+                            <input class="form-control" id="inpDrivingLicenseImageDriver" type="file"/>
+                        </section>
+                    </section>
+
+                    <section class="row">
+                        <section class="col-12">
+                            <button class="btn btn-primary btn-block mb-4" id="driver-create-account-btn">Register
+                                Driver
+                            </button>
+                            <!--                            <button id="create-account-btn">Create Account</button>-->
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="liner"></section>
+            <section id="driver-reg-image"></section>
+        </section>
+
+        <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+<!--        <section class="main-content" id="order-request-section">-->
+<!--            <section class="container" id="register-car-topic"><h3>Register Car</h3></section>-->
+<!--            <section class="container" id="car-details-section">-->
+<!--                <section class="container-fluid flex-container">-->
+<!--                    <section class="row">-->
+<!--                        <section class="col-4">-->
+<!--                            <div class="form-outline">-->
+<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-car-registered-number"-->
+<!--                                       maxlength="20"-->
+<!--                                       type="text"/>-->
+<!--                                <label class="form-label" for="inp-car-registered-number">Registered Number</label>-->
+<!--                                <div class="form-helper"></div>-->
+<!--                            </div>-->
+<!--                        </section>-->
+<!--                        <section class="col-4">-->
+<!--                            <select aria-label="Default select example" class="form-select" id="select-car-brand">-->
+<!--                                <option selected>Brand</option>-->
+<!--                                <option value="BMW">BMW</option>-->
+<!--                                <option value="Volvo">Volvo</option>-->
+<!--                                <option value="Toyota">Toyota</option>-->
+<!--                                <option value="Nissan">Nissan</option>-->
+<!--                                <option value="Suzuki">Suzuki</option>-->
+<!--                            </select>-->
+<!--                        </section>-->
+<!--                        <section class="col-4">-->
+<!--                            <select aria-label="Default select example" class="form-select" id="select-car-type">-->
+<!--                                <option selected>Type</option>-->
+<!--                                <option value="Mini">General</option>-->
+<!--                                <option value="Premium">Premium</option>-->
+<!--                                <option value="Luxury">Luxury</option>-->
+<!--                            </select>-->
+<!--                        </section>-->
+<!--                    </section>-->
+
+
+<!--                    <section class="row">-->
+<!--                        <section class="col-4">-->
+<!--                            <select aria-label="Default select example" class="form-select"-->
+<!--                                    id="select-transmission-type">-->
+<!--                                <option selected>Transmission Type</option>-->
+<!--                                <option value="Auto">Auto</option>-->
+<!--                                <option value="Manual">Manual</option>-->
+<!--                            </select>-->
+<!--                        </section>-->
+<!--                        <section class="col-4">-->
+<!--                            <div class="form-outline">-->
+<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-passenger-count"-->
+<!--                                       maxlength="20"-->
+<!--                                       type="text"/>-->
+<!--                                <label class="form-label" for="inp-passenger-count">Number of Passengers</label>-->
+<!--                                <div class="form-helper"></div>-->
+<!--                            </div>-->
+<!--                        </section>-->
+<!--                        <section class="col-4">-->
+<!--                            <select aria-label="Default select example" class="form-select" id="select-fuel-type">-->
+<!--                                <option selected>Fuel Type</option>-->
+<!--                                <option value="Petrol">Petrol</option>-->
+<!--                                <option value="Diesel">Diesel</option>-->
+<!--                            </select>-->
+<!--                        </section>-->
+<!--                    </section>-->
+
+<!--                    <section class="row">-->
+<!--                        <section class="col-4">-->
+<!--                            <div class="form-outline">-->
+<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-daily-km" maxlength="20"-->
+<!--                                       type="text"/>-->
+<!--                                <label class="form-label" for="inp-daily-km">Daily Km</label>-->
+<!--                                <div class="form-helper"></div>-->
+<!--                            </div>-->
+<!--                        </section>-->
+<!--                        <section class="col-4">-->
+<!--                            <div class="form-outline">-->
+<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-monthly-km"-->
+<!--                                       maxlength="20"-->
+<!--                                       type="text"/>-->
+<!--                                <label class="form-label" for="inp-monthly-km">Monthly Km</label>-->
+<!--                                <div class="form-helper"></div>-->
+<!--                            </div>-->
+<!--                        </section>-->
+<!--                        <section class="col-4">-->
+<!--                            <div class="form-outline">-->
+<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-daily-rate"-->
+<!--                                       maxlength="20"-->
+<!--                                       type="text"/>-->
+<!--                                <label class="form-label" for="inp-daily-rate">Daily Rate</label>-->
+<!--                                <div class="form-helper"></div>-->
+<!--                            </div>-->
+<!--                        </section>-->
+<!--                    </section>-->
+
+<!--                    <section class="row">-->
+<!--                        <section class="col-4">-->
+<!--                            <div class="form-outline">-->
+<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-monthly-rate"-->
+<!--                                       maxlength="20"-->
+<!--                                       type="text"/>-->
+<!--                                <label class="form-label" for="inp-monthly-rate">Monthly Rate</label>-->
+<!--                                <div class="form-helper"></div>-->
+<!--                            </div>-->
+<!--                        </section>-->
+<!--                        <section class="col-4">-->
+<!--                            <div class="form-outline">-->
+<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-extra-price"-->
+<!--                                       maxlength="20"-->
+<!--                                       type="text"/>-->
+<!--                                <label class="form-label" for="inp-extra-price">Price for extra Km</label>-->
+<!--                                <div class="form-helper"></div>-->
+<!--                            </div>-->
+<!--                        </section>-->
+<!--                        <section class="col-4">-->
+<!--                            <select aria-label="Default select example" class="form-select"-->
+<!--                                    id="select-car-current-status">-->
+<!--                                <option selected>Current Status</option>-->
+<!--                                <option value="1">Maintaining</option>-->
+<!--                                <option value="2">Booked</option>-->
+<!--                                <option value="3">Available</option>-->
+<!--                            </select>-->
+<!--                        </section>-->
+<!--                    </section>-->
+
+<!--                    <section class="row">-->
+<!--                        <section class="col-6">-->
+<!--                            <label class="form-label" for="inp-car-front-view">Front view of the car</label>-->
+<!--                            <input class="form-control" id="inp-car-front-view" type="file"/>-->
+<!--                        </section>-->
+<!--                        <section class="col-6">-->
+<!--                            <label class="form-label" for="inp-car-back-view">Back view of the car</label>-->
+<!--                            <input class="form-control" id="inp-car-back-view" type="file"/>-->
+<!--                        </section>-->
+<!--                    </section>-->
+
+
+<!--                    <section class="row">-->
+<!--                        <section class="col-6">-->
+<!--                            <label class="form-label" for="inp-car-side-view" style="margin-top: 18px">Side view of the-->
+<!--                                car</label>-->
+<!--                            <input class="form-control" id="inp-car-side-view" type="file"/>-->
+<!--                        </section>-->
+<!--                        <section class="col-6">-->
+<!--                            <label class="form-label" for="inp-car-interior-view" style="margin-top: 18px">Interior view-->
+<!--                                of the-->
+<!--                                car</label>-->
+<!--                            <input class="form-control" id="inp-car-interior-view" type="file"/>-->
+<!--                        </section>-->
+<!--                    </section>-->
+
+<!--                    <section class="row">-->
+<!--                        <section class="col-12">-->
+<!--                            <button class="btn btn-primary btn-block mb-4" id="register-car-btn">Register Car</button>-->
+<!--                        </section>-->
+<!--                    </section>-->
+
+<!--                </section>-->
+<!--            </section>-->
+<!--            <section id="car-register-image"></section>-->
+<!--        </section>-->
+
+
 
 </main>
 <script
