@@ -25,6 +25,68 @@
     bottom: 0;
     /*height: 250px;*/
 }
+#cars-container h3{
+    color: black;
+}
+
+.car-price{
+    display: flex;
+    flex-flow: column;
+}
+
+.car-selection div{
+    margin-top: 25px;
+}
+.car-selection input{
+    width: 10%;
+}
+
+#odd-btn{
+    background-color: #0860e3;
+}
+
+.car-selection button{
+    margin-top: 20px;
+    width: 260px;
+    height: 30px;
+    border: transparent;
+    background-color: #8507de;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.price{
+    font-size: 23px;
+    color: #5110e8;
+}
+
+.car-price>section{
+    font-family: 'Poppins', sans-serif;
+    /*border: 1px solid red;*/
+    height: 50%;
+    display: flex;
+}
+
+.car-price>section>section{
+    font-family: 'Poppins', sans-serif;
+    /*border: 1px solid red;*/
+    width: 50%;
+}
+
+h5{
+    font-family: 'Poppins', sans-serif;
+    color: blue;
+}
+
+.car-details .row{
+    width: 100%;
+}
+
+span{
+    position: absolute;
+    margin: auto;
+    top: 30px;
+}
 
 .car-details{
     display: flex;
@@ -33,7 +95,7 @@
 
 .car-details>section{
     width: 100%;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
     height: 25%;
 }
 
