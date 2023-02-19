@@ -41,16 +41,24 @@
     width: 10%;
 }
 
+#car-select-topic{
+    position: absolute;
+    /*border: 1px solid red;*/
+    left: 30px;
+    margin: auto;
+    top: 10px;
+}
+
 #odd-btn{
-    background-color: #0860e3;
+    /*background-color: #0860e3;*/
 }
 
 .car-selection button{
-    margin-top: 20px;
+    margin-top: 18px;
     width: 260px;
-    height: 30px;
+    height: 35px;!important;
     border: transparent;
-    background-color: #8507de;
+    /*background-color: #8507de;*/
     color: white;
     font-family: 'Poppins', sans-serif;
 }
