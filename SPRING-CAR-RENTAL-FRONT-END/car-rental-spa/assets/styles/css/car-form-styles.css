@@ -1,11 +1,12 @@
 #cars-container{
-    border: 1px solid red;
-    width: 900px;
-    /*overflow-y: scroll;*/
+    /*border: 1px solid red;*/
+    width: 1000px;
+    overflow-y: scroll;
     position: absolute;
     margin: auto;
     left: 10px;
-    height: 500px;
+    bottom: 10px;
+    height: 550px;
 }
 
 #cars-container>section{
@@ -23,6 +24,30 @@
     top: 0;
     bottom: 0;
     /*height: 250px;*/
+}
+
+.car-details{
+    display: flex;
+    flex-flow: column;
+}
+
+.car-details>section{
+    width: 100%;
+    border: 1px solid red;
+    height: 25%;
+}
+
+#cars-container>section>section>section{
+    border: 1px solid #aaa8aa;
+    /*border-radius: 2%;*/
+    /*height: 250px;*/
+}
+
+#car-img{
+    /*border: 1px solid red;*/
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../images/2022-ford-mustang-shelby-gt500-02-1636734552.jpg");
 }
 
 #cars-section>button{
