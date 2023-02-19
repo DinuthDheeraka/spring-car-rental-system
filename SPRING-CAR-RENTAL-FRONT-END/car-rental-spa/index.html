@@ -12,6 +12,7 @@
     <link href="assets/styles/css/all-driver-form-styles.css" rel="stylesheet">
     <link href="assets/styles/css/register-car-form.css" rel="stylesheet">
     <link href="assets/styles/css/register-driver-form-styles.css" rel="stylesheet">
+    <link href="assets/styles/css/car-form-styles.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/css/normalize.css" rel="stylesheet">
 
@@ -1105,168 +1106,15 @@
             <section id="driver-reg-image"></section>
         </section>
 
-        <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
-<!--        <section class="main-content" id="order-request-section">-->
-<!--            <section class="container" id="register-car-topic"><h3>Register Car</h3></section>-->
-<!--            <section class="container" id="car-details-section">-->
-<!--                <section class="container-fluid flex-container">-->
-<!--                    <section class="row">-->
-<!--                        <section class="col-4">-->
-<!--                            <div class="form-outline">-->
-<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-car-registered-number"-->
-<!--                                       maxlength="20"-->
-<!--                                       type="text"/>-->
-<!--                                <label class="form-label" for="inp-car-registered-number">Registered Number</label>-->
-<!--                                <div class="form-helper"></div>-->
-<!--                            </div>-->
-<!--                        </section>-->
-<!--                        <section class="col-4">-->
-<!--                            <select aria-label="Default select example" class="form-select" id="select-car-brand">-->
-<!--                                <option selected>Brand</option>-->
-<!--                                <option value="BMW">BMW</option>-->
-<!--                                <option value="Volvo">Volvo</option>-->
-<!--                                <option value="Toyota">Toyota</option>-->
-<!--                                <option value="Nissan">Nissan</option>-->
-<!--                                <option value="Suzuki">Suzuki</option>-->
-<!--                            </select>-->
-<!--                        </section>-->
-<!--                        <section class="col-4">-->
-<!--                            <select aria-label="Default select example" class="form-select" id="select-car-type">-->
-<!--                                <option selected>Type</option>-->
-<!--                                <option value="Mini">General</option>-->
-<!--                                <option value="Premium">Premium</option>-->
-<!--                                <option value="Luxury">Luxury</option>-->
-<!--                            </select>-->
-<!--                        </section>-->
-<!--                    </section>-->
+        <section class="main-content" id="cars-section">
+            <button id="add">add</button>
+            <section class="container" id="cars-container">
 
-
-<!--                    <section class="row">-->
-<!--                        <section class="col-4">-->
-<!--                            <select aria-label="Default select example" class="form-select"-->
-<!--                                    id="select-transmission-type">-->
-<!--                                <option selected>Transmission Type</option>-->
-<!--                                <option value="Auto">Auto</option>-->
-<!--                                <option value="Manual">Manual</option>-->
-<!--                            </select>-->
-<!--                        </section>-->
-<!--                        <section class="col-4">-->
-<!--                            <div class="form-outline">-->
-<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-passenger-count"-->
-<!--                                       maxlength="20"-->
-<!--                                       type="text"/>-->
-<!--                                <label class="form-label" for="inp-passenger-count">Number of Passengers</label>-->
-<!--                                <div class="form-helper"></div>-->
-<!--                            </div>-->
-<!--                        </section>-->
-<!--                        <section class="col-4">-->
-<!--                            <select aria-label="Default select example" class="form-select" id="select-fuel-type">-->
-<!--                                <option selected>Fuel Type</option>-->
-<!--                                <option value="Petrol">Petrol</option>-->
-<!--                                <option value="Diesel">Diesel</option>-->
-<!--                            </select>-->
-<!--                        </section>-->
-<!--                    </section>-->
-
-<!--                    <section class="row">-->
-<!--                        <section class="col-4">-->
-<!--                            <div class="form-outline">-->
-<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-daily-km" maxlength="20"-->
-<!--                                       type="text"/>-->
-<!--                                <label class="form-label" for="inp-daily-km">Daily Km</label>-->
-<!--                                <div class="form-helper"></div>-->
-<!--                            </div>-->
-<!--                        </section>-->
-<!--                        <section class="col-4">-->
-<!--                            <div class="form-outline">-->
-<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-monthly-km"-->
-<!--                                       maxlength="20"-->
-<!--                                       type="text"/>-->
-<!--                                <label class="form-label" for="inp-monthly-km">Monthly Km</label>-->
-<!--                                <div class="form-helper"></div>-->
-<!--                            </div>-->
-<!--                        </section>-->
-<!--                        <section class="col-4">-->
-<!--                            <div class="form-outline">-->
-<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-daily-rate"-->
-<!--                                       maxlength="20"-->
-<!--                                       type="text"/>-->
-<!--                                <label class="form-label" for="inp-daily-rate">Daily Rate</label>-->
-<!--                                <div class="form-helper"></div>-->
-<!--                            </div>-->
-<!--                        </section>-->
-<!--                    </section>-->
-
-<!--                    <section class="row">-->
-<!--                        <section class="col-4">-->
-<!--                            <div class="form-outline">-->
-<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-monthly-rate"-->
-<!--                                       maxlength="20"-->
-<!--                                       type="text"/>-->
-<!--                                <label class="form-label" for="inp-monthly-rate">Monthly Rate</label>-->
-<!--                                <div class="form-helper"></div>-->
-<!--                            </div>-->
-<!--                        </section>-->
-<!--                        <section class="col-4">-->
-<!--                            <div class="form-outline">-->
-<!--                                <input class="form-control" data-mdb-showcounter="true" id="inp-extra-price"-->
-<!--                                       maxlength="20"-->
-<!--                                       type="text"/>-->
-<!--                                <label class="form-label" for="inp-extra-price">Price for extra Km</label>-->
-<!--                                <div class="form-helper"></div>-->
-<!--                            </div>-->
-<!--                        </section>-->
-<!--                        <section class="col-4">-->
-<!--                            <select aria-label="Default select example" class="form-select"-->
-<!--                                    id="select-car-current-status">-->
-<!--                                <option selected>Current Status</option>-->
-<!--                                <option value="1">Maintaining</option>-->
-<!--                                <option value="2">Booked</option>-->
-<!--                                <option value="3">Available</option>-->
-<!--                            </select>-->
-<!--                        </section>-->
-<!--                    </section>-->
-
-<!--                    <section class="row">-->
-<!--                        <section class="col-6">-->
-<!--                            <label class="form-label" for="inp-car-front-view">Front view of the car</label>-->
-<!--                            <input class="form-control" id="inp-car-front-view" type="file"/>-->
-<!--                        </section>-->
-<!--                        <section class="col-6">-->
-<!--                            <label class="form-label" for="inp-car-back-view">Back view of the car</label>-->
-<!--                            <input class="form-control" id="inp-car-back-view" type="file"/>-->
-<!--                        </section>-->
-<!--                    </section>-->
-
-
-<!--                    <section class="row">-->
-<!--                        <section class="col-6">-->
-<!--                            <label class="form-label" for="inp-car-side-view" style="margin-top: 18px">Side view of the-->
-<!--                                car</label>-->
-<!--                            <input class="form-control" id="inp-car-side-view" type="file"/>-->
-<!--                        </section>-->
-<!--                        <section class="col-6">-->
-<!--                            <label class="form-label" for="inp-car-interior-view" style="margin-top: 18px">Interior view-->
-<!--                                of the-->
-<!--                                car</label>-->
-<!--                            <input class="form-control" id="inp-car-interior-view" type="file"/>-->
-<!--                        </section>-->
-<!--                    </section>-->
-
-<!--                    <section class="row">-->
-<!--                        <section class="col-12">-->
-<!--                            <button class="btn btn-primary btn-block mb-4" id="register-car-btn">Register Car</button>-->
-<!--                        </section>-->
-<!--                    </section>-->
-
-<!--                </section>-->
-<!--            </section>-->
-<!--            <section id="car-register-image"></section>-->
-<!--        </section>-->
-
-
-
+            </section>
+        </section>
+    </section>
 </main>
 <script
         src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"
@@ -1276,5 +1124,6 @@
 <script src="assets/styles/js/home.js"></script>
 <script src="../car-rental-spa/assets/controller/register-customer-form-controller.js"></script>
 <script src="../car-rental-spa/assets/controller/register-car-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/car-form-controller.js"></script>
 </body>
 </html>

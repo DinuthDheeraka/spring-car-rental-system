@@ -1,0 +1,19 @@
+#cars-container{
+    border: 1px solid red;
+    width: 900px;
+    overflow-y: scroll;
+    position: absolute;
+    margin: auto;
+    left: 10px;
+    height: 500px;
+}
+
+#cars-container>section{
+    height: 250px;
+}
+
+#cars-section>button{
+    position: absolute;
+    margin: auto;
+    right: 0;
+}
