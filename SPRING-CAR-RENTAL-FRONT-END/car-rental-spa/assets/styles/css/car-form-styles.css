@@ -5,7 +5,7 @@
     position: absolute;
     margin: auto;
     left: 10px;
-    bottom: 10px;
+    bottom: 40px;
     height: 550px;
 }
 
@@ -35,10 +35,35 @@
 }
 
 .car-selection div{
-    margin-top: 25px;
+    margin-top: 60px;
 }
 .car-selection input{
     width: 10%;
+}
+
+.temp{
+    /*border: 1px solid red;*/
+    height: 5px;
+    position: absolute;
+    margin: auto;
+    top: 140px;
+}
+
+.temp>section{
+    /*border: 1px solid #c726cd;*/
+}
+
+.fuel-h5{
+    margin-left: -11px;
+}
+
+.temp>section>h5{
+    margin-top: 20px;
+    color: black;
+}
+
+.span02{
+    margin-left: 70px;
 }
 
 #car-select-topic{
@@ -54,7 +79,7 @@
 }
 
 .car-selection button{
-    margin-top: 18px;
+    margin-top: 50px;
     width: 260px;
     height: 35px;!important;
     border: transparent;
@@ -93,7 +118,7 @@ h5{
 span{
     position: absolute;
     margin: auto;
-    top: 30px;
+    top: 7px;
 }
 
 .car-details{
@@ -124,4 +149,18 @@ span{
     position: absolute;
     margin: auto;
     right: 0;
+}
+
+#all-cars-filter{
+    width: 30%;
+    border: 1px solid red;
+    position: absolute;
+    margin: auto;
+    top: 72px;
+    right: 20px;
+    height: 200px;
+}
+
+.car-name{
+    margin-top: -29px;
 }
