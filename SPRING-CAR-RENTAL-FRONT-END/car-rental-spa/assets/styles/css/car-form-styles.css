@@ -158,7 +158,27 @@ span{
     margin: auto;
     top: 72px;
     right: 20px;
-    height: 200px;
+}
+
+#all-cars-filter>section{
+    margin-top: 10px;
+    /*border: 1px solid #6314f5;*/
+}
+
+#all-cars-filter button{
+    width: 100%;
+    height: 35px;
+    /*border: 1px solid #6314f5;*/
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    background-color: #f59a10;
+    color: white;
+}
+
+#all-cars-filter h5{
+    /*border: 1px solid #6314f5;*/
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
 }
 
 .car-name{
