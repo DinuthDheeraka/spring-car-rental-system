@@ -1208,28 +1208,29 @@
         <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
         <section class="main-content" id="main-order-request-section">
+            <section id="request-order-page-btn-section"><button>Request order</button></section>
             <section id="request-order-topic"><h3>Request for order</h3></section>
             <section class="container" id="order-request-inputs-container">
                 <section class="row">
-                    <section class="col-12"><h5 id="order-detail">Order details</h5></section>
+                    <section class="col-12"><h5 id="order-detail">Order Details</h5></section>
                 </section>
 
                 <section class="row">
                     <section class="col-3">
                         <label class="form-check-label">Pickup Date</label>
-                        <input type="date" class="form-control">
+                        <input class="form-control" type="date">
                     </section>
                     <section class="col-3">
                         <label class="form-check-label">Pickup Time</label>
-                        <input type="time" class="form-control">
+                        <input class="form-control" type="time">
                     </section>
                     <section class="col-3">
                         <label class="form-check-label">Return Date</label>
-                        <input type="date" class="form-control">
+                        <input class="form-control" type="date">
                     </section>
                     <section class="col-3">
                         <label class="form-check-label">Return Time</label>
-                        <input type="time" class="form-control">
+                        <input class="form-control" type="time">
                     </section>
                 </section>
 
@@ -1258,7 +1259,7 @@
                 <section class="row">
                     <section class="col-12">
                         <div class="form-check" id="driver-check-box">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <input class="form-check-input" id="flexCheckDefault" type="checkbox" value=""/>
                             <label class="form-check-label" for="flexCheckDefault">Assign a Driver</label>
                         </div>
                     </section>
@@ -1305,7 +1306,26 @@
                 </section>
                 <section class="row"></section>
             </section>
-            <section class="container" id="request-car-container"></section>
+            <section class="container" id="request-car-container">
+                <section class="row">
+                    <section class="col-12"><h5 id="selected-car-details-topic">Selected Car Details</h5></section>
+                </section>
+            </section>
+            <section class="container" id="request-order-payment-details">
+                <section class="row">
+                    <section class="col-12">
+                        <h5 id="request-payments-details-topic">Payments Details</h5>
+                    </section>
+                </section>
+            </section>
+            <section class="container" id="reason-for-rejection-section">
+                <section class="row">
+                    <section class="col-12"><h5>Reason for Rejecting your order request</h5></section>
+                </section>
+                <section class="row">
+                    <section class="col-12"><textarea cols="78" id="w3review" name="w3review" rows="4"></textarea></section>
+                </section>
+            </section>
         </section>
 
     </section>

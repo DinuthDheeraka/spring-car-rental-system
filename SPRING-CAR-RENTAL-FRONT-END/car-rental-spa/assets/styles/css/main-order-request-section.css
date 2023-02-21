@@ -2,7 +2,7 @@
     border: 1px solid #adaaaa;
     position: absolute;
     left: 30px;
-    top: 80px;
+    top: 70px;
     /*height: 500px;*/
     width: 800px;
 }
@@ -10,19 +10,86 @@
 #request-car-container{
     position: absolute;
     margin: auto;
-    border: 1px solid red;
-    width: 650px;
-    right: 30px;
-    top: 80px;
+    border: 1px solid #9c9a9a;
+    width: 800px;
+    left: 30px;
+    bottom: 10px;
+    overflow-y: scroll;
+    height: 250px;
+}
+
+#selected-car-details-topic{
+    color: black;
+}
+
+#request-car-container>section{
+    margin-top: 10px;
+    /*border: 1px solid fuchsia;*/
 }
 
 #order-request-driver-detail-container{
     border: 1px solid #aaa9a9;
-    width: 500px;
+    width: 670px;
     position: absolute;
     margin: auto;
-    left: 30px;
+    right: 30px;
+    top: 70px;
+}
+
+#request-order-payment-details{
+    position: absolute;
+    margin: auto;
+    border: 1px solid #b3afaf;
+    right: 30px;
+    top: 275px;
+    height: 200px;
+    width: 670px;
+}
+
+#reason-for-rejection-section{
+    border: 1px solid #9e9d9d;
+    position: absolute;
     bottom: 10px;
+    margin: auto;
+    right: 30px;
+    width: 670px;
+    height: 168px;
+}
+
+#request-order-page-btn-section{
+    position: absolute;
+    margin: auto;
+    right: 30px;
+    top: 18px;
+}
+
+#request-order-page-btn-section>button{
+    border: transparent;
+    background-color: #05c60f;
+    color: white;
+    width: 180px;
+    height: 35px;
+}
+
+textarea{
+    border-color: #7d7b7b;
+    font-family: 'Poppins', sans-serif;
+}
+
+#reason-for-rejection-section h5{
+    color: black;
+}
+
+#reason-for-rejection-section>section{
+    margin-top: 10px;
+}
+
+#request-order-payment-details>section{
+    margin-top: 10px;
+}
+
+#request-payments-details-topic{
+    color: black;
 }
 
 #order-request-driver-detail-container>section{
