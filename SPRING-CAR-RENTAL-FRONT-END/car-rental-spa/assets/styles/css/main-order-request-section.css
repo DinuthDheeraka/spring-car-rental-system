@@ -1,0 +1,54 @@
+#order-request-inputs-container{
+    border: 1px solid #adaaaa;
+    position: absolute;
+    left: 30px;
+    top: 80px;
+    /*height: 500px;*/
+    width: 800px;
+}
+
+#request-car-container{
+    position: absolute;
+    margin: auto;
+    border: 1px solid red;
+    width: 650px;
+    right: 30px;
+    top: 80px;
+}
+
+#order-request-driver-detail-container{
+    border: 1px solid #aaa9a9;
+    width: 500px;
+    position: absolute;
+    margin: auto;
+    left: 30px;
+    bottom: 10px;
+}
+
+#order-request-driver-detail-container>section{
+    margin-top: 10px;
+}
+
+#request-order-topic{
+    position: absolute;
+    margin: auto;
+    top: 10px;
+    left: 30px;
+}
+
+#request-order-topic>h3{
+    color: black;
+}
+
+#driver-check-box{
+    /*margin-top: 40px;*/
+}
+
+#order-detail{
+    color: black;
+}
+
+#order-request-inputs-container>section{
+    margin-top: 20px;
+    /*border: 1px solid #a110de;*/
+}

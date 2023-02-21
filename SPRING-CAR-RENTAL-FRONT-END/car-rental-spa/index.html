@@ -13,6 +13,7 @@
     <link href="assets/styles/css/register-car-form.css" rel="stylesheet">
     <link href="assets/styles/css/register-driver-form-styles.css" rel="stylesheet">
     <link href="assets/styles/css/car-form-styles.css" rel="stylesheet">
+    <link href="assets/styles/css/main-order-request-section.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/css/normalize.css" rel="stylesheet">
 
@@ -1107,7 +1108,7 @@
             <section id="driver-reg-image"></section>
         </section>
 
-<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+        <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
         <section class="main-content" id="cars-section">
             <section id="car-select-topic"><h3 style="color: black">Select and Rent Cars</h3></section>
@@ -1115,7 +1116,9 @@
             <section class="container" id="cars-container">
             </section>
 
-            <section class="container" id="request-order-btn-section"><button id="request-order-btn">Request order</button></section>
+            <section class="container" id="request-order-btn-section">
+                <button id="request-order-btn">Request order</button>
+            </section>
 
             <section class="container" id="all-car-image-sec"></section>
 
@@ -1172,7 +1175,7 @@
                 <section class="row">
                     <section class="col-6">
                         <div class="form-outline">
-                            <input class="form-control"  id="inp-daily-rate"
+                            <input class="form-control" id="inp-daily-rate"
                                    type="text"/>
                             <label class="form-label" for="inp-daily-rate">Daily Rate</label>
                             <div class="form-helper"></div>
@@ -1201,6 +1204,110 @@
                 </section>
             </section>
         </section>
+
+        <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+        <section class="main-content" id="main-order-request-section">
+            <section id="request-order-topic"><h3>Request for order</h3></section>
+            <section class="container" id="order-request-inputs-container">
+                <section class="row">
+                    <section class="col-12"><h5 id="order-detail">Order details</h5></section>
+                </section>
+
+                <section class="row">
+                    <section class="col-3">
+                        <label class="form-check-label">Pickup Date</label>
+                        <input type="date" class="form-control">
+                    </section>
+                    <section class="col-3">
+                        <label class="form-check-label">Pickup Time</label>
+                        <input type="time" class="form-control">
+                    </section>
+                    <section class="col-3">
+                        <label class="form-check-label">Return Date</label>
+                        <input type="date" class="form-control">
+                    </section>
+                    <section class="col-3">
+                        <label class="form-check-label">Return Time</label>
+                        <input type="time" class="form-control">
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input class="form-control" id="inp-daily-km" maxlength="20"
+                                   type="text"/>
+                            <label class="form-label" for="inp-daily-km">Pickup Venue</label>
+                            <div class="form-helper"></div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input class="form-control" id="inp-daily-km" maxlength="20"
+                                   type="text"/>
+                            <label class="form-label" for="inp-daily-km">Return Venue</label>
+                            <div class="form-helper"></div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-check" id="driver-check-box">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                            <label class="form-check-label" for="flexCheckDefault">Assign a Driver</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row"></section>
+            </section>
+            <section class="container" id="order-request-driver-detail-container">
+                <section class="row">
+                    <section class="col-12"><h5 id="order-detail">Driver Details</h5></section>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input class="form-control" id="inp-daily-km" maxlength="20"
+                                   type="text"/>
+                            <label class="form-label" for="inp-daily-km">Driver Name</label>
+                            <div class="form-helper"></div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input class="form-control" id="inp-daily-km" maxlength="20"
+                                   type="text"/>
+                            <label class="form-label" for="inp-daily-km">Driver Contact Number</label>
+                            <div class="form-helper"></div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input class="form-control" id="inp-daily-km" maxlength="20"
+                                   type="text"/>
+                            <label class="form-label" for="inp-daily-km">Driver E-mail</label>
+                            <div class="form-helper"></div>
+                        </div>
+                    </section>
+                </section>
+                <section class="row"></section>
+            </section>
+            <section class="container" id="request-car-container"></section>
+        </section>
+
     </section>
 </main>
 <script
