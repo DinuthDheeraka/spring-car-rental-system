@@ -35,19 +35,19 @@ public class CarController {
         byte[] bytes = new byte[0];
         try {
             bytes = frontView.getBytes();
-            Path frontViewPath = Paths.get("E:\\carViews\\"+carId +"-"+"frontView.png");
+            Path frontViewPath = Paths.get("E:\\upload\\car\\"+carId +"-"+"frontView.png");
             Files.write(frontViewPath, bytes);
 
             bytes = sideView.getBytes();
-            Path sideViewPath = Paths.get("E:\\carViews\\"+carId +"-"+"sideView.png");
+            Path sideViewPath = Paths.get("E:\\upload\\car\\"+carId +"-"+"sideView.png");
             Files.write(sideViewPath, bytes);
 
             bytes = backView.getBytes();
-            Path backViewPath = Paths.get("E:\\carViews\\"+carId +"-"+"backView.png");
+            Path backViewPath = Paths.get("E:\\upload\\car\\"+carId +"-"+"backView.png");
             Files.write(backViewPath, bytes);
 
             bytes = interiorView.getBytes();
-            Path interiorPath = Paths.get("E:\\carViews\\"+carId +"-"+"interiorView.png");
+            Path interiorPath = Paths.get("E:\\upload\\car\\"+carId +"-"+"interiorView.png");
             Files.write(interiorPath, bytes);
 
         } catch (IOException ioException) {
