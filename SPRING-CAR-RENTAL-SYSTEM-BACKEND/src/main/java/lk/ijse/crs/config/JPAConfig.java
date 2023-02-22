@@ -4,6 +4,7 @@
  */
 package lk.ijse.crs.config;
 
+import lk.ijse.crs.repo.CarRepo;
 import lk.ijse.crs.repo.CustomerRepo;
 import lk.ijse.crs.repo.DriverRepo;
 import org.springframework.context.annotation.Bean;
@@ -23,7 +24,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
-@EnableJpaRepositories(basePackageClasses = {CustomerRepo.class, DriverRepo.class})
+@EnableJpaRepositories(basePackageClasses = {CustomerRepo.class, DriverRepo.class, CarRepo.class})
 public class JPAConfig {
 
     @Bean

@@ -22,7 +22,7 @@ import javax.persistence.Id;
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    String carId;
+    int carId;
     String registrationId;
     double monthlyRate;
     double dailyRate;

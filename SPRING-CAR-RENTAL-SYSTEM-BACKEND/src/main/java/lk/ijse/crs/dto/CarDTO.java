@@ -14,7 +14,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class CarDTO {
-    String carId;
+    int carId;
     String registrationId;
     double monthlyRate;
     double dailyRate;

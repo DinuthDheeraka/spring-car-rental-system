@@ -6,6 +6,8 @@ package lk.ijse.crs.controller;
 
 import lk.ijse.crs.dto.CarDTO;
 import lk.ijse.crs.dto.CustomerDTO;
+import lk.ijse.crs.service.CarService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -19,13 +21,16 @@ import java.nio.file.Paths;
 @RequestMapping("/car")
 public class CarController {
 
+    @Autowired
+    CarService carService;
+
     public CarController(){
         System.out.println("CREATED CAR CONTROLLER");
     }
 
     @PostMapping(path = {"/register"}, consumes = {"application/json"})
     public void addCar(@RequestBody CarDTO carDTO) {
-        System.out.println("car");
+        carService.addCar(carDTO);
         System.out.println(carDTO);
     }
 
