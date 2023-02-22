@@ -5,6 +5,8 @@
 package lk.ijse.crs.controller;
 
 import lk.ijse.crs.dto.CustomerDTO;
+import lk.ijse.crs.service.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -18,8 +20,12 @@ import java.nio.file.Paths;
 @RequestMapping("/customer")
 public class CustomerController {
 
+    @Autowired
+    CustomerService customerService;
+
     @PostMapping(path = {"/register"}, consumes = {"application/json"})
     public void addCustomer(@RequestBody CustomerDTO customerDTO) {
+        customerService.addCustomer(customerDTO);
         System.out.println(customerDTO);
     }
 

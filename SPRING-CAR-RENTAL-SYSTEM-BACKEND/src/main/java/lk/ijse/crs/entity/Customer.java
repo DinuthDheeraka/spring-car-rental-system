@@ -20,11 +20,11 @@ import javax.persistence.Id;
 public class Customer {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    int id;
-    String name;
+    int customerId;
     String nicNumber;
     String drivingLicenseNumber;
-    String address;
-    String contactNumber;
+    String fullName;
+    String homeAddress;
+    String telephoneNumber;
     String emailAddress;
 }

@@ -14,7 +14,7 @@ function uploadCustomerNicAndDrivingLicense(){
 
 
     $.ajax({
-        url: baseUrl+'/customer/upload/CT-000001',
+        url: baseUrl+'/customer/upload/1',
         data: formData,
         type: 'POST',
         contentType: false,
