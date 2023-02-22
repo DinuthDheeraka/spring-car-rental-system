@@ -1,8 +1,8 @@
 /**
  * @author :  Dinuth Dheeraka
- * Created : 2/22/2023 8:30 PM
+ * Created : 2/22/2023 10:21 PM
  */
-package lk.ijse.crs.entity;
+package lk.ijse.crs.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,26 +10,18 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.time.LocalTime;
 import java.util.Date;
 
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class orders {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+public class OrderDTO {
     int id;
     String orderId;
     String customerId;
     String driverId;
-    @CreationTimestamp
     Date orderRequestedDate;
     String deniedReason;
     String orderStatus;
