@@ -62,8 +62,8 @@
     color: black;
 }
 
-.span02{
-    margin-left: 70px;
+#cars-section .span02{
+    margin-left: 67px;
 }
 
 #car-select-topic{
@@ -115,7 +115,7 @@ h5{
     width: 100%;
 }
 
-span{
+#cars-section span{
     position: absolute;
     margin: auto;
     top: 7px;

@@ -1,3 +1,8 @@
+let selectedDriverStatus = '';
+$('#select-driver-status').change(function (e) {
+    selectedDriverStatus = e.target.value;
+});
+
 $('#driver-create-account-btn').click(function () {
     registerDriver();
     uploadDriverNicAndDrivingLicense();
@@ -35,7 +40,8 @@ function registerDriver() {
         fullName:$('#inpFullNameDriver').val(),
         homeAddress:$('#inpHomeAddressDriver').val(),
         telephoneNumber:$('#inpTeleNoDriver').val(),
-        emailAddress:$('#inpEmailDriver').val()
+        emailAddress:$('#inpEmailDriver').val(),
+        driverStatus:selectedDriverStatus
     };
 
     $.ajax({
