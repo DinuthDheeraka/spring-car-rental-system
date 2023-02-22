@@ -4,8 +4,10 @@
  */
 package lk.ijse.crs.config;
 
+import lk.ijse.crs.repo.CustomerRepo;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
@@ -20,12 +22,13 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableTransactionManagement
+@EnableJpaRepositories(basePackageClasses = {CustomerRepo.class})
 public class JPAConfig {
 
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactory(DataSource dataSource, JpaVendorAdapter jpaVendorAdapter){
         LocalContainerEntityManagerFactoryBean bean  = new LocalContainerEntityManagerFactoryBean();
-        bean.setPackagesToScan("lk.ijse.spring.entity");
+        bean.setPackagesToScan("lk.ijse.crs.entity");
         bean.setDataSource(dataSource);
         bean.setJpaVendorAdapter(jpaVendorAdapter);
         return bean;
