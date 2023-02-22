@@ -17,7 +17,7 @@ function uploadDriverNicAndDrivingLicense(){
 
 
     $.ajax({
-        url: baseUrl+'/driver/upload/DR-000001',
+        url: baseUrl+'/driver/upload/1',
         data: formData,
         type: 'POST',
         contentType: false,
