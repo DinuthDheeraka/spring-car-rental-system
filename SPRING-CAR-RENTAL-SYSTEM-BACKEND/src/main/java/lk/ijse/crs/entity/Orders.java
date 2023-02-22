@@ -22,7 +22,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class orders {
+public class Orders {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
