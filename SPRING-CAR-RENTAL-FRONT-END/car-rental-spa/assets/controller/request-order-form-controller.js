@@ -36,18 +36,18 @@ function requestOrder() {
         returnTime:$('#return-time').val(),
         pickupVenue:$('#inp-pickup-venue').val(),
         returnVenue:$('#inp-return-venue').val(),
-        assignDriver:$('#check-assign-driver').is(':checked')
+        driverId:'1'
     };
     console.log(order)
 
-    // $.ajax({
-    //     url:baseUrl+'customer/register',
-    //     dataType:'json',
-    //     contentType:'application/json',
-    //     data:JSON.stringify(order),
-    //     async:false,
-    //     method:'post',
-    //     success:function (resp) {
-    //     }
-    // });
+    $.ajax({
+        url:baseUrl+'order/place_order',
+        dataType:'json',
+        contentType:'application/json',
+        data:JSON.stringify(order),
+        async:false,
+        method:'post',
+        success:function (resp) {
+        }
+    });
 }
