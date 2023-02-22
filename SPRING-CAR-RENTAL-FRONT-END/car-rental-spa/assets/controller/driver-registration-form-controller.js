@@ -1,11 +1,11 @@
-let selectedDriverStatus = '';
+let selectedDriverStatus = 'Active';
 $('#select-driver-status').change(function (e) {
     selectedDriverStatus = e.target.value;
 });
 
 $('#driver-create-account-btn').click(function () {
     registerDriver();
-    uploadDriverNicAndDrivingLicense();
+    // uploadDriverNicAndDrivingLicense();
 });
 function uploadDriverNicAndDrivingLicense(){
     let nicImage = $("#inpNicImageDriver").prop('files')[0];

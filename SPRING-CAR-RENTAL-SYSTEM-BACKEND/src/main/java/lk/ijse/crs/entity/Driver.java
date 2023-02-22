@@ -20,7 +20,7 @@ import javax.persistence.Id;
 public class Driver {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    String driverId;
+    int driverId;
     String nicNumber;
     String drivingLicenseNumber;
     String fullName;

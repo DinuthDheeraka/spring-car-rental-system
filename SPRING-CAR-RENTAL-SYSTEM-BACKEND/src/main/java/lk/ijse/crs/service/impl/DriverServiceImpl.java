@@ -10,7 +10,12 @@ import lk.ijse.crs.repo.DriverRepo;
 import lk.ijse.crs.service.DriverService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
+@Service
+@Transactional
 public class DriverServiceImpl implements DriverService {
 
     @Autowired
