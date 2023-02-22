@@ -21,4 +21,10 @@ public class Customer {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     int id;
+    String name;
+    String nicNumber;
+    String drivingLicenseNumber;
+    String address;
+    String contactNumber;
+    String emailAddress;
 }
