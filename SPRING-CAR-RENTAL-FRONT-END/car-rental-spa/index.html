@@ -1039,7 +1039,7 @@
                         </section>
                         <section class="col-6">
                             <select aria-label="Default select example" class="form-select" id="select-driver-status">
-                                <option value="Active" selected>Active</option>
+                                <option selected value="Active">Active</option>
                                 <option value="Inactive">Inactive</option>
                             </select>
                         </section>
@@ -1210,38 +1210,37 @@
 
         <section class="main-content" id="main-order-request-section">
             <section id="request-order-page-btn-section">
-                <button>Request order</button>
+                <button id="main-request-order-btn">Request order</button>
             </section>
             <section id="request-order-topic"><h3>Request for order</h3></section>
             <section class="container" id="order-request-inputs-container">
                 <section class="row">
-                    <section class="col-12"><h5 id="order-detail">Order Details</h5></section>
+                    <section class="col-12"><h5 id="req-order-order-detail-topic">Order Details</h5></section>
                 </section>
 
                 <section class="row">
                     <section class="col-3">
                         <label class="form-check-label">Pickup Date</label>
-                        <input class="form-control" type="date">
+                        <input class="form-control" type="date" id="pickup-date">
                     </section>
                     <section class="col-3">
                         <label class="form-check-label">Pickup Time</label>
-                        <input class="form-control" type="time">
+                        <input class="form-control" type="time" id="pickup-time">
                     </section>
                     <section class="col-3">
                         <label class="form-check-label">Return Date</label>
-                        <input class="form-control" type="date">
+                        <input class="form-control" type="date" id="return-date">
                     </section>
                     <section class="col-3">
                         <label class="form-check-label">Return Time</label>
-                        <input class="form-control" type="time">
+                        <input class="form-control" type="time" id="return-time">
                     </section>
                 </section>
 
                 <section class="row">
                     <section class="col-12">
                         <div class="form-outline">
-                            <input class="form-control" id="inp-daily-km" maxlength="20"
-                                   type="text"/>
+                            <input class="form-control" id="inp-pickup-venue" maxlength="20" type="text"/>
                             <label class="form-label" for="inp-daily-km">Pickup Venue</label>
                             <div class="form-helper"></div>
                         </div>
@@ -1251,7 +1250,7 @@
                 <section class="row">
                     <section class="col-12">
                         <div class="form-outline">
-                            <input class="form-control" id="inp-daily-km" maxlength="20"
+                            <input class="form-control" id="inp-return-venue" maxlength="20"
                                    type="text"/>
                             <label class="form-label" for="inp-daily-km">Return Venue</label>
                             <div class="form-helper"></div>
@@ -1262,8 +1261,8 @@
                 <section class="row">
                     <section class="col-12">
                         <div class="form-check" id="driver-check-box">
-                            <input class="form-check-input" id="flexCheckDefault" type="checkbox" value=""/>
-                            <label class="form-check-label" for="flexCheckDefault">Assign a Driver</label>
+                            <input class="form-check-input" id="check-assign-driver" type="checkbox" value="assign"/>
+                            <label class="form-check-label" for="check-assign-driver">Assign a Driver</label>
                         </div>
                     </section>
                 </section>
@@ -1344,5 +1343,6 @@
 <script src="../car-rental-spa/assets/controller/register-car-form-controller.js"></script>
 <script src="../car-rental-spa/assets/controller/car-form-controller.js"></script>
 <script src="../car-rental-spa/assets/controller/driver-registration-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/request-order-form-controller.js"></script>
 </body>
 </html>

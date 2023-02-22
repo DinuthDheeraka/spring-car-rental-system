@@ -5,7 +5,6 @@
 package lk.ijse.crs.controller;
 
 import lk.ijse.crs.dto.CarDTO;
-import lk.ijse.crs.dto.CustomerDTO;
 import lk.ijse.crs.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +23,7 @@ public class CarController {
     @Autowired
     CarService carService;
 
-    public CarController(){
+    public CarController() {
         System.out.println("CREATED CAR CONTROLLER");
     }
 
@@ -40,19 +39,19 @@ public class CarController {
         byte[] bytes = new byte[0];
         try {
             bytes = frontView.getBytes();
-            Path frontViewPath = Paths.get("E:\\upload\\car\\"+carId +"-"+"frontView.png");
+            Path frontViewPath = Paths.get("E:\\upload\\car\\" + carId + "-" + "frontView.png");
             Files.write(frontViewPath, bytes);
 
             bytes = sideView.getBytes();
-            Path sideViewPath = Paths.get("E:\\upload\\car\\"+carId +"-"+"sideView.png");
+            Path sideViewPath = Paths.get("E:\\upload\\car\\" + carId + "-" + "sideView.png");
             Files.write(sideViewPath, bytes);
 
             bytes = backView.getBytes();
-            Path backViewPath = Paths.get("E:\\upload\\car\\"+carId +"-"+"backView.png");
+            Path backViewPath = Paths.get("E:\\upload\\car\\" + carId + "-" + "backView.png");
             Files.write(backViewPath, bytes);
 
             bytes = interiorView.getBytes();
-            Path interiorPath = Paths.get("E:\\upload\\car\\"+carId +"-"+"interiorView.png");
+            Path interiorPath = Paths.get("E:\\upload\\car\\" + carId + "-" + "interiorView.png");
             Files.write(interiorPath, bytes);
 
         } catch (IOException ioException) {

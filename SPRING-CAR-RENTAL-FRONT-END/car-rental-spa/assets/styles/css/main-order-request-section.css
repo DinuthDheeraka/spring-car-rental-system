@@ -63,6 +63,10 @@
     top: 18px;
 }
 
+#req-order-order-detail-topic{
+    color: black;
+}
+
 #request-order-page-btn-section>button{
     border: transparent;
     background-color: #05c60f;
