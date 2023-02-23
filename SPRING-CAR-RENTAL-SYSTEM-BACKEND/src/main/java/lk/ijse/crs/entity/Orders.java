@@ -24,7 +24,6 @@ import java.util.Date;
 @ToString
 public class Orders {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     int id;
     String orderId;
     String customerId;

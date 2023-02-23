@@ -19,7 +19,6 @@ import javax.persistence.Id;
 @NoArgsConstructor
 public class Customer {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
     int customerId;
     String nicNumber;
     String drivingLicenseNumber;

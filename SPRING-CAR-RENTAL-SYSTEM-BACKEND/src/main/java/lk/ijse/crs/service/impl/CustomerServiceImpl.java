@@ -27,5 +27,6 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void addCustomer(CustomerDTO customerDTO) {
         customerRepo.save(modelMapper.map(customerDTO, Customer.class));
+        System.out.println(customerRepo.getLastCustomerId());
     }
 }

@@ -27,6 +27,12 @@ public class CustomerController {
     public void addCustomer(@RequestBody CustomerDTO customerDTO) {
         customerService.addCustomer(customerDTO);
         System.out.println(customerDTO);
+        System.out.println();
+    }
+
+    @PostMapping(path = {"/lastCustomerId"})
+    public void findLastCustomerId() {
+
     }
 
     @PostMapping(path = {"/upload/{customerId}"})

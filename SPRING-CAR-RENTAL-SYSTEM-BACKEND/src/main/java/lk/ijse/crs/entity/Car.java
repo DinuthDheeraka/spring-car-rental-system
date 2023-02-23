@@ -21,7 +21,6 @@ import javax.persistence.Id;
 @ToString
 public class Car {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     int carId;
     String registrationId;
     double monthlyRate;
