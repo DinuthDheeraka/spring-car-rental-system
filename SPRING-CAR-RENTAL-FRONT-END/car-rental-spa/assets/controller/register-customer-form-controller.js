@@ -1,6 +1,6 @@
 let baseUrl = "http://localhost:8080/SPRING_CAR_RENTAL_SYSTEM_BACKEND_war_exploded/";
 
-let newCustomerId=0;
+let newCustomerId = 0;
 
 $('#create-account-btn').click(function () {
     getCustomerLastId();
@@ -10,15 +10,16 @@ $('#create-account-btn').click(function () {
 
 function getCustomerLastId() {
     $.ajax({
-        url:baseUrl+'customer/lastCustomerId',
-        async:false,
-        method:'get',
-        success:function (resp) {
-            newCustomerId = (resp.data[0]);
+        url: baseUrl + 'customer/lastCustomerId',
+        async: false,
+        method: 'get',
+        success: function (resp) {
+            newCustomerId = (resp.data[0])+1;
         }
     });
 }
-function uploadCustomerNicAndDrivingLicense(){
+
+function uploadCustomerNicAndDrivingLicense() {
     let nicImage = $("#inpNicImage").prop('files')[0];
     let drivingLicenseImage = $("#inpDrivingLicenseImage").prop('files')[0];
 
@@ -28,12 +29,12 @@ function uploadCustomerNicAndDrivingLicense(){
 
 
     $.ajax({
-        url: baseUrl+'/customer/upload/'+newCustomerId,
+        url: baseUrl + '/customer/upload/' + newCustomerId,
         data: formData,
         type: 'POST',
         contentType: false,
         processData: false,
-        async:false,
+        async: false,
         success: function (data) {
             // console.log('Image uploaded successfully.');
         },
@@ -46,23 +47,23 @@ function uploadCustomerNicAndDrivingLicense(){
 function registerCustomer() {
 
     let customer = {
-        customerId:newCustomerId,
-        nicNumber:$('#inpNicNo').val(),
-        drivingLicenseNumber:$('#inpDrivingLicenseNo').val(),
-        fullName:$('#inpFullName').val(),
-        homeAddress:$('#inpHomeAddress').val(),
-        telephoneNumber:$('#inpTeleNo').val(),
-        emailAddress:$('#inpEmail').val()
+        customerId: newCustomerId,
+        nicNumber: $('#inpNicNo').val(),
+        drivingLicenseNumber: $('#inpDrivingLicenseNo').val(),
+        fullName: $('#inpFullName').val(),
+        homeAddress: $('#inpHomeAddress').val(),
+        telephoneNumber: $('#inpTeleNo').val(),
+        emailAddress: $('#inpEmail').val()
     };
 
     $.ajax({
-        url:baseUrl+'customer/register',
-        dataType:'json',
-        contentType:'application/json',
-        data:JSON.stringify(customer),
-        async:false,
-        method:'post',
-        success:function (resp) {
+        url: baseUrl + 'customer/register',
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify(customer),
+        async: false,
+        method: 'post',
+        success: function (resp) {
         }
     });
 }
