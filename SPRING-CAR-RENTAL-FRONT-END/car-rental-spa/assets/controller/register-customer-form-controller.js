@@ -1,9 +1,23 @@
 let baseUrl = "http://localhost:8080/SPRING_CAR_RENTAL_SYSTEM_BACKEND_war_exploded/";
 
+let newCustomerId=0;
+
 $('#create-account-btn').click(function () {
+    getCustomerLastId();
     registerCustomer();
     uploadCustomerNicAndDrivingLicense();
 });
+
+function getCustomerLastId() {
+    $.ajax({
+        url:baseUrl+'customer/lastCustomerId',
+        async:false,
+        method:'get',
+        success:function (resp) {
+            newCustomerId = (resp.data[0]);
+        }
+    });
+}
 function uploadCustomerNicAndDrivingLicense(){
     let nicImage = $("#inpNicImage").prop('files')[0];
     let drivingLicenseImage = $("#inpDrivingLicenseImage").prop('files')[0];
@@ -14,7 +28,7 @@ function uploadCustomerNicAndDrivingLicense(){
 
 
     $.ajax({
-        url: baseUrl+'/customer/upload/1',
+        url: baseUrl+'/customer/upload/'+newCustomerId,
         data: formData,
         type: 'POST',
         contentType: false,
@@ -32,6 +46,7 @@ function uploadCustomerNicAndDrivingLicense(){
 function registerCustomer() {
 
     let customer = {
+        customerId:newCustomerId,
         nicNumber:$('#inpNicNo').val(),
         drivingLicenseNumber:$('#inpDrivingLicenseNo').val(),
         fullName:$('#inpFullName').val(),

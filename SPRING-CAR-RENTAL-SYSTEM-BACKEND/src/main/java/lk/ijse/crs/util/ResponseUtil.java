@@ -9,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -16,5 +17,5 @@ import java.util.ArrayList;
 public class ResponseUtil<T> {
     private String status;
     private String message;
-    private ArrayList<T> data;
+    private List<T> data;
 }

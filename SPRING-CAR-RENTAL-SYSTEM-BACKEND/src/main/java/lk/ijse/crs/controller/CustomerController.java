@@ -6,6 +6,7 @@ package lk.ijse.crs.controller;
 
 import lk.ijse.crs.dto.CustomerDTO;
 import lk.ijse.crs.service.CustomerService;
+import lk.ijse.crs.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,6 +15,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -27,12 +30,13 @@ public class CustomerController {
     public void addCustomer(@RequestBody CustomerDTO customerDTO) {
         customerService.addCustomer(customerDTO);
         System.out.println(customerDTO);
-        System.out.println();
     }
 
-    @PostMapping(path = {"/lastCustomerId"})
-    public void findLastCustomerId() {
-
+    @GetMapping(path = {"/lastCustomerId"})
+    public ResponseUtil<Integer> findLastCustomerId() {
+        ResponseUtil<Integer> responseUtil = new ResponseUtil(
+                "200","Done", customerService.findLastCustomerId());
+        return responseUtil;
     }
 
     @PostMapping(path = {"/upload/{customerId}"})

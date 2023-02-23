@@ -14,7 +14,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class CustomerDTO {
-    String customerId;
+    int customerId;
     String nicNumber;
     String drivingLicenseNumber;
     String fullName;

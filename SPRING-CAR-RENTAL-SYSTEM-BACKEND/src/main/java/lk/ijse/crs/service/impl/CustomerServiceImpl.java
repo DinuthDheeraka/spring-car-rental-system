@@ -13,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @Transactional
@@ -27,6 +29,10 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void addCustomer(CustomerDTO customerDTO) {
         customerRepo.save(modelMapper.map(customerDTO, Customer.class));
-        System.out.println(customerRepo.getLastCustomerId());
+    }
+
+    @Override
+    public List<Integer> findLastCustomerId() {
+        return (customerRepo.findLastCustomerId());
     }
 }
