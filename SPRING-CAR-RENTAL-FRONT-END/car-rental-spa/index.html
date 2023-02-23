@@ -14,6 +14,7 @@
     <link href="assets/styles/css/register-driver-form-styles.css" rel="stylesheet">
     <link href="assets/styles/css/car-form-styles.css" rel="stylesheet">
     <link href="assets/styles/css/main-order-request-section.css" rel="stylesheet">
+    <link href="assets/styles/css/show-request-admin-form-styles.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/css/normalize.css" rel="stylesheet">
 
@@ -57,6 +58,7 @@
         <button id="dri-reg">dri-reg</button>
         <button id="all-cars">all-cars</button>
         <button id="req-order">req-order</button>
+        <button id="show-order-reqs">show-order-reqs</button>
     </header>
 
     <section class="container-fluid" id="main-content-container">
@@ -830,17 +832,24 @@
                         <section class="col-4">
                             <select aria-label="Default select example" class="form-select" id="select-car-brand">
                                 <option selected>Brand</option>
-                                <option value="BMW">BMW</option>
-                                <option value="Volvo">Volvo</option>
-                                <option value="Toyota">Toyota</option>
-                                <option value="Nissan">Nissan</option>
-                                <option value="Suzuki">Suzuki</option>
+                                <option value="Suzuki Alto - Premium">Suzuki Alto - Premium</option>
+                                <option value="Suzuki Alto K10">Suzuki Alto K10</option>
+                                <option value="Suzuki Celerio">Suzuki Celerio</option>
+                                <option value="Perodua (Daihatsu)">Perodua (Daihatsu)</option>
+                                <option value="Toyota Prius C/ Aqua">Toyota Prius C/ Aqua</option>
+                                <option value="Toyota Corolla Axio/ NZE141">Toyota Corolla Axio/ NZE141</option>
+                                <option value="Perodua Bezza Prime Sedan">Perodua Bezza Prime Sedan</option>
+                                <option value="Toyota Allion NZT 260">Toyota Allion NZT 260</option>
+                                <option value="Toyota Axio NKR 165">Toyota Axio NKR 165</option>
+                                <option value="Toyota Premio">Toyota Premio</option>
+                                <option value="Mercedes">Mercedes</option>
+                                <option value="BMW i8">BMW i8</option>
                             </select>
                         </section>
                         <section class="col-4">
-                            <select aria-label="Default select example" class="form-select" id="select-car-type">
+                            <select aria-label="Default select example" class="form-select" id="main-select-car-type">
                                 <option selected>Type</option>
-                                <option value="Mini">General</option>
+                                <option value="General">General</option>
                                 <option value="Premium">Premium</option>
                                 <option value="Luxury">Luxury</option>
                             </select>
@@ -895,7 +904,7 @@
                         </section>
                         <section class="col-4">
                             <div class="form-outline">
-                                <input class="form-control" data-mdb-showcounter="true" id="inp-daily-rate"
+                                <input class="form-control" data-mdb-showcounter="true" id="main-inp-daily-rate"
                                        maxlength="20"
                                        type="text"/>
                                 <label class="form-label" for="inp-daily-rate">Daily Rate</label>
@@ -927,9 +936,9 @@
                             <select aria-label="Default select example" class="form-select"
                                     id="select-car-current-status">
                                 <option selected>Current Status</option>
-                                <option value="1">Maintaining</option>
-                                <option value="2">Booked</option>
-                                <option value="3">Available</option>
+                                <option value="Maintaining">Maintaining</option>
+                                <option value="Booked">Booked</option>
+                                <option value="Available">Available</option>
                             </select>
                         </section>
                     </section>
@@ -1221,19 +1230,19 @@
                 <section class="row">
                     <section class="col-3">
                         <label class="form-check-label">Pickup Date</label>
-                        <input class="form-control" type="date" id="pickup-date">
+                        <input class="form-control" id="pickup-date" type="date">
                     </section>
                     <section class="col-3">
                         <label class="form-check-label">Pickup Time</label>
-                        <input class="form-control" type="time" id="pickup-time">
+                        <input class="form-control" id="pickup-time" type="time">
                     </section>
                     <section class="col-3">
                         <label class="form-check-label">Return Date</label>
-                        <input class="form-control" type="date" id="return-date">
+                        <input class="form-control" id="return-date" type="date">
                     </section>
                     <section class="col-3">
                         <label class="form-check-label">Return Time</label>
-                        <input class="form-control" type="time" id="return-time">
+                        <input class="form-control" id="return-time" type="time">
                     </section>
                 </section>
 
@@ -1327,6 +1336,71 @@
                 <section class="row">
                     <section class="col-12"><textarea cols="78" id="w3review" name="w3review" rows="4"></textarea>
                     </section>
+                </section>
+            </section>
+        </section>
+
+        <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+
+        <section class="main-content" id="show-order-requests-section">
+            <section class="container-fluid" id="admin-reqs-search-bar-section">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input class="form-control" id="inp-admin-reqs-search-bar" type="search"/>
+                        <label class="form-label" for="inp-all-driver-search-bar">Search</label>
+                    </div>
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="container-fluid" id="admin-requests-tbl-section">
+                <section class="container-fluid flex-container" id="admin-requests-tbl-section-inner">
+                    <table class="table align-middle mb-0 bg-white" id="admin-request-table">
+                        <thead class="bg-light">
+                        <tr>
+                            <th class="font-weight-bolder">Order Id</th>
+                            <th class="font-weight-bold">Customer Name</th>
+                            <th class="font-weight-bold">NIC Number</th>
+                            <th class="font-weight-bold">Driving License Number</th>
+                            <th class="font-weight-bold">E-mail Address</th>
+                            <th class="font-weight-bold">Contact Number</th>
+                            <th class="font-weight-bold">Order Placed Date</th>
+                            <th class="font-weight-bold">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody id="admin-requests-tbl-body">
+                        <tr>
+                            <td>
+                                <p class="fw-bold mb-1">20030080N</p>
+                            </td>
+                            <td>
+                                <p class="fw-bold mb-1">200300801817</p>
+                            </td>
+                            <td>
+                                <p class="fw-bold mb-1">20030080N</p>
+                            </td>
+                            <td>
+                                <p class="fw-bold mb-1">No 178,Galle Road,Kalutara North</p>
+                            </td>
+                            <td>
+                                <p class="fw-bold mb-1">dinuth@gmail.com</p>
+                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
+                                <!--                                    Edit-->
+                                <!--                                </button>-->
+                            </td>
+                            <td>
+                                <p class="fw-bold mb-1">0778765432</p>
+                            </td>
+                            <td><p class="fw-bold mb-1">Sample</p></td>
+                            <td>
+                                <button class="btn btn-success btn-sm btn-rounded" type="button">View</button>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
                 </section>
             </section>
         </section>

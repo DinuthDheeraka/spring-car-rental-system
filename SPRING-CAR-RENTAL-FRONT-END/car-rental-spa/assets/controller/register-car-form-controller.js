@@ -8,7 +8,7 @@ $('#select-car-brand').change(function (e) {
     selectedBrand = e.target.value;
 });
 
-$('#select-car-type').change(function (e) {
+$('#main-select-car-type').change(function (e) {
     selectedType = e.target.value;
 });
 
@@ -26,7 +26,7 @@ $('#select-car-current-status').change(function (e) {
 
 $('#register-car-btn').click(function () {
     registerCar();
-    uploadCarViews()
+    // uploadCarViews()
 });
 
 function uploadCarViews() {
@@ -40,6 +40,8 @@ function uploadCarViews() {
     formData.append("side_view", carSideView);
     formData.append("back_view", carBackView);
     formData.append("interior_view", carInteriorView);
+
+    // let carRegId = $('#inp');
 
     $.ajax({
         url: baseUrl+'/car/upload/CR-00001',
@@ -61,7 +63,7 @@ function registerCar() {
     let car = {
         registrationId:$('#inp-car-registered-number').val(),
         monthlyRate:$('#inp-monthly-rate').val(),
-        dailyRate:$('#inp-daily-rate').val(),
+        dailyRate:$('#main-inp-daily-rate').val(),
         colour:$('#select-vehicle-colour').val(),
         brand:selectedBrand,
         type:selectedType,
