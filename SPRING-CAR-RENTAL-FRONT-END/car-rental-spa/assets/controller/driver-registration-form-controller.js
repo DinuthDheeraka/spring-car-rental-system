@@ -1,12 +1,28 @@
 let selectedDriverStatus = 'Active';
+
+let newDriverId = 0;
+
 $('#select-driver-status').change(function (e) {
     selectedDriverStatus = e.target.value;
 });
 
 $('#driver-create-account-btn').click(function () {
+    getDriverLastId();
     registerDriver();
     // uploadDriverNicAndDrivingLicense();
 });
+
+function getDriverLastId() {
+    $.ajax({
+        url: baseUrl + 'driver/lastDriverId',
+        async: false,
+        method: 'get',
+        success: function (resp) {
+            newDriverId = (resp.data[0])+1;
+        }
+    });
+}
+
 function uploadDriverNicAndDrivingLicense(){
     let nicImage = $("#inpNicImageDriver").prop('files')[0];
     let drivingLicenseImage = $("#inpDrivingLicenseImageDriver").prop('files')[0];
@@ -35,6 +51,7 @@ function uploadDriverNicAndDrivingLicense(){
 function registerDriver() {
 
     let driver = {
+        driverId: newDriverId,
         nicNumber:$('#inpNicNoDriver').val(),
         drivingLicenseNumber:$('#inpDrivingLicenseNoDriver').val(),
         fullName:$('#inpFullNameDriver').val(),

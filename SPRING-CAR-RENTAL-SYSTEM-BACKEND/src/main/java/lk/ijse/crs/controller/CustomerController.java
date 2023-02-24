@@ -15,8 +15,6 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -35,7 +33,14 @@ public class CustomerController {
     @GetMapping(path = {"/lastCustomerId"})
     public ResponseUtil<Integer> findLastCustomerId() {
         ResponseUtil<Integer> responseUtil = new ResponseUtil(
-                "200","Done", customerService.findLastCustomerId());
+                "200", "Done", customerService.findLastCustomerId());
+        return responseUtil;
+    }
+
+    @GetMapping(path = {"/getAllCustomers"})
+    public ResponseUtil<CustomerDTO> findAllCustomers() {
+        ResponseUtil<CustomerDTO> responseUtil = new ResponseUtil(
+                "200", "Done", customerService.findAllCustomers());
         return responseUtil;
     }
 
@@ -45,11 +50,11 @@ public class CustomerController {
         byte[] bytes = new byte[0];
         try {
             bytes = nic.getBytes();
-            Path nicPath = Paths.get("E:\\upload\\customer\\"+customerId +"-"+"nic.png");
+            Path nicPath = Paths.get("E:\\upload\\customer\\" + customerId + "-" + "nic.png");
             Files.write(nicPath, bytes);
 
             bytes = drivingLicense.getBytes();
-            Path drivingLicensePath = Paths.get("E:\\upload\\customer\\"+customerId +"-" +"license.png");
+            Path drivingLicensePath = Paths.get("E:\\upload\\customer\\" + customerId + "-" + "license.png");
             Files.write(drivingLicensePath, bytes);
 
         } catch (IOException ioException) {

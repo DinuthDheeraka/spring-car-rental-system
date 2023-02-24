@@ -15,6 +15,7 @@
     <link href="assets/styles/css/car-form-styles.css" rel="stylesheet">
     <link href="assets/styles/css/main-order-request-section.css" rel="stylesheet">
     <link href="assets/styles/css/show-request-admin-form-styles.css" rel="stylesheet">
+    <link href="assets/styles/css/search-order-section-styles.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/css/normalize.css" rel="stylesheet">
 
@@ -59,6 +60,7 @@
         <button id="all-cars">all-cars</button>
         <button id="req-order">req-order</button>
         <button id="show-order-reqs">show-order-reqs</button>
+        <button id="search-order">search-order</button>
     </header>
 
     <section class="container-fluid" id="main-content-container">
@@ -318,233 +320,8 @@
                 <section class="container-fluid flex-container" id="customer-table-section-inner">
                     <table class="table align-middle mb-0 bg-white" id="all-customer-table">
                         <thead class="bg-light">
-                        <tr>
-                            <th class="font-weight-bolder">Name</th>
-                            <th class="font-weight-bold">NIC Number</th>
-                            <th class="font-weight-bold">Driving License Number</th>
-                            <th class="font-weight-bold">Home Address</th>
-                            <th class="font-weight-bold">E-mail Address</th>
-                            <th class="font-weight-bold">Contact Number</th>
-                            <th class="font-weight-bold">Status</th>
-                            <th class="font-weight-bold">Action</th>
-                        </tr>
                         </thead>
                         <tbody id="all-customer-table-body">
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img
-                                            alt=""
-                                            class="rounded-circle"
-                                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                            style="width: 45px; height: 45px"
-                                    />
-                                    <div class="ms-3">
-                                        <p class="fw-bold mb-1">John Doe</p>
-                                        <!--                                        <p class="text-muted mb-0">john.doe@gmail.com</p>-->
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">200300801817</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">20030080N</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">No 178,Galle Road,Kalutara North</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">dinuth@gmail.com</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">0778765432</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <span class="badge badge-success rounded-pill d-inline">Active</span>
-                            </td>
-                            <td>
-                                <button class="btn btn-link btn-sm btn-rounded" type="button">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img
-                                            alt=""
-                                            class="rounded-circle"
-                                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                            style="width: 45px; height: 45px"
-                                    />
-                                    <div class="ms-3">
-                                        <p class="fw-bold mb-1">John Doe</p>
-                                        <!--                                        <p class="text-muted mb-0">john.doe@gmail.com</p>-->
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">200300801817</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">20030080N</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">No 178,Galle Road,Kalutara North</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">dinuth@gmail.com</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">0778765432</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <span class="badge badge-success rounded-pill d-inline">Active</span>
-                            </td>
-                            <td>
-                                <button class="btn btn-link btn-sm btn-rounded" type="button">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img
-                                            alt=""
-                                            class="rounded-circle"
-                                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                            style="width: 45px; height: 45px"
-                                    />
-                                    <div class="ms-3">
-                                        <p class="fw-bold mb-1">John Doe</p>
-                                        <!--                                        <p class="text-muted mb-0">john.doe@gmail.com</p>-->
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">200300801817</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">20030080N</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">No 178,Galle Road,Kalutara North</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">dinuth@gmail.com</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">0778765432</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <span class="badge badge-success rounded-pill d-inline">Active</span>
-                            </td>
-                            <td>
-                                <button class="btn btn-link btn-sm btn-rounded" type="button">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img
-                                            alt=""
-                                            class="rounded-circle"
-                                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                            style="width: 45px; height: 45px"
-                                    />
-                                    <div class="ms-3">
-                                        <p class="fw-bold mb-1">John Doe</p>
-                                        <!--                                        <p class="text-muted mb-0">john.doe@gmail.com</p>-->
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">200300801817</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">20030080N</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">No 178,Galle Road,Kalutara North</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">dinuth@gmail.com</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">0778765432</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <span class="badge badge-success rounded-pill d-inline">Active</span>
-                            </td>
-                            <td>
-                                <button class="btn btn-link btn-sm btn-rounded" type="button">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img
-                                            alt=""
-                                            class="rounded-circle"
-                                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                            style="width: 45px; height: 45px"
-                                    />
-                                    <div class="ms-3">
-                                        <p class="fw-bold mb-1">John Doe</p>
-                                        <!--                                        <p class="text-muted mb-0">john.doe@gmail.com</p>-->
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">200300801817</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">20030080N</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">No 178,Galle Road,Kalutara North</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">dinuth@gmail.com</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">0778765432</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <span class="badge badge-success rounded-pill d-inline">Active</span>
-                            </td>
-                            <td>
-                                <button class="btn btn-link btn-sm btn-rounded" type="button">Edit</button>
-                            </td>
-                        </tr>
                         </tbody>
                     </table>
 
@@ -590,178 +367,6 @@
                         </tr>
                         </thead>
                         <tbody id="all-driver-table-body">
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img
-                                            alt=""
-                                            class="rounded-circle"
-                                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                            style="width: 45px; height: 45px"
-                                    />
-                                    <div class="ms-3">
-                                        <p class="fw-bold mb-1">John Doe</p>
-                                        <!--                                        <p class="text-muted mb-0">john.doe@gmail.com</p>-->
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">200300801817</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">20030080N</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">No 178,Galle Road,Kalutara North</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">dinuth@gmail.com</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">0778765432</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <span class="badge badge-success rounded-pill d-inline">Active</span>
-                            </td>
-                            <td>
-                                <button class="btn btn-link btn-sm btn-rounded" type="button">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img
-                                            alt=""
-                                            class="rounded-circle"
-                                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                            style="width: 45px; height: 45px"
-                                    />
-                                    <div class="ms-3">
-                                        <p class="fw-bold mb-1">John Doe</p>
-                                        <!--                                        <p class="text-muted mb-0">john.doe@gmail.com</p>-->
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">200300801817</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">20030080N</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">No 178,Galle Road,Kalutara North</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">dinuth@gmail.com</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">0778765432</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <span class="badge badge-success rounded-pill d-inline">Active</span>
-                            </td>
-                            <td>
-                                <button class="btn btn-link btn-sm btn-rounded" type="button">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img
-                                            alt=""
-                                            class="rounded-circle"
-                                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                            style="width: 45px; height: 45px"
-                                    />
-                                    <div class="ms-3">
-                                        <p class="fw-bold mb-1">John Doe</p>
-                                        <!--                                        <p class="text-muted mb-0">john.doe@gmail.com</p>-->
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">200300801817</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">20030080N</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">No 178,Galle Road,Kalutara North</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">dinuth@gmail.com</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">0778765432</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <span class="badge badge-success rounded-pill d-inline">Active</span>
-                            </td>
-                            <td>
-                                <button class="btn btn-link btn-sm btn-rounded" type="button">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex align-items-center">
-                                    <img
-                                            alt=""
-                                            class="rounded-circle"
-                                            src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                                            style="width: 45px; height: 45px"
-                                    />
-                                    <div class="ms-3">
-                                        <p class="fw-bold mb-1">John Doe</p>
-                                        <!--                                        <p class="text-muted mb-0">john.doe@gmail.com</p>-->
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">200300801817</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">20030080N</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">No 178,Galle Road,Kalutara North</p>
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">dinuth@gmail.com</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <p class="fw-bold mb-1">0778765432</p>
-                                <!--                                <button type="button" class="btn btn-link btn-sm btn-rounded">-->
-                                <!--                                    Edit-->
-                                <!--                                </button>-->
-                            </td>
-                            <td>
-                                <span class="badge badge-success rounded-pill d-inline">Active</span>
-                            </td>
-                            <td>
-                                <button class="btn btn-link btn-sm btn-rounded" type="button">Edit</button>
-                            </td>
-                        </tr>
                         <tr>
                             <td>
                                 <div class="d-flex align-items-center">
@@ -1416,6 +1021,97 @@
             </section>
         </section>
 
+<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+
+        <section class="main-content" id="search-order-section">
+            <section class="container" id="search-order-order-detail-section">
+                <section class="row">
+                    <section class="col-12"><h3>Order Details</h3></section>
+                </section>
+                <section class="row">
+                    <section class="col-3">
+                        <div class="form-outline">
+                            <input type="text" id="" class="form-control" />
+                            <label class="form-label" for="form12">Example label</label>
+                        </div>
+                    </section>
+                    <section class="col-3">
+                        <div class="form-outline">
+                            <input type="text" id="" class="form-control" />
+                            <label class="form-label" for="form12">Example label</label>
+                        </div>
+                    </section>
+                    <section class="col-3">
+                        <div class="form-outline">
+                            <input type="text" id="" class="form-control" />
+                            <label class="form-label" for="form12">Example label</label>
+                        </div>
+                    </section>
+                    <section class="col-3">
+                        <div class="form-outline">
+                            <input type="text" id="" class="form-control" />
+                            <label class="form-label" for="form12">Example label</label>
+                        </div>
+                    </section>
+                </section>
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input type="text" id="" class="form-control" />
+                            <label class="form-label" for="form12">Example label</label>
+                        </div>
+                    </section>
+                </section>
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input type="text" id="" class="form-control" />
+                            <label class="form-label" for="form12">Example label</label>
+                        </div>
+                    </section>
+                </section>
+                <section class="row">
+                </section>
+            </section>
+            <section class="container" id="search-order-car-details">
+                <section class="row">
+                    <section class="col-12"><h3>Ordered Car Details</h3></section>
+                </section>
+            </section>
+            <section class="container" id="search-order-driver-details">
+                <section class="row">
+                    <section class="col-12"><h3>Driver Details</h3></section>
+                </section>
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input type="text" id="" class="form-control" />
+                            <label class="form-label" for="form12">Example label</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input type="text" id="" class="form-control" />
+                            <label class="form-label" for="form12">Example label</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input type="text" id="" class="form-control" />
+                            <label class="form-label" for="form12">Example label</label>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <section class="container" id="search-order-payments-details"></section>
+            <section class="container" id="search-order-order-status-section"></section>
+        </section>
     </section>
 </main>
 <script
@@ -1429,5 +1125,7 @@
 <script src="../car-rental-spa/assets/controller/car-form-controller.js"></script>
 <script src="../car-rental-spa/assets/controller/driver-registration-form-controller.js"></script>
 <script src="../car-rental-spa/assets/controller/request-order-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/all-customers-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/all-driver-form-controller.js"></script>
 </body>
 </html>

@@ -6,6 +6,7 @@ package lk.ijse.crs.controller;
 
 import lk.ijse.crs.dto.DriverDTO;
 import lk.ijse.crs.service.DriverService;
+import lk.ijse.crs.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -27,6 +28,20 @@ public class DriverController {
     public void addDriver(@RequestBody DriverDTO driverDTO) {
         System.out.println(driverDTO);
         driverService.addDriver(driverDTO);
+    }
+
+    @GetMapping(path = {"/lastDriverId"})
+    public ResponseUtil<Integer> findLastCustomerId() {
+        ResponseUtil<Integer> responseUtil = new ResponseUtil(
+                "200", "Done", driverService.findDriverLastId());
+        return responseUtil;
+    }
+
+    @GetMapping(path = {"/getAllDrivers"})
+    public ResponseUtil<DriverDTO> findAllCustomers() {
+        ResponseUtil<DriverDTO> responseUtil = new ResponseUtil(
+                "200", "Done", driverService.findAllDrivers());
+        return responseUtil;
     }
 
     @PostMapping(path = {"/upload/{driverId}"})

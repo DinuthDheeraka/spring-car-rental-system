@@ -9,6 +9,7 @@ import lk.ijse.crs.entity.Customer;
 import lk.ijse.crs.repo.CustomerRepo;
 import lk.ijse.crs.service.CustomerService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,5 +35,10 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public List<Integer> findLastCustomerId() {
         return (customerRepo.findLastCustomerId());
+    }
+
+    @Override
+    public List<CustomerDTO> findAllCustomers() {
+        return modelMapper.map(customerRepo.findAll(),new TypeToken<ArrayList<CustomerDTO>>(){}.getType());
     }
 }

@@ -8,4 +8,5 @@ import java.util.List;
 public interface CustomerService {
     void addCustomer(CustomerDTO customerDTO);
     List<Integer> findLastCustomerId();
+    List<CustomerDTO> findAllCustomers();
 }
