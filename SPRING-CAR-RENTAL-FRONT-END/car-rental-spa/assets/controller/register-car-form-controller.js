@@ -4,6 +4,8 @@ let selectedFuelType = "";
 let selectedTransmissionType = "";
 let selectedCurrentStatus = "";
 
+let newCarId = 0;
+
 $('#select-car-brand').change(function (e) {
     selectedBrand = e.target.value;
 });
@@ -25,9 +27,22 @@ $('#select-car-current-status').change(function (e) {
 });
 
 $('#register-car-btn').click(function () {
+    findLastCarId();
     registerCar();
     // uploadCarViews()
+    console.log(newCarId);
 });
+
+function findLastCarId() {
+    $.ajax({
+        url: baseUrl + 'car/lastCarId',
+        async: false,
+        method: 'get',
+        success: function (resp) {
+            newCarId = (resp.data[0])+1;
+        }
+    });
+}
 
 function uploadCarViews() {
     let carFrontView = $("#inp-car-front-view").prop('files')[0];
@@ -61,6 +76,7 @@ function uploadCarViews() {
 
 function registerCar() {
     let car = {
+        carId:newCarId,
         registrationId:$('#inp-car-registered-number').val(),
         monthlyRate:$('#inp-monthly-rate').val(),
         dailyRate:$('#main-inp-daily-rate').val(),

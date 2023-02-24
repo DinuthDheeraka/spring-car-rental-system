@@ -20,6 +20,10 @@
     width: 800px;
 }
 
+#search-order-car-details>section{
+    margin-top: 20px;
+}
+
 
 #search-order-driver-details{
     border: 1px solid #adaaaa;
@@ -37,7 +41,7 @@
     border: 1px solid #adaaaa;
     position: absolute;
     right: 30px;
-    top: 280px;
+    top: 330px;
     width: 650px;
     height: 200px;
 }
@@ -46,7 +50,7 @@
     border: 1px solid #adaaaa;
     position: absolute;
     right: 30px;
-    top: 485px;
+    bottom: 3px;
     width: 650px;
-    height: 170px;
+    height: 120px;
 }

@@ -6,6 +6,7 @@ package lk.ijse.crs.controller;
 
 import lk.ijse.crs.dto.CarDTO;
 import lk.ijse.crs.service.CarService;
+import lk.ijse.crs.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -31,6 +32,13 @@ public class CarController {
     public void addCar(@RequestBody CarDTO carDTO) {
         carService.addCar(carDTO);
         System.out.println(carDTO);
+    }
+
+    @GetMapping(path = {"/lastCarId"})
+    public ResponseUtil<Integer> findLastCarId() {
+        ResponseUtil<Integer> responseUtil = new ResponseUtil(
+                "200", "Done", carService.findLastCarId());
+        return responseUtil;
     }
 
     @PostMapping(path = {"/upload/{carId}"})

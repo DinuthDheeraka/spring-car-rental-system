@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.List;
 
 @Service
 @Transactional
@@ -27,5 +28,10 @@ public class CarServiceImpl implements CarService {
     @Override
     public void addCar(CarDTO carDTO) {
         carRepo.save(modelMapper.map(carDTO, Car.class));
+    }
+
+    @Override
+    public List<Integer> findLastCarId() {
+        return carRepo.findLastCarId();
     }
 }
