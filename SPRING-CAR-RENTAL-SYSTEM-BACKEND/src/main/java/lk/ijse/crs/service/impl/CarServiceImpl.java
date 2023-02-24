@@ -9,10 +9,12 @@ import lk.ijse.crs.entity.Car;
 import lk.ijse.crs.repo.CarRepo;
 import lk.ijse.crs.service.CarService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -33,5 +35,10 @@ public class CarServiceImpl implements CarService {
     @Override
     public List<Integer> findLastCarId() {
         return carRepo.findLastCarId();
+    }
+
+    @Override
+    public List<CarDTO> findAllCars() {
+        return modelMapper.map(carRepo.findAll(),new TypeToken<ArrayList<CarDTO>>(){}.getType());
     }
 }

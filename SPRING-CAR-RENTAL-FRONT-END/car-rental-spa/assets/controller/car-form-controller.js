@@ -1,5 +1,18 @@
 
 let clickCount = 1;
+
+function loadCarCards() {
+    $.ajax({
+        url:baseUrl+'car/findAllCars',
+        method:'get',
+        async:false,
+        dataType:'json',
+        success:function (resp) {
+
+        }
+    });
+}
+
 $('#add').click(function () {
     if(clickCount%2==1){
         $('#cars-container').append

@@ -7,5 +7,8 @@ import java.util.List;
 public interface CarService {
 
     void addCar(CarDTO carDTO);
+
     List<Integer> findLastCarId();
+
+    List<CarDTO> findAllCars();
 }

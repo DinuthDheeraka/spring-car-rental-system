@@ -41,6 +41,13 @@ public class CarController {
         return responseUtil;
     }
 
+    @GetMapping(path = {"/findAllCars"})
+    public ResponseUtil<Integer> findAllCars() {
+        ResponseUtil<Integer> responseUtil = new ResponseUtil(
+                "200", "Done", carService.findAllCars());
+        return responseUtil;
+    }
+
     @PostMapping(path = {"/upload/{carId}"})
     public void uploadCarViews(@RequestParam("front_view") MultipartFile frontView, @RequestParam("side_view") MultipartFile sideView, @RequestParam("back_view") MultipartFile backView, @RequestParam("interior_view") MultipartFile interiorView, @PathVariable("carId") String carId) {
 
