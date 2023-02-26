@@ -32,16 +32,14 @@ public class OrderController {
     @PostMapping(path = {"/place_order"}, consumes = {"application/json"})
     public void addOrder(@RequestBody OrderDTO orderDTO) {
         System.out.println(orderDTO);
-//        System.out.println("ID"+IdsGenerator.generateId("OR-",orderService.getAllOrderIds().get(0)));
-//        System.out.println(orderService.getAllOrderIds());
     }
 
-//    @GetMapping(path = {"/findNewOrderId"})
-//    public void findNewOrderId(@RequestBody OrderDTO orderDTO) {
-//        System.out.println(orderDTO);
-//        List<String> list = new ArrayList<>();
-//        list.add(IdsGenerator.generateId("OR-",orderService.getAllOrderIds().get(0)));
-//    }
+    @GetMapping(path = {"/findNewOrderId"})
+    public ResponseUtil<String> findNewOrderId() {
+        List<String> list = new ArrayList<>();
+        list.add(IdsGenerator.generateId("OR-",orderService.getAllOrderIds().get(0)));
+        return new ResponseUtil<String>("200","Done",list);
+    }
 
     @GetMapping(path = {"/findAllOrders"})
     public ResponseUtil<OrderDTO> findAllOrders() {

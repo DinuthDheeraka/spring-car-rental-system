@@ -1,5 +1,7 @@
+let newOrderId = '';
 $('#main-request-order-btn').click(function () {
-    requestOrder();
+    // requestOrder();
+    findNewOrderId();
     // uploadCustomerNicAndDrivingLicense();
 });
 function uploadCustomerNicAndDrivingLicense(){
@@ -30,6 +32,7 @@ function uploadCustomerNicAndDrivingLicense(){
 function requestOrder() {
 
     let order = {
+        orderId:newOrderId,
         pickupDate:$('#pickup-date').val(),
         pickupTime:$('#pickup-time').val(),
         returnDate:$('#return-date').val(),
@@ -72,15 +75,14 @@ function loadSelectedCarsToRequestOrder(selectedCars) {
     }
 }
 
-function findLastOrderId() {
+function findNewOrderId() {
     $.ajax({
-        url:baseUrl+'order/findLastOrderId',
-        // dataType:'json',
-        // contentType:'application/json',
-        // data:JSON.stringify(order),
+        url:baseUrl+'order/findNewOrderId',
+        dataType:'json',
         async:false,
         method:'get',
         success:function (resp) {
+            newOrderId = resp.data[0];
         }
     });
 }

@@ -13,7 +13,7 @@ function setOrderTblData() {
     for(let i = 0; i<allOrders.length; i++){
         let order = allOrders[i];
         let customer = findCustomer(allOrders[i].customerId);
-        console.log(customer);
+        // console.log(customer);
 
         $('#admin-requests-tbl-body').append(
             '<tr>\n' +
