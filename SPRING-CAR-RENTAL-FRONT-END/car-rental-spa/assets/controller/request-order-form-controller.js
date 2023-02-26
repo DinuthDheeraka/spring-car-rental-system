@@ -1,10 +1,12 @@
 let newOrderId = '';
 $('#main-request-order-btn').click(function () {
-    // requestOrder();
+    $('#pickup-date').val("2022-01-01");
     findNewOrderId();
+    requestOrder();
     // uploadCustomerNicAndDrivingLicense();
 });
-function uploadCustomerNicAndDrivingLicense(){
+
+function uploadCustomerNicAndDrivingLicense() {
     let nicImage = $("#inpNicImage").prop('files')[0];
     let drivingLicenseImage = $("#inpDrivingLicenseImage").prop('files')[0];
 
@@ -14,12 +16,12 @@ function uploadCustomerNicAndDrivingLicense(){
 
 
     $.ajax({
-        url: baseUrl+'/customer/upload/1',
+        url: baseUrl + '/customer/upload/1',
         data: formData,
         type: 'POST',
         contentType: false,
         processData: false,
-        async:false,
+        async: false,
         success: function (data) {
             // console.log('Image uploaded successfully.');
         },
@@ -31,38 +33,45 @@ function uploadCustomerNicAndDrivingLicense(){
 
 function requestOrder() {
 
+    let date = new Date();
+    let formattedDate = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate() + ' ' + ((date) + "").substring(16, 24);
+
     let order = {
-        orderId:newOrderId,
-        pickupDate:$('#pickup-date').val(),
-        pickupTime:$('#pickup-time').val(),
-        returnDate:$('#return-date').val(),
-        returnTime:$('#return-time').val(),
-        pickupVenue:$('#inp-pickup-venue').val(),
-        returnVenue:$('#inp-return-venue').val(),
-        orderStatus:"new"
+        orderId: newOrderId,
+        customerId: 0,
+        driverId: 0,
+        pickupDate: $('#pickup-date').val(),
+        pickupTime: $('#pickup-time').val(),
+        returnDate: $('#return-date').val(),
+        returnTime: $('#return-time').val(),
+        pickupVenue: $('#inp-pickup-venue').val(),
+        returnVenue: $('#inp-return-venue').val(),
+        orderRequestedDate: formattedDate,
+        orderStatus: "new"
     };
     console.log(order)
 
     $.ajax({
-        url:baseUrl+'order/place_order',
+        url: baseUrl + 'order/place_order',
         // dataType:'json',
-        contentType:'application/json',
-        data:JSON.stringify(order),
-        async:false,
-        method:'post',
-        success:function (resp) {
+        contentType: 'application/json',
+        data: JSON.stringify(order),
+        async: false,
+        method: 'post',
+        success: function (resp) {
         }
     });
 }
 
 function loadSelectedCarsToRequestOrder(selectedCars) {
-    for(let i = 0; i<selectedCars.length; i++){
+    $('#request-car-container').empty();
+    for (let i = 0; i < selectedCars.length; i++) {
         let car = selectedCars[i];
         $('#request-car-container').append(
             '<section class="row">\n' +
             '                    <section class="col-6">\n' +
             '                        <div class="outline">\n' +
-            '                            <h5 class="selected-car-h5" style="margin-top: 10px" id=inp-'+car.carId+'>'+car.brand+'</h5>\n' +
+            '                            <h5 class="selected-car-h5" style="margin-top: 10px" id=inp-' + car.carId + '>' + car.brand + '</h5>\n' +
             '                            \n' +
             '                        </div>\n' +
             '                    </section>\n' +
@@ -77,12 +86,31 @@ function loadSelectedCarsToRequestOrder(selectedCars) {
 
 function findNewOrderId() {
     $.ajax({
-        url:baseUrl+'order/findNewOrderId',
-        dataType:'json',
-        async:false,
-        method:'get',
-        success:function (resp) {
+        url: baseUrl + 'order/findNewOrderId',
+        dataType: 'json',
+        async: false,
+        method: 'get',
+        success: function (resp) {
             newOrderId = resp.data[0];
         }
     });
 }
+
+
+$('#main-request-search-order-btn').click(function () {
+    $.ajax({
+        url: baseUrl + 'order/findOrderById/OR-0001',
+        async: false,
+        method: 'get',
+        success: function (resp) {
+            let order = (resp.data[0]);
+            console.log(order);
+            $('#pickup-date').val(order.pickupDate.substring(0,10));
+            $('#pickup-time').val(order.pickupTime);
+            $('#return-date').val(order.returnDate.substring(0,10));
+            $('#return-time').val(order.returnTime);
+            $('#inp-pickup-venue').val(order.pickupVenue);
+            $('#inp-return-venue').val(order.returnVenue);
+        }
+    });
+});

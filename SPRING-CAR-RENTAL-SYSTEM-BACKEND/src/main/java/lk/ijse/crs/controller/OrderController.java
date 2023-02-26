@@ -32,6 +32,7 @@ public class OrderController {
     @PostMapping(path = {"/place_order"}, consumes = {"application/json"})
     public void addOrder(@RequestBody OrderDTO orderDTO) {
         System.out.println(orderDTO);
+        orderService.addOrder(orderDTO);
     }
 
     @GetMapping(path = {"/findNewOrderId"})
@@ -41,11 +42,16 @@ public class OrderController {
         return new ResponseUtil<String>("200","Done",list);
     }
 
+    @GetMapping(path = {"/findOrderById/{orderId}"})
+    public ResponseUtil<OrderDTO> findOrderById(@PathVariable String orderId) {
+        List<OrderDTO> list = new ArrayList<>();
+        list.add(orderService.findOrderById(orderId));
+        return new ResponseUtil<OrderDTO>("200","Done",list);
+    }
+
     @GetMapping(path = {"/findAllOrders"})
     public ResponseUtil<OrderDTO> findAllOrders() {
-
         List<OrderDTO> orderDTOS = orderService.getAllOrders();
-
         return new ResponseUtil<OrderDTO>("200","Done",orderDTOS);
     }
 }

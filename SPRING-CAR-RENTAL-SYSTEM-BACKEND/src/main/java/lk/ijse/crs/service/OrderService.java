@@ -11,4 +11,5 @@ public interface OrderService {
     void addOrder(OrderDTO orderDTO);
     List<String>  getAllOrderIds();
     List<OrderDTO> getAllOrders();
+    OrderDTO findOrderById(String orderId);
 }

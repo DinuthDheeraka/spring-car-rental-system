@@ -41,4 +41,9 @@ public class OrderServiceImpl implements OrderService {
     public List<OrderDTO> getAllOrders() {
         return modelMapper.map(orderRepo.findAll(),new TypeToken<ArrayList<OrderDTO>>(){}.getType());
     }
+
+    @Override
+    public OrderDTO findOrderById(String orderId) {
+        return modelMapper.map(orderRepo.findById(orderId).get(),OrderDTO.class);
+    }
 }
