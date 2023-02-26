@@ -23,6 +23,14 @@ main{
 }
 
 
+#request-car-container .selected-car-h5{
+    color: #444343;
+}
+
+#request-car-container .outline{
+}
+
+
 
 /* width */
 ::-webkit-scrollbar {

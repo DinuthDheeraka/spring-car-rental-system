@@ -14,7 +14,6 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class TempOrderDTO {
-    int id;
     String orderId;
     String customerId;
     String driverId;

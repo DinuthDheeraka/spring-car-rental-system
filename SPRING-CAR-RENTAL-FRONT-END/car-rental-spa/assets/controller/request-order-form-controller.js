@@ -36,17 +36,50 @@ function requestOrder() {
         returnTime:$('#return-time').val(),
         pickupVenue:$('#inp-pickup-venue').val(),
         returnVenue:$('#inp-return-venue').val(),
-        driverId:'1'
+        orderStatus:"new"
     };
     console.log(order)
 
     $.ajax({
         url:baseUrl+'order/place_order',
-        dataType:'json',
+        // dataType:'json',
         contentType:'application/json',
         data:JSON.stringify(order),
         async:false,
         method:'post',
+        success:function (resp) {
+        }
+    });
+}
+
+function loadSelectedCarsToRequestOrder(selectedCars) {
+    for(let i = 0; i<selectedCars.length; i++){
+        let car = selectedCars[i];
+        $('#request-car-container').append(
+            '<section class="row">\n' +
+            '                    <section class="col-6">\n' +
+            '                        <div class="outline">\n' +
+            '                            <h5 class="selected-car-h5" style="margin-top: 10px" id=inp-'+car.carId+'>'+car.brand+'</h5>\n' +
+            '                            \n' +
+            '                        </div>\n' +
+            '                    </section>\n' +
+            '                    <section class="col-6">\n' +
+            '                        <input type="file" class="form-control" id="customFile" />\n' +
+            '                    </section>\n' +
+            '                </section>'
+        );
+        // $('#inp-'+car.carId).val(car.brand);
+    }
+}
+
+function findLastOrderId() {
+    $.ajax({
+        url:baseUrl+'order/findLastOrderId',
+        // dataType:'json',
+        // contentType:'application/json',
+        // data:JSON.stringify(order),
+        async:false,
+        method:'get',
         success:function (resp) {
         }
     });

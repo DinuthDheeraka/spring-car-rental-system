@@ -18,18 +18,17 @@ import java.util.Date;
 @NoArgsConstructor
 @ToString
 public class OrderDTO {
-    int id;
     String orderId;
     String customerId;
     String driverId;
-    Date orderRequestedDate;
+    String orderRequestedDate;
     String deniedReason;
     String orderStatus;
     String confirmationStatus;
-    Date pickupDate;
-    LocalTime pickupTime;
-    Date returnDate;
-    LocalTime returnTime;
+    String pickupDate;
+    String pickupTime;
+    String returnDate;
+    String returnTime;
     String pickupVenue;
     String returnVenue;
     String note;

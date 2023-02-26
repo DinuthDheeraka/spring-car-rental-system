@@ -24,7 +24,6 @@ import java.util.Date;
 @ToString
 public class Orders {
     @Id
-    int id;
     String orderId;
     String customerId;
     String driverId;
