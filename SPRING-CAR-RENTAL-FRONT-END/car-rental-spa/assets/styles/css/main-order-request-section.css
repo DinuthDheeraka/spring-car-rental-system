@@ -124,3 +124,14 @@ textarea{
     margin-top: 20px;
     /*border: 1px solid #a110de;*/
 }
+
+#show-order-id-section{
+    position: absolute;
+    margin: auto;
+    left: 320px;
+    top: 14px;
+}
+
+#request-order-payment-details>section{
+    margin-top: 20px;
+}

@@ -781,9 +781,8 @@
         <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
         <section class="main-content" id="main-order-request-section">
-            <section id="request-order-page-search-order-section">
-                <button id="main-request-search-order-btn">Request order</button>
-            </section>
+            <section id="show-order-id-section"><h4 id="orderId" style="font-family: 'Poppins', sans-serif">Order Id :
+                OR-0000</h4></section>
             <section id="request-order-page-btn-section">
                 <button id="main-request-order-btn">Request order</button>
             </section>
@@ -888,6 +887,32 @@
                 <section class="row">
                     <section class="col-12"><h5 id="selected-car-details-topic">Selected Car Details</h5></section>
                 </section>
+
+                <section class="row">
+                    <section class="col-3">
+                        <div class="form-outline">
+                            <input class="form-control" maxlength="20" type="text"/>
+                            <label class="form-label" for="inp-daily-km">Registered No</label>
+                            <div class="form-helper"></div>
+                        </div>
+                    </section>
+
+                    <section class="col-4">
+                        <div class="form-outline">
+                            <input class="form-control"  maxlength="20" type="text"/>
+                            <label class="form-label" for="inp-daily-km">Brand</label>
+                            <div class="form-helper"></div>
+                        </div>
+                    </section>
+
+                    <section class="col-5">
+                        <div class="form-outline">
+                            <input type="file" class="form-control" id="customFile" />
+                        </div>
+                    </section>
+                </section>
+
+
             </section>
 
             <section class="container" id="request-order-payment-details">
@@ -896,11 +921,40 @@
                         <h5 id="request-payments-details-topic">Payments Details</h5>
                     </section>
                 </section>
+                <section class="row">
+                    <section class="col-3">
+                        <div class="form-outline">
+                            <input class="form-control" id="payments-details-car-reg-no" maxlength="20" type="text"/>
+                            <label class="form-label" for="inp-daily-km">Registered No</label>
+                            <div class="form-helper"></div>
+                        </div>
+                    </section>
+
+                    <section class="col-4">
+                        <div class="form-outline">
+                            <input class="form-control" id="payments-details-car-brand" maxlength="20" type="text"/>
+                            <label class="form-label" for="inp-daily-km">Brand</label>
+                            <div class="form-helper"></div>
+                        </div>
+                    </section>
+
+                    <section class="col-5">
+                        <div class="form-outline">
+                            <input class="form-control" id="payments-details-car-price" maxlength="20" type="text"/>
+                            <label class="form-label" for="inp-daily-km">Price</label>
+                            <div class="form-helper"></div>
+                        </div>
+                    </section>
+                </section>
+
             </section>
+
             <section class="container" id="reason-for-rejection-section">
                 <section class="row">
                     <section class="col-6"><h5>Order Confirmation Status</h5></section>
-                    <section class="col-6"><span style="margin-left: -60px" class="badge badge-success rounded-pill d-inline">Order Confirmed</span></section>
+                    <section class="col-6"><span class="badge badge-success rounded-pill d-inline"
+                                                 style="margin-left: -60px">Order Confirmed</span>
+                    </section>
                 </section>
                 <section class="row">
                     <section class="col-12"><textarea cols="78" id="w3review" name="w3review" rows="4"></textarea>
@@ -979,101 +1033,101 @@
             </section>
         </section>
 
-<!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
+        <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
-<!--        <section class="main-content" id="search-order-section">-->
-<!--            <section><h3>Search Order Detail</h3></section>-->
-<!--            <section class="container" id="search-order-order-detail-section">-->
-<!--                <section class="row">-->
-<!--                    <section class="col-12"><h5>Order Details</h5></section>-->
-<!--                </section>-->
-<!--                <section class="row">-->
-<!--                    <section class="col-3">-->
-<!--                        <div class="form-outline">-->
-<!--                            <input type="text" id="" class="form-control" />-->
-<!--                            <label class="form-label" for="form12">Example label</label>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                    <section class="col-3">-->
-<!--                        <div class="form-outline">-->
-<!--                            <input type="text" id="" class="form-control" />-->
-<!--                            <label class="form-label" for="form12">Example label</label>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                    <section class="col-3">-->
-<!--                        <div class="form-outline">-->
-<!--                            <input type="text" id="" class="form-control" />-->
-<!--                            <label class="form-label" for="form12">Example label</label>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                    <section class="col-3">-->
-<!--                        <div class="form-outline">-->
-<!--                            <input type="text" id="" class="form-control" />-->
-<!--                            <label class="form-label" for="form12">Example label</label>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </section>-->
-<!--                <section class="row">-->
-<!--                    <section class="col-12">-->
-<!--                        <div class="form-outline">-->
-<!--                            <input type="text" id="" class="form-control" />-->
-<!--                            <label class="form-label" for="form12">Example label</label>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </section>-->
-<!--                <section class="row">-->
-<!--                    <section class="col-12">-->
-<!--                        <div class="form-outline">-->
-<!--                            <input type="text" id="" class="form-control" />-->
-<!--                            <label class="form-label" for="form12">Example label</label>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </section>-->
-<!--                <section class="row">-->
-<!--                </section>-->
-<!--            </section>-->
-<!--            <section class="container" id="search-order-car-details">-->
-<!--                <section class="row">-->
-<!--                    <section class="col-12"><h5>Ordered Car Details</h5></section>-->
-<!--                </section>-->
-<!--            </section>-->
+        <!--        <section class="main-content" id="search-order-section">-->
+        <!--            <section><h3>Search Order Detail</h3></section>-->
+        <!--            <section class="container" id="search-order-order-detail-section">-->
+        <!--                <section class="row">-->
+        <!--                    <section class="col-12"><h5>Order Details</h5></section>-->
+        <!--                </section>-->
+        <!--                <section class="row">-->
+        <!--                    <section class="col-3">-->
+        <!--                        <div class="form-outline">-->
+        <!--                            <input type="text" id="" class="form-control" />-->
+        <!--                            <label class="form-label" for="form12">Example label</label>-->
+        <!--                        </div>-->
+        <!--                    </section>-->
+        <!--                    <section class="col-3">-->
+        <!--                        <div class="form-outline">-->
+        <!--                            <input type="text" id="" class="form-control" />-->
+        <!--                            <label class="form-label" for="form12">Example label</label>-->
+        <!--                        </div>-->
+        <!--                    </section>-->
+        <!--                    <section class="col-3">-->
+        <!--                        <div class="form-outline">-->
+        <!--                            <input type="text" id="" class="form-control" />-->
+        <!--                            <label class="form-label" for="form12">Example label</label>-->
+        <!--                        </div>-->
+        <!--                    </section>-->
+        <!--                    <section class="col-3">-->
+        <!--                        <div class="form-outline">-->
+        <!--                            <input type="text" id="" class="form-control" />-->
+        <!--                            <label class="form-label" for="form12">Example label</label>-->
+        <!--                        </div>-->
+        <!--                    </section>-->
+        <!--                </section>-->
+        <!--                <section class="row">-->
+        <!--                    <section class="col-12">-->
+        <!--                        <div class="form-outline">-->
+        <!--                            <input type="text" id="" class="form-control" />-->
+        <!--                            <label class="form-label" for="form12">Example label</label>-->
+        <!--                        </div>-->
+        <!--                    </section>-->
+        <!--                </section>-->
+        <!--                <section class="row">-->
+        <!--                    <section class="col-12">-->
+        <!--                        <div class="form-outline">-->
+        <!--                            <input type="text" id="" class="form-control" />-->
+        <!--                            <label class="form-label" for="form12">Example label</label>-->
+        <!--                        </div>-->
+        <!--                    </section>-->
+        <!--                </section>-->
+        <!--                <section class="row">-->
+        <!--                </section>-->
+        <!--            </section>-->
+        <!--            <section class="container" id="search-order-car-details">-->
+        <!--                <section class="row">-->
+        <!--                    <section class="col-12"><h5>Ordered Car Details</h5></section>-->
+        <!--                </section>-->
+        <!--            </section>-->
 
-<!--            <section class="container" id="search-order-driver-details">-->
-<!--                <section class="row">-->
-<!--                    <section class="col-12"><h5>Driver Details</h5></section>-->
-<!--                </section>-->
-<!--                <section class="row">-->
-<!--                    <section class="col-12">-->
-<!--                        <div class="form-outline">-->
-<!--                            <input type="text" id="" class="form-control" />-->
-<!--                            <label class="form-label" for="form12">Example label</label>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </section>-->
+        <!--            <section class="container" id="search-order-driver-details">-->
+        <!--                <section class="row">-->
+        <!--                    <section class="col-12"><h5>Driver Details</h5></section>-->
+        <!--                </section>-->
+        <!--                <section class="row">-->
+        <!--                    <section class="col-12">-->
+        <!--                        <div class="form-outline">-->
+        <!--                            <input type="text" id="" class="form-control" />-->
+        <!--                            <label class="form-label" for="form12">Example label</label>-->
+        <!--                        </div>-->
+        <!--                    </section>-->
+        <!--                </section>-->
 
-<!--                <section class="row">-->
-<!--                    <section class="col-12">-->
-<!--                        <div class="form-outline">-->
-<!--                            <input type="text" id="" class="form-control" />-->
-<!--                            <label class="form-label" for="form12">Example label</label>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </section>-->
+        <!--                <section class="row">-->
+        <!--                    <section class="col-12">-->
+        <!--                        <div class="form-outline">-->
+        <!--                            <input type="text" id="" class="form-control" />-->
+        <!--                            <label class="form-label" for="form12">Example label</label>-->
+        <!--                        </div>-->
+        <!--                    </section>-->
+        <!--                </section>-->
 
-<!--                <section class="row">-->
-<!--                    <section class="col-12">-->
-<!--                        <div class="form-outline">-->
-<!--                            <input type="text" id="" class="form-control" />-->
-<!--                            <label class="form-label" for="form12">Example label</label>-->
-<!--                        </div>-->
-<!--                    </section>-->
-<!--                </section>-->
-<!--                <section class="row"></section>-->
+        <!--                <section class="row">-->
+        <!--                    <section class="col-12">-->
+        <!--                        <div class="form-outline">-->
+        <!--                            <input type="text" id="" class="form-control" />-->
+        <!--                            <label class="form-label" for="form12">Example label</label>-->
+        <!--                        </div>-->
+        <!--                    </section>-->
+        <!--                </section>-->
+        <!--                <section class="row"></section>-->
 
-<!--            </section>-->
-<!--            <section class="container" id="search-order-payments-details"></section>-->
-<!--            <section class="container" id="search-order-order-status-section"></section>-->
-<!--        </section>-->
+        <!--            </section>-->
+        <!--            <section class="container" id="search-order-payments-details"></section>-->
+        <!--            <section class="container" id="search-order-order-status-section"></section>-->
+        <!--        </section>-->
     </section>
 </main>
 <script

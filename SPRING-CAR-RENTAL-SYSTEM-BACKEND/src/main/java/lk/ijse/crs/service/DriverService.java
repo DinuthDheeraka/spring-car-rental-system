@@ -9,4 +9,5 @@ public interface DriverService {
     void addDriver(DriverDTO driverDTO);
     List<Integer> findDriverLastId();
     List<DriverDTO> findAllDrivers();
+    List<DriverDTO> findAllDriversByDriverStatus(String driverStatus);
 }

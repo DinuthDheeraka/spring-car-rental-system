@@ -38,9 +38,16 @@ public class DriverController {
     }
 
     @GetMapping(path = {"/getAllDrivers"})
-    public ResponseUtil<DriverDTO> findAllCustomers() {
+    public ResponseUtil<DriverDTO> findAllDrivers() {
         ResponseUtil<DriverDTO> responseUtil = new ResponseUtil(
                 "200", "Done", driverService.findAllDrivers());
+        return responseUtil;
+    }
+
+    @GetMapping(path = {"/getAllAvailableDrivers"})
+    public ResponseUtil<DriverDTO> findAllAvailableDrivers() {
+        ResponseUtil<DriverDTO> responseUtil = new ResponseUtil(
+                "200", "Done", driverService.findAllDriversByDriverStatus("Inactive"));
         return responseUtil;
     }
 

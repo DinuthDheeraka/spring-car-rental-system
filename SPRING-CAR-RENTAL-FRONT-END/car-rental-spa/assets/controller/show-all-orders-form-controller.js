@@ -85,6 +85,7 @@ $('.searchOrderBtn').click(function () {
         success: function (resp) {
             let order = (resp.data[0]);
             console.log(order);
+            $('#orderId').text("Order Id : "+order.orderId);
             $('#pickup-date').val(order.pickupDate.substring(0,10));
             $('#pickup-time').val(order.pickupTime);
             $('#return-date').val(order.returnDate.substring(0,10));
