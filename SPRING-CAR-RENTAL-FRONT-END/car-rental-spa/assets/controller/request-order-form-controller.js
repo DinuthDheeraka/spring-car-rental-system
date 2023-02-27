@@ -65,6 +65,11 @@ function requestOrder() {
 
 function loadSelectedCarsToRequestOrder(selectedCars) {
     $('#request-car-container').empty();
+    $('#request-car-container').append(
+        '<section class="row">\n' +
+        '                    <section class="col-12"><h5 id="selected-car-details-topic">Selected Car Details</h5></section>\n' +
+        '                </section>'
+    );
     for (let i = 0; i < selectedCars.length; i++) {
         let car = selectedCars[i];
         $('#request-car-container').append(

@@ -16,6 +16,7 @@
     <link href="assets/styles/css/main-order-request-section.css" rel="stylesheet">
     <link href="assets/styles/css/show-request-admin-form-styles.css" rel="stylesheet">
     <link href="assets/styles/css/search-order-section-styles.css" rel="stylesheet">
+    <link href="assets/styles/css/all-my-requests-section-styles.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/css/normalize.css" rel="stylesheet">
 
@@ -60,7 +61,7 @@
         <button id="all-cars">all-cars</button>
         <button id="req-order">req-order</button>
         <button id="show-order-reqs">show-order-reqs</button>
-        <button id="search-order">search-order</button>
+        <button id="search-order">my-requests</button>
     </header>
 
     <section class="container-fluid" id="main-content-container">
@@ -684,7 +685,7 @@
 
         <section class="main-content" id="cars-section">
             <section id="car-select-topic"><h3 style="color: black">Select and Rent Cars</h3></section>
-            <button id="add">add</button>
+
             <section class="container" id="cars-container">
             </section>
 
@@ -780,7 +781,7 @@
         <!--        &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
         <section class="main-content" id="main-order-request-section">
-            <section id="request-order-page-btn-section-1">
+            <section id="request-order-page-search-order-section">
                 <button id="main-request-search-order-btn">Request order</button>
             </section>
             <section id="request-order-page-btn-section">
@@ -898,7 +899,8 @@
             </section>
             <section class="container" id="reason-for-rejection-section">
                 <section class="row">
-                    <section class="col-12"><h5>Reason for Rejecting your order request</h5></section>
+                    <section class="col-6"><h5>Order Confirmation Status</h5></section>
+                    <section class="col-6"><span style="margin-left: -60px" class="badge badge-success rounded-pill d-inline">Order Confirmed</span></section>
                 </section>
                 <section class="row">
                     <section class="col-12"><textarea cols="78" id="w3review" name="w3review" rows="4"></textarea>
@@ -940,6 +942,39 @@
                         <tbody id="admin-requests-tbl-body">
                         </tbody>
                     </table>
+                </section>
+            </section>
+        </section>
+
+        <section class="main-content" id="my-order-requests-section">
+            <section class="container-fluid" id="my-request-search-bar">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input class="form-control" id="inp-my-requests-search-bar" type="search"/>
+                        <label class="form-label" for="inp-all-driver-search-bar">Search</label>
+                    </div>
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section class="container-fluid" id="my-requests-table-section">
+                <section class="container-fluid flex-container" id="my-requests-table-section-inner">
+                    <table class="table align-middle mb-0 bg-white" id="all-my-requests-table">
+                        <thead class="bg-light">
+                        <tr>
+                            <th class="font-weight-bolder">Order Id</th>
+                            <th class="font-weight-bold">Order Requested Date</th>
+                            <th class="font-weight-bold">Order Confirmation Status</th>
+                            <th class="font-weight-bold">Order Confirmation Message</th>
+                            <th class="font-weight-bold">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody id="all-my-requests-table-body">
+                        </tbody>
+                    </table>
+
                 </section>
             </section>
         </section>

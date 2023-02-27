@@ -37,7 +37,7 @@ function setOrderTblData() {
             '                            </td>\n' +
             '                            <td><p class="fw-bold mb-1">'+order.orderRequestedDate+'</p></td>\n' +
             '                            <td>\n' +
-            '                                <button class="btn btn-success btn-sm btn-rounded" type="button">View</button>\n' +
+            '                                <button class="searchOrderBtn btn btn-success btn-sm btn-rounded" type="button" value="'+order.orderId+'">View</button>\n' +
             '                            </td>\n' +
             '                        </tr>'
         );
@@ -75,3 +75,22 @@ function findCustomer(id) {
         }
     }
 }
+
+$('.searchOrderBtn').click(function () {
+    let orderId = $(this).val();
+    $.ajax({
+        url: baseUrl + 'order/findOrderById/'+orderId,
+        async: false,
+        method: 'get',
+        success: function (resp) {
+            let order = (resp.data[0]);
+            console.log(order);
+            $('#pickup-date').val(order.pickupDate.substring(0,10));
+            $('#pickup-time').val(order.pickupTime);
+            $('#return-date').val(order.returnDate.substring(0,10));
+            $('#return-time').val(order.returnTime);
+            $('#inp-pickup-venue').val(order.pickupVenue);
+            $('#inp-return-venue').val(order.returnVenue);
+        }
+    });
+});
