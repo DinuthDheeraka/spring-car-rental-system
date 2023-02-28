@@ -130,7 +130,7 @@ $('.searchOrderBtn').click(function () {
         }
     });
 
-    setSelectedCarDetails(orderDetailCars);
+    loadCarDetailsForAdmin(orderDetailCars);
     setSelectedCarsPaymentDetails(orderDetailCars);
 });
 
@@ -139,5 +139,33 @@ function filterAllCar(carId) {
         if(allCars[i].carId == carId){
             return allCars[i];
         }
+    }
+}
+
+function loadCarDetailsForAdmin(selectedCars) {
+    emptyOrderCarDetailView();
+
+    for (let i = 0; i < selectedCars.length; i++) {
+        let car = selectedCars[i];
+        $('#request-car-container').append(
+            '                <section class="row">\n' +
+            '                    <section class="col-6">\n' +
+            '                        \n' +
+            '                            <input class="form-control" maxlength="20" value="' + car.registrationId + '" type="text"/>\n' +
+            '                            \n' +
+            '                            <div class="form-helper"></div>\n' +
+            '                        \n' +
+            '                    </section>\n' +
+            '\n' +
+            '                    <section class="col-6">\n' +
+            '                        \n' +
+            '                            <input class="form-control"  maxlength="20" value="' + car.brand + '" type="text"/>\n' +
+            '                            \n' +
+            '                            <div class="form-helper"></div>\n' +
+            '                        \n' +
+            '                    </section>\n' +
+            '\n' +
+            '                </section>\n'
+        );
     }
 }

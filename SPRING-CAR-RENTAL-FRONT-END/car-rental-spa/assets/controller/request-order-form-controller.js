@@ -44,7 +44,7 @@ function requestOrder() {
     emptyOrderPaymentView();
 }
 
-function addOrder(){
+function addOrder() {
     let date = new Date();
     let formattedDate = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate() + ' ' + ((date) + "").substring(16, 24);
 
@@ -90,12 +90,12 @@ function addOrder(){
 
 function addOrderDetail() {
 
-    for(let i = 0; i<carsCart.length; i++){
+    for (let i = 0; i < carsCart.length; i++) {
         let orderDetail = {
             orderId: newOrderId,
-            carId:carsCart[i].carId,
-            lostDamageWaiverReturnStatus:"Not-Paid",
-            lostDamageWaiverStatus:"Paid"
+            carId: carsCart[i].carId,
+            lostDamageWaiverReturnStatus: "Not-Paid",
+            lostDamageWaiverStatus: "Paid"
         };
 
         $.ajax({
@@ -118,16 +118,19 @@ function loadSelectedCarsToRequestOrder(selectedCars) {
 }
 
 function setSelectedCarsPaymentDetails(selectedCars) {
-    var start = new Date( $('#pickup-date').val() ).getTime(),
-        end = new Date( $('#return-date').val() ).getTime();
+    var start = new Date($('#pickup-date').val()).getTime(),
+        end = new Date($('#return-date').val()).getTime();
 
     //1000 * 60 * 60 * 24 = 1 day = 86400000
-    let dateDiff = ( ((end - start) / 86400000));
+    let dateDiff = (((end - start) / 86400000));
 
     emptyOrderPaymentView();
 
+    let total = 0;
+
     for (let i = 0; i < selectedCars.length; i++) {
         let car = selectedCars[i];
+        total+=car.dailyRate*dateDiff;
         $('#request-order-payment-details').append(
             '                <section class="row">\n' +
             '                    <section class="col-3">\n' +
@@ -148,12 +151,16 @@ function setSelectedCarsPaymentDetails(selectedCars) {
             '\n' +
             '                    <section class="col-5">\n' +
             '                        \n' +
-            '                            <input class="form-control"  maxlength="20" value="' + car.dailyRate*dateDiff + '" type="text"/>\n' +
+            '                            <input class="form-control"  maxlength="20" value="' + car.dailyRate * dateDiff + '" type="text"/>\n' +
             '                        <div class="form-helper"></div>\n' +
             '                    </section>\n' +
             '                </section>\n'
         );
     }
+
+    $('#request-order-payment-details').append(
+        '<section class="row"><section class="col-12"><input class="form-control" value="'+total+'"></section></section>'
+    );
 }
 
 function setSelectedCarDetails(selectedCars) {

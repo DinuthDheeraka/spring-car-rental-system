@@ -1,0 +1,72 @@
+#landing-page-icon{
+    position: absolute;
+    /*border: 1px solid red;*/
+    margin: auto;
+    width:200px;
+    height: 100px;
+    top: 20px;
+    right: 10px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../images/attachment_104083548.png");
+}
+#landing-page-image-section{
+    position: absolute;
+    /*border: 1px solid red;*/
+    margin: auto;
+    width: 2000px;
+    height: 700px;
+    top: 0;
+    bottom: -67px;
+    right: 10px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../images/10751.jpg");
+}
+
+#landing-page-topic{
+    position: absolute;
+    margin: auto;
+    top: 170px;
+    left: 10px;
+    /*border: 1px solid red;*/
+    width: 840px;
+    /*background-color: #f1f1f1;*/
+}
+
+#landing-page-h3-1{
+    color: black;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#landing-page-h3-3{
+    color: #1e0ad4;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#landing-page-btn-section{
+    position: absolute;
+    margin: auto;
+    /*border: 1px solid red;*/
+    top: 350px;
+    left: 15px;
+}
+
+#landing-page-btn-section button{
+    width: 175px;
+    height: 45px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    /*border: transparent;*/
+    /*color: white;*/
+}
+
+#landing-login-btn{
+    /*background-color: #6c05b4;*/
+}
+
+#landing-check-car-btn{
+    /*background-color: #074dc6;*/
+}
