@@ -46,4 +46,9 @@ public class OrderServiceImpl implements OrderService {
     public OrderDTO findOrderById(String orderId) {
         return modelMapper.map(orderRepo.findById(orderId).get(),OrderDTO.class);
     }
+
+    @Override
+    public void updateOrder(OrderDTO orderDTO) {
+        orderRepo.save(modelMapper.map(orderDTO,Orders.class));
+    }
 }

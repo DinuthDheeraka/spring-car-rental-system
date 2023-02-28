@@ -12,4 +12,5 @@ public interface OrderService {
     List<String>  getAllOrderIds();
     List<OrderDTO> getAllOrders();
     OrderDTO findOrderById(String orderId);
+    void updateOrder(OrderDTO orderDTO);
 }

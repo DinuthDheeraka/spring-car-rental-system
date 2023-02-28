@@ -5,7 +5,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    border: 1px solid black;
+    /*border: 1px solid black;*/
     height: 74px;
     background-color: #ffffff;
 }

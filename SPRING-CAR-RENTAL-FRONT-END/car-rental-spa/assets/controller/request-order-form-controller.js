@@ -1,14 +1,55 @@
 let newOrderId = '';
 let assignedDriver = '';
 
+let orderConfirmStatus = '';
+
 let carsCart = [];
+
+let clickedOrderId = '';
+let clickedOrder = null;
 
 findNewOrderId();
 
 $('#main-request-order-btn').click(function () {
-    requestOrder();
+    alert($('#order-note').val());
+    if($('#main-request-order-btn').html()=='Update Order'){
+        updateOrder();
+    }else{
+        requestOrder();
+    }
     // uploadCustomerNicAndDrivingLicense();
 });
+
+
+function updateOrder() {
+    let order = {
+        orderId: clickedOrderId,
+        confirmationStatus:orderConfirmStatus,
+        note:$('#order-note').val(),
+        customerId: clickedOrder.customerId,
+        driverId: clickedOrder.driverId,
+        pickupDate: clickedOrder.pickupDate,
+        pickupTime: clickedOrder.pickupTime,
+        returnDate: clickedOrder.returnDate,
+        returnTime: clickedOrder.returnTime,
+        pickupVenue: clickedOrder.pickupVenue,
+        returnVenue: clickedOrder.returnVenue,
+        orderRequestedDate: clickedOrder.orderRequestedDate,
+        orderStatus: "new"
+    };
+    console.log(order);
+
+    $.ajax({
+        url: baseUrl + 'order/update_order',
+        // dataType:'json',
+        contentType: 'application/json',
+        data: JSON.stringify(order),
+        async: false,
+        method: 'post',
+        success: function (resp) {
+        }
+    });
+}
 
 function uploadCustomerNicAndDrivingLicense() {
     let nicImage = $("#inpNicImage").prop('files')[0];

@@ -35,10 +35,22 @@ public class OrderController {
         orderService.addOrder(orderDTO);
     }
 
+    @PostMapping(path = {"/update_order"}, consumes = {"application/json"})
+    public void updateOrder(@RequestBody OrderDTO orderDTO) {
+        System.out.println(orderDTO);
+        orderService.updateOrder(orderDTO);
+    }
+
+
     @GetMapping(path = {"/findNewOrderId"})
     public ResponseUtil<String> findNewOrderId() {
         List<String> list = new ArrayList<>();
-        list.add(IdsGenerator.generateId("OR-",orderService.getAllOrderIds().get(0)));
+        List<String> allOrderIds = orderService.getAllOrderIds();
+        if(allOrderIds.size()>0){
+            list.add(IdsGenerator.generateId("OR-",allOrderIds.get(0)));
+        }else{
+            list.add("OR-0000");
+        }
         return new ResponseUtil<String>("200","Done",list);
     }
 

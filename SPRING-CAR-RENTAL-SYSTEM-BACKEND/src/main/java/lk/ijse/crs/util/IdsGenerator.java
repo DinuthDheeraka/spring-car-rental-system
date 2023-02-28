@@ -7,7 +7,8 @@ package lk.ijse.crs.util;
 public class IdsGenerator {
 
     public static String generateId(String prefix,String lastId){
-        if(lastId.equals("[]")){
+        System.out.println("last id : "+lastId);
+        if(lastId.equals("")){
             return prefix+"0000";
         }
         int nextValue = Integer.parseInt(lastId.replace(prefix,""))+1;

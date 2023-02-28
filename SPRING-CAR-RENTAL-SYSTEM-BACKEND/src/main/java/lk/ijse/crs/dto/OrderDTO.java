@@ -26,9 +26,9 @@ public class OrderDTO {
     String orderStatus;
     String confirmationStatus;
     String pickupDate;
-    String pickupTime;
+    LocalTime pickupTime;
     String returnDate;
-    String returnTime;
+    LocalTime returnTime;
     String pickupVenue;
     String returnVenue;
     String note;
