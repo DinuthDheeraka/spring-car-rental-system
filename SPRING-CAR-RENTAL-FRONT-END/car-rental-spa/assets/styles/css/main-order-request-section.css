@@ -44,6 +44,7 @@
     top: 275px;
     height: 200px;
     width: 670px;
+    overflow-y: scroll;
 }
 
 #reason-for-rejection-section{

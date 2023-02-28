@@ -1,6 +1,8 @@
 let newOrderId = '';
 let assignedDriver = '';
 
+let carsCart = [];
+
 findNewOrderId();
 $('#main-request-order-btn').click(function () {
 
@@ -75,6 +77,7 @@ function requestOrder() {
 }
 
 function loadSelectedCarsToRequestOrder(selectedCars) {
+    carsCart = selectedCars;
     setSelectedCarDetails(selectedCars);
     setSelectedCarsPaymentDetails(selectedCars);
 }
