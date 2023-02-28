@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/driver")
@@ -48,6 +50,15 @@ public class DriverController {
     public ResponseUtil<DriverDTO> findAllAvailableDrivers() {
         ResponseUtil<DriverDTO> responseUtil = new ResponseUtil(
                 "200", "Done", driverService.findAllDriversByDriverStatus("Inactive"));
+        return responseUtil;
+    }
+
+    @GetMapping(path = {"/findDriverById/{driverId}"})
+    public ResponseUtil<DriverDTO> findDriverById(@PathVariable int driverId) {
+        List<DriverDTO> driverDTOList = new ArrayList<>();
+        driverDTOList.add(driverService.findDriverById(driverId));
+        ResponseUtil<DriverDTO> responseUtil = new ResponseUtil(
+                "200", "Done", driverDTOList);
         return responseUtil;
     }
 

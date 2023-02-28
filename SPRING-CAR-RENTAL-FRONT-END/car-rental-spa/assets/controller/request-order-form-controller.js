@@ -4,8 +4,8 @@ let assignedDriver = '';
 let carsCart = [];
 
 findNewOrderId();
-$('#main-request-order-btn').click(function () {
 
+$('#main-request-order-btn').click(function () {
     requestOrder();
     // uploadCustomerNicAndDrivingLicense();
 });
@@ -37,6 +37,14 @@ function uploadCustomerNicAndDrivingLicense() {
 
 function requestOrder() {
 
+    addOrder();
+    addOrderDetail();
+    findNewOrderId();
+    emptyOrderCarDetailView();
+    emptyOrderPaymentView();
+}
+
+function addOrder(){
     let date = new Date();
     let formattedDate = date.getFullYear() + '-' + date.getMonth() + '-' + date.getDate() + ' ' + ((date) + "").substring(16, 24);
 
@@ -53,7 +61,7 @@ function requestOrder() {
         orderRequestedDate: formattedDate,
         orderStatus: "new"
     };
-    console.log(order)
+    console.log(order);
 
     $.ajax({
         url: baseUrl + 'order/place_order',
@@ -66,7 +74,6 @@ function requestOrder() {
         }
     });
 
-    findNewOrderId();
     assignedDriver = null;
     $('#pickup-date').val("");
     $('#pickup-time').val("");
@@ -74,6 +81,34 @@ function requestOrder() {
     $('#return-time').val("");
     $('#inp-pickup-venue').val("");
     $('#inp-return-venue').val("");
+    $('#inp-req-driver-contact-no').val("");
+    $('#inp-req-driver-email').val("");
+    $('#inp-req-driver-name').val("");
+
+
+}
+
+function addOrderDetail() {
+
+    for(let i = 0; i<carsCart.length; i++){
+        let orderDetail = {
+            orderId: newOrderId,
+            carId:carsCart[i].carId,
+            lostDamageWaiverReturnStatus:"Not-Paid",
+            lostDamageWaiverStatus:"Paid"
+        };
+
+        $.ajax({
+            url: baseUrl + 'orderDetail/addOrder',
+            // dataType:'json',
+            contentType: 'application/json',
+            data: JSON.stringify(orderDetail),
+            async: false,
+            method: 'post',
+            success: function (resp) {
+            }
+        });
+    }
 }
 
 function loadSelectedCarsToRequestOrder(selectedCars) {
@@ -89,12 +124,7 @@ function setSelectedCarsPaymentDetails(selectedCars) {
     //1000 * 60 * 60 * 24 = 1 day = 86400000
     let dateDiff = ( ((end - start) / 86400000));
 
-    $('#request-order-payment-details').empty();
-    $('#request-order-payment-details').append(
-        '<section class="row">\n' +
-        '                    <section class="col-12"><h5 id="selected-car-details-topic">Payments Details</h5></section>\n' +
-        '                </section>'
-    );
+    emptyOrderPaymentView();
 
     for (let i = 0; i < selectedCars.length; i++) {
         let car = selectedCars[i];
@@ -128,12 +158,7 @@ function setSelectedCarsPaymentDetails(selectedCars) {
 
 function setSelectedCarDetails(selectedCars) {
 
-    $('#request-car-container').empty();
-    $('#request-car-container').append(
-        '<section class="row">\n' +
-        '                    <section class="col-12"><h5 id="selected-car-details-topic">Selected Car Details</h5></section>\n' +
-        '                </section>'
-    );
+    emptyOrderCarDetailView();
 
     for (let i = 0; i < selectedCars.length; i++) {
         let car = selectedCars[i];
@@ -173,6 +198,7 @@ function findNewOrderId() {
         method: 'get',
         success: function (resp) {
             newOrderId = resp.data[0];
+            console.log(newOrderId);
             $('#orderId').text("Order Id : " + newOrderId);
         }
     });
@@ -213,3 +239,21 @@ $('#check-assign-driver').change(function () {
         });
     }
 });
+
+function emptyOrderCarDetailView() {
+    $('#request-car-container').empty();
+    $('#request-car-container').append(
+        '<section class="row">\n' +
+        '                    <section class="col-12"><h5 id="selected-car-details-topic">Selected Car Details</h5></section>\n' +
+        '                </section>'
+    );
+}
+
+function emptyOrderPaymentView() {
+    $('#request-order-payment-details').empty();
+    $('#request-order-payment-details').append(
+        '<section class="row">\n' +
+        '                    <section class="col-12"><h5 id="selected-car-details-topic">Payments Details</h5></section>\n' +
+        '                </section>'
+    );
+}

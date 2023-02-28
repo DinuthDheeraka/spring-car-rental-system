@@ -8,6 +8,6 @@ import java.util.List;
 
 public interface OrderRepo extends JpaRepository<Orders,String> {
 
-    @Query(value = "SELECT o.orderId FROM Orders o ORDER BY o.driverId DESC")
+    @Query(value = "SELECT o.orderId FROM Orders o ORDER BY o.orderId DESC")
     List<String> findLastOrderId();
 }

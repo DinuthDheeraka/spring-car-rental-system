@@ -77,7 +77,13 @@ function findCustomer(id) {
 }
 
 $('.searchOrderBtn').click(function () {
+
+    $('#main-request-order-btn').html("Update Order");
+    $('#request-order-h3').text("Order Detail");
+    $('#driver-check-box').css('visibility','hidden');
+
     let orderId = $(this).val();
+    let driverId = 0;
     $.ajax({
         url: baseUrl + 'order/findOrderById/'+orderId,
         async: false,
@@ -92,6 +98,46 @@ $('.searchOrderBtn').click(function () {
             $('#return-time').val(order.returnTime);
             $('#inp-pickup-venue').val(order.pickupVenue);
             $('#inp-return-venue').val(order.returnVenue);
+            driverId = order.driverId;
         }
     });
+
+    $.ajax({
+        url: baseUrl + 'driver/findDriverById/'+driverId,
+        async: false,
+        method: 'get',
+        success: function (resp) {
+            let driver = resp.data[0];
+            $('#inp-req-driver-contact-no').val(driver.telephoneNumber);
+            $('#inp-req-driver-email').val(driver.emailAddress);
+            $('#inp-req-driver-name').val(driver.fullName);
+        }
+    });
+
+
+    let orderDetailCars = [];
+
+    $.ajax({
+        url: baseUrl + 'orderDetail/findOrderDetailById/'+orderId,
+        async: false,
+        method: 'get',
+        success: function (resp) {
+            for(let i = 0; i<resp.data.length; i++){
+                let orderDetail = (resp.data[i]);
+                let car = filterAllCar(orderDetail.carId);
+                orderDetailCars.push(car);
+            }
+        }
+    });
+
+    setSelectedCarDetails(orderDetailCars);
+    setSelectedCarsPaymentDetails(orderDetailCars);
 });
+
+function filterAllCar(carId) {
+    for(let i = 0; i<allCars.length; i++){
+        if(allCars[i].carId == carId){
+            return allCars[i];
+        }
+    }
+}
