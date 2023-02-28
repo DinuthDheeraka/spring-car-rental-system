@@ -63,6 +63,7 @@
         <button id="req-order">req-order</button>
         <button id="show-order-reqs">show-order-reqs</button>
         <button id="search-order">my-requests</button>
+        <button id="landing-page-btn">landing</button>
     </header>
 
     <section class="container-fluid" id="main-content-container">
@@ -186,10 +187,12 @@
 
         <section class="main-content" id="login-section">
 
+            <section class="container" id="sign-icon"></section>
+
             <section class="container" id="customer-login-details-section">
                 <section class="container-fluid flex-container">
                     <section class="container">
-                        <h3>Sign in</h3>
+                        <h3 id="sign-in-topic">Sign in</h3>
                     </section>
                     <form>
                         <!-- Email input -->
@@ -226,7 +229,7 @@
 
                         <!-- Register buttons -->
                         <div class="text-center">
-                            <p>Not a member? <a href="#!">Register</a></p>
+                            <p>Not a member? <button type="button"  id="landing-cus-register-btn">Register</button></p>
                             <p>or sign up with:</p>
                             <button class="btn btn-secondary btn-floating mx-1" type="button">
                                 <i class="fab fa-facebook-f"></i>
@@ -1041,7 +1044,8 @@
             </section>
             <section class="container" id="landing-page-icon"></section>
             <section class="container" id="landing-page-topic">
-                <h3 id="landing-page-h3-1">Find,Book and Rental car in </h3>
+                <h3 id="landing-page-h3-1">Find,Book and</h3>
+                <h3 id="landing-page-h3-2">Rental car in</h3>
                 <h3 id="landing-page-h3-3">Easy Steps</h3>
             </section>
             <section class="row" id="landing-page-btn-section">
@@ -1168,5 +1172,7 @@
 <!--<script src="../car-rental-spa/assets/controller/all-customers-form-controller.js"></script>-->
 <!--<script src="../car-rental-spa/assets/controller/all-driver-form-controller.js"></script>-->
 <!--<script src="../car-rental-spa/assets/controller/show-all-orders-form-controller.js"></script>-->
+<script src="../car-rental-spa/assets/controller/landing-page-styles.js"></script>
+<script src="../car-rental-spa/assets/controller/login-page-styles.js"></script>
 </body>
 </html>

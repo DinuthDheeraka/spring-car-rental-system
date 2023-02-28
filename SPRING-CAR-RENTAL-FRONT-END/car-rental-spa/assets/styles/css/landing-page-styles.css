@@ -4,7 +4,7 @@
     margin: auto;
     width:200px;
     height: 100px;
-    top: 20px;
+    top: 0px;
     right: 10px;
     background-position: center;
     background-size: cover;
@@ -14,21 +14,21 @@
     position: absolute;
     /*border: 1px solid red;*/
     margin: auto;
-    width: 2000px;
-    height: 700px;
+    width: 1050px;
+    height: 620px;
     top: 0;
-    bottom: -67px;
-    right: 10px;
+    bottom: -45px;
+    right: 5px;
     background-position: center;
     background-size: cover;
-    background-image: url("../../images/10751.jpg");
+    background-image: url("../../images/8399.jpg");
 }
 
 #landing-page-topic{
     position: absolute;
     margin: auto;
     top: 170px;
-    left: 10px;
+    left: 30px;
     /*border: 1px solid red;*/
     width: 840px;
     /*background-color: #f1f1f1;*/
@@ -46,12 +46,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#landing-page-h3-2{
+    color: #000000;
+    font-size: 60px;
+    font-family: 'Poppins', sans-serif;
+}
+
 #landing-page-btn-section{
     position: absolute;
     margin: auto;
     /*border: 1px solid red;*/
-    top: 350px;
-    left: 15px;
+    top: 450px;
+    left: 28px;
 }
 
 #landing-page-btn-section button{
@@ -69,4 +75,10 @@
 
 #landing-check-car-btn{
     /*background-color: #074dc6;*/
+}
+
+#landing-cus-register-btn{
+    border: transparent;
+    color: #1a84f6;
+    background-color: transparent;
 }

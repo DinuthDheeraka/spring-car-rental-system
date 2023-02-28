@@ -1,6 +1,6 @@
-$('#landing-login-btn').click(function () {
-    $('#customer-register-section').css('visibility','hidden');
-    $('#login-section').css('visibility','visible');
+$('#landing-cus-register-btn').click(function () {
+    $('#customer-register-section').css('visibility','visible');
+    $('#login-section').css('visibility','hidden');
     $('#all-customer-section').css('visibility','hidden');
     $('#all-driver-section').css('visibility','hidden');
     $('#register-car-section').css('visibility','hidden');

@@ -8,6 +8,25 @@
     font-family: 'Poppins', sans-serif;
 }
 
+#sign-in-topic{
+    color: #363535;
+    font-weight: bold;
+    margin-left: -10px;
+}
+
+#sign-icon{
+    position: absolute;
+    /*border: 1px solid red;*/
+    margin: auto;
+    width:200px;
+    height: 100px;
+    top: 10px;
+    left: 10px;
+    background-position: center;
+    background-size: cover;
+    background-image: url("../../images/attachment_104083548.png");
+}
+
 #login-text{
     /*border:1px solid red;*/
     font-family: 'Poppins', sans-serif;
@@ -31,8 +50,8 @@
     /*height: 80%;*/
     position: absolute;
     margin: auto;
-    left: 0;
-    top: 100px;
+    left: 25px;
+    top: 150px;
 }
 
 #customer-login-image{
@@ -47,5 +66,5 @@
     /*border-radius: 100%;*/
     background-position: center;
     background-size: cover;
-    background-image: url("../../images/Sign in-pana (1).png");
+    background-image: url("../../images/Sign in-pana.png");
 }
