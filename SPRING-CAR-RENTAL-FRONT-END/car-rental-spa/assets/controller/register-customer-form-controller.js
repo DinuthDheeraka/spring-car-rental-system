@@ -3,10 +3,31 @@ let baseUrl = "http://localhost:8080/SPRING_CAR_RENTAL_SYSTEM_BACKEND_war_explod
 let newCustomerId = 0;
 
 $('#create-account-btn').click(function () {
-    getCustomerLastId();
-    registerCustomer();
-    uploadCustomerNicAndDrivingLicense();
+    // getCustomerLastId();
+    // registerCustomer();
+    addNewSystemUser();
+    // uploadCustomerNicAndDrivingLicense();
 });
+
+function addNewSystemUser() {
+    let systemUser = {
+        nicNumber: $('#inpNicNo').val(),
+        password:$('#inpPassword').val(),
+        userName:$('#inpUserName').val(),
+        userType:"Customer"
+    };
+
+    $.ajax({
+        url: baseUrl + 'systemUser/addSystemUser',
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify(systemUser),
+        async: false,
+        method: 'post',
+        success: function (resp) {
+        }
+    });
+}
 
 function getCustomerLastId() {
     $.ajax({
