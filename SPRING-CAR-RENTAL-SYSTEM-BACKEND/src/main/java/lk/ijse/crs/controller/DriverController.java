@@ -32,6 +32,12 @@ public class DriverController {
         driverService.addDriver(driverDTO);
     }
 
+    @PostMapping(path = {"/updateDriver"}, consumes = {"application/json"})
+    public void updateDriver(@RequestBody DriverDTO driverDTO) {
+        driverService.deleteDriverById(driverDTO.getDriverId());
+        driverService.addDriver(driverDTO);
+    }
+
     @GetMapping(path = {"/lastDriverId"})
     public ResponseUtil<Integer> findLastCustomerId() {
         ResponseUtil<Integer> responseUtil = new ResponseUtil(

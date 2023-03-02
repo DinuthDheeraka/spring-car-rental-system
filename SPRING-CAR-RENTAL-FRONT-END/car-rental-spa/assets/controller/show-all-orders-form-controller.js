@@ -77,6 +77,8 @@ function findCustomer(id) {
 }
 
 $('.searchOrderBtn').click(function () {
+    $('#main-order-request-section').css('visibility','visible');
+    $('#show-order-requests-section').css('visibility','hidden');
     clickedOrderId = $(this).val();
 
     $('#main-request-order-btn').html("Update Order");

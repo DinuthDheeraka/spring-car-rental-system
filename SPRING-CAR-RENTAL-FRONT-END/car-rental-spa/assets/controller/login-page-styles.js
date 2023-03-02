@@ -37,6 +37,7 @@ function searchUser(systemUsers, password, userName) {
 
 function findActiveUser(user) {
     let userType = user.userType;
+    updateViews(userType);
     if(userType=="Admin"){
         activeUser = user;
         activeUserType = "Admin";
@@ -83,5 +84,23 @@ function findActiveUser(user) {
 
     }
 
-    alert(activeUser.userType);
+    alert(activeUser.nicNumber);
+}
+
+
+function updateViews(userType) {
+    switch (userType) {
+        case "Driver":
+            $('#driver-header').css('visibility','visible');
+            $('#customer-header').css('visibility','hidden');
+            $('#admin-header').css('visibility','hidden');break;
+        case "Admin":
+            $('#driver-header').css('visibility','hidden');
+            $('#customer-header').css('visibility','hidden');
+            $('#admin-header').css('visibility','visible');break;
+        case "Customer":
+            $('#driver-header').css('visibility','hidden');
+            $('#admin-header').css('visibility','hidden');
+            $('#customer-header').css('visibility','visible');break;
+    }
 }

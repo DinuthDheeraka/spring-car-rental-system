@@ -11,4 +11,8 @@ public interface CarService {
     List<Integer> findLastCarId();
 
     List<CarDTO> findAllCars();
+
+    void updateCar(CarDTO carDTO);
+
+    void deleteCar(CarDTO carDTO);
 }

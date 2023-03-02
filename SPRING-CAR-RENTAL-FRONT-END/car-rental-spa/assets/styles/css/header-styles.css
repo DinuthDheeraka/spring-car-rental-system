@@ -17,3 +17,25 @@ header{
     width: 100%;
     height: 74px;
 }
+
+li>a{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-weight: bolder;
+}
+
+#admin-header-inner{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 74px;
+}
+
+#driver-header-inner{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 74px;
+}

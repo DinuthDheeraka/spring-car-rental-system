@@ -53,4 +53,9 @@ public class DriverServiceImpl implements DriverService {
     public DriverDTO findDriverById(int driverId) {
         return modelMapper.map(driverRepo.findById(driverId),DriverDTO.class);
     }
+
+    @Override
+    public void deleteDriverById(int driverId) {
+        driverRepo.deleteDriverByDriverId(driverId);
+    }
 }

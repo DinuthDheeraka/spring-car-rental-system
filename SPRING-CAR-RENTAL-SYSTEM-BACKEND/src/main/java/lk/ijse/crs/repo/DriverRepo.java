@@ -12,4 +12,6 @@ public interface DriverRepo extends JpaRepository<Driver,Integer> {
     List<Integer> findLastDriverId();
 
     List<Driver> findAllByDriverStatus(String driverStatus);
+
+    void deleteDriverByDriverId(int driverId);
 }

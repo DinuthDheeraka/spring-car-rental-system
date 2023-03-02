@@ -11,4 +11,6 @@ public interface CarRepo extends JpaRepository<Car,Integer> {
 
     @Query(value = "SELECT c.carId FROM Car c ORDER BY c.carId DESC")
     List<Integer> findLastCarId();
+
+    void deleteCarByCarId(int carId);
 }

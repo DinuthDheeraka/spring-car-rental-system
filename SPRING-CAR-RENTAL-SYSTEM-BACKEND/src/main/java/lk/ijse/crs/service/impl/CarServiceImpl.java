@@ -41,4 +41,14 @@ public class CarServiceImpl implements CarService {
     public List<CarDTO> findAllCars() {
         return modelMapper.map(carRepo.findAll(),new TypeToken<ArrayList<CarDTO>>(){}.getType());
     }
+
+    @Override
+    public void updateCar(CarDTO carDTO) {
+        carRepo.save(modelMapper.map(carDTO,Car.class));
+    }
+
+    @Override
+    public void deleteCar(CarDTO carDTO) {
+        carRepo.deleteCarByCarId(carDTO.getCarId());
+    }
 }

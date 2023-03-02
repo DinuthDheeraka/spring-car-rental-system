@@ -78,11 +78,72 @@ function uploadCustomerNicAndDrivingLicense() {
 
 function requestOrder() {
 
-    addOrder();
-    addOrderDetail();
-    findNewOrderId();
-    emptyOrderCarDetailView();
-    emptyOrderPaymentView();
+    // addOrder();
+    // addOrderDetail();
+    updateCarStatus();
+    updateDriverStatus();
+    // findNewOrderId();
+    // emptyOrderCarDetailView();
+    // emptyOrderPaymentView();
+}
+
+function updateCarStatus() {
+    for(let c of carsCart){
+        let car = {
+            brand:c.brand,
+            carId:c.carId,
+            colour:c.colour,
+            currentStatus:'Booked',
+            dailyKm:c.dailyKm,
+            dailyRate:c.dailyRate,
+            fuelType:c.fuelType,
+            monthlyKm:c.monthlyKm,
+            monthlyRate:c.monthlyRate,
+            numberOfPassengers:c.numberOfPassengers,
+            priceForExtraKm:c.priceForExtraKm,
+            registrationId:c.registrationId,
+            transmissionType:c.transmissionType,
+            type:c.type
+        }
+
+        $.ajax({
+            url: baseUrl + 'car/updateCar',
+            // dataType:'json',
+            contentType: 'application/json',
+            data: JSON.stringify(car),
+            async: false,
+            method: 'post',
+            success: function (resp) {
+            }
+        });
+    }
+}
+
+function updateDriverStatus() {
+
+    let driver = {
+        driverId:assignedDriver.driverId,
+        driverStatus:"Requested",
+        drivingLicenseNumber:assignedDriver.drivingLicenseNumber,
+        emailAddress:assignedDriver.emailAddress,
+        fullName:assignedDriver.fullName,
+        homeAddress:assignedDriver.homeAddress,
+        nicNumber:assignedDriver.nicNumber,
+        telephoneNumber:assignedDriver.telephoneNumber
+    }
+
+    $.ajax({
+        url: baseUrl + 'driver/updateDriver',
+        // dataType:'json',
+        contentType: 'application/json',
+        data: JSON.stringify(driver),
+        async: false,
+        method: 'post',
+        success: function (resp) {
+        }
+    });
+
+
 }
 
 function addOrder() {
@@ -91,7 +152,7 @@ function addOrder() {
 
     let order = {
         orderId: newOrderId,
-        customerId: 0,
+        customerId: activeUser.customerId,
         driverId: assignedDriver.driverId,
         pickupDate: $('#pickup-date').val(),
         pickupTime: $('#pickup-time').val(),
@@ -147,6 +208,7 @@ function addOrderDetail() {
             async: false,
             method: 'post',
             success: function (resp) {
+                alert('Requested Order Successfully');
             }
         });
     }
@@ -280,6 +342,7 @@ $('#check-assign-driver').change(function () {
             async: false,
             success: function (resp) {
                 assignedDriver = resp.data[0];
+                console.log(assignedDriver);
                 $('#inp-req-driver-contact-no').val(assignedDriver.telephoneNumber);
                 $('#inp-req-driver-email').val(assignedDriver.emailAddress);
                 $('#inp-req-driver-name').val(assignedDriver.fullName);
@@ -305,3 +368,7 @@ function emptyOrderPaymentView() {
         '                </section>'
     );
 }
+
+$('#return-date').change(function () {
+    setSelectedCarsPaymentDetails(carsCart);
+});

@@ -34,6 +34,13 @@ public class CarController {
         System.out.println(carDTO);
     }
 
+    @PostMapping(path = {"/updateCar"}, consumes = {"application/json"})
+    public void updateCar(@RequestBody CarDTO carDTO) {
+        carService.deleteCar(carDTO);
+//        System.out.println(carDTO);
+        carService.updateCar(carDTO);
+    }
+
     @GetMapping(path = {"/lastCarId"})
     public ResponseUtil<Integer> findLastCarId() {
         ResponseUtil<Integer> responseUtil = new ResponseUtil(

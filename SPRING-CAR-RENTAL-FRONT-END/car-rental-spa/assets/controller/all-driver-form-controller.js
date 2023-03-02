@@ -46,7 +46,7 @@ function loadAllDrivers() {
                     '                                <!--                                </button>-->\n' +
                     '                            </td>\n' +
                     '                            <td>\n' +
-                    '                                <span class="badge badge-success rounded-pill d-inline">Active</span>\n' +
+                    '                                <span class="badge badge-success rounded-pill d-inline">'+driver.driverStatus+'</span>\n' +
                     '                            </td>\n' +
                     '                            <td>\n' +
                     '                                <button class="btn btn-link btn-sm btn-rounded" type="button">Edit</button>\n' +

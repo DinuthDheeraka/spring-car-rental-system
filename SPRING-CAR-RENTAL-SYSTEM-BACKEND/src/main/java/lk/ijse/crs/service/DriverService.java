@@ -11,4 +11,5 @@ public interface DriverService {
     List<DriverDTO> findAllDrivers();
     List<DriverDTO> findAllDriversByDriverStatus(String driverStatus);
     DriverDTO findDriverById(int driverId);
+    void deleteDriverById(int driverId);
 }
