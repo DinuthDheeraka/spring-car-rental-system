@@ -15,6 +15,8 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @CrossOrigin
@@ -28,6 +30,17 @@ public class CustomerController {
     public void addCustomer(@RequestBody CustomerDTO customerDTO) {
         customerService.addCustomer(customerDTO);
         System.out.println(customerDTO);
+    }
+
+    @GetMapping(path = {"findCustomerById/{customerId}"})
+    public ResponseUtil<CustomerDTO> findCustomerById(@PathVariable int customerId){
+        CustomerDTO customerDTO = customerService.findCustomerById(customerId);
+        List<CustomerDTO> customerDTOS= new ArrayList<>();
+        customerDTOS.add(customerDTO);
+        ResponseUtil<CustomerDTO> responseUtil = new ResponseUtil<>(
+                "200","Done",customerDTOS
+        );
+        return responseUtil;
     }
 
     @GetMapping(path = {"/lastCustomerId"})

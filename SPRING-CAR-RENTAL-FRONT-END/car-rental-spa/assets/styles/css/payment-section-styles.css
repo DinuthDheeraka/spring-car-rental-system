@@ -1,0 +1,163 @@
+#payment-topic-section{
+    position: absolute;
+    margin: auto;
+    left: 30px;
+    top: 30px;
+}
+
+#payments-search-bar-section{
+    position: absolute;
+    margin: auto;
+    top: 30px;
+    left: 180px;
+    width: 715px;
+}
+
+#payment-order-detail-date-section{
+    border: 1px solid #b6b4b4;
+    position: absolute;
+    margin: auto;
+    left: 30px;
+    top: 120px;
+    width: 850px;
+}
+
+#payment-order-detail-date-section h5{
+    color: #7d7a7a;
+}
+
+#payment-order-detail-date-section>section{
+    margin-top: 10px;
+}
+
+#payment-order-detail-customer-section h5{
+    color: #7d7a7a;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#payment-order-detail-customer-section{
+    border: 1px solid #b6b4b4;
+    position: absolute;
+    margin: auto;
+    left: 30px;
+    top: 260px;
+    width: 850px;
+}
+
+#payment-order-detail-customer-section>section{
+    margin-top: 10px;
+}
+
+#payment-order-detail-car-section{
+    overflow-y: scroll;
+    border: 1px solid #b6b4b4;
+    position: absolute;
+    margin: auto;
+    left: 30px;
+    top: 420px;
+    width: 850px;
+    height: 220px;
+}
+
+#payment-order-detail-car-section>section{
+    margin-top: 10px;
+}
+
+#payment-order-detail-car-section h5{
+    color: #7d7a7a;
+}
+
+#payment-damage-waiver-section{
+    border: 1px solid #b6b4b4;
+    position: absolute;
+    margin: auto;
+    right: 30px;
+    top: 120px;
+    width: 600px;
+}
+
+#payment-damage-waiver-section>section{
+    margin-top: 10px;
+}
+
+#payment-damage-waiver-section h5{
+    color: #7d7a7a;
+}
+
+#extra-payment{
+    border: 1px solid #b6b4b4;
+    position: absolute;
+    margin: auto;
+    right: 30px;
+    top: 280px;
+    width: 600px;
+}
+
+#extra-payment h5{
+    color: #7d7a7a;
+    font-family: 'Poppins', sans-serif;
+}
+
+#extra-payment>section{
+    margin-top: 10px;
+}
+
+#payment-cash{
+    border: 1px solid #b6b4b4;
+    position: absolute;
+    margin: auto;
+    right: 30px;
+    top: 450px;
+    width: 600px;
+}
+
+#payment-cash>section{
+    margin-top: 10px;
+}
+
+#payment-cash h5{
+    color:  #7d7a7a;
+}
+
+#payment-btn{
+    position: absolute;
+    margin: auto;
+    bottom: 16px;
+    right: 10px;
+    width: 630px;
+    /*border: 1px solid red;*/
+}
+
+#payment-btn>button{
+    width: 100%;
+}
+
+#payment-total-section{
+    /*border: 1px solid red;*/
+    /*width: 310px;*/
+    position: absolute;
+    margin: auto;
+    top: 70px;
+    right: 17px;
+    text-align: right;
+}
+
+#payment-total-section>h2{
+    font-family: 'Poppins', sans-serif;
+    color: #000000;
+}
+
+#payment-order-id{
+    /*border: 1px solid red;*/
+    position: absolute;
+    margin: auto;
+    top: 20px;
+    text-align: right;
+    right: 17px;
+}
+
+#payment-order-id>h5{
+    /*border: 1px solid red;*/
+    color: black;
+}

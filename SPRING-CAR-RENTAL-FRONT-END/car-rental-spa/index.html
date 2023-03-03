@@ -18,6 +18,7 @@
     <link href="assets/styles/css/search-order-section-styles.css" rel="stylesheet">
     <link href="assets/styles/css/all-my-requests-section-styles.css" rel="stylesheet">
     <link href="assets/styles/css/landing-page-styles.css" rel="stylesheet">
+    <link href="assets/styles/css/payment-section-styles.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/css/normalize.css" rel="stylesheet">
 
@@ -1450,6 +1451,235 @@
 
         </section>
 
+        <section class="main-content" id="payment-section">
+            <section id="payment-topic-section">
+                <h3>Payments</h3>
+            </section>
+
+            <section class="container" id="payments-search-bar-section">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input type="search" id="payment-search-bar" class="form-control" />
+                        <label class="form-label" for="payment-search-bar">Search</label>
+                    </div>
+                    <button type="button" class="btn btn-primary" id="payment-search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section class="container" id="payment-total-section">
+                <h2 id="payment-total-h2">Total Rs.2500.00</h2>
+            </section>
+
+            <section class="container" id="payment-order-id">
+                <h5 id="payment-order-id-h5">Order Id : OR-0000</h5>
+            </section>
+
+            <section class="container" id="payment-order-detail-date-section">
+                <section class="row">
+                    <h5>Order Duration</h5>
+                </section>
+                <section class="row">
+                    <section class="col-6">
+                        <label class="form-check-label">Pickup Date</label>
+                        <input class="form-control" id="payment-pickup-date" type="date">
+                    </section>
+                    <section class="col-6">
+                        <label class="form-check-label">Return Date</label>
+                        <input class="form-control" id="payment-return-date" type="date">
+                    </section>
+                </section>
+
+                <section class="row"></section>
+            </section>
+
+
+            <section class="container" id="payment-order-detail-customer-section">
+                <section class="row">
+                    <h5>Customer Details</h5>
+                </section>
+
+                <section class="row">
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-cus-nic" class="form-control" />
+                            <label class="form-label" for="payment-cus-nic">Customer Nic No</label>
+                        </div>
+                    </section>
+
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-cus-driving-license" class="form-control" />
+                            <label class="form-label" for="payment-cus-driving-license">Customer Driving License No</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-cus-email" class="form-control" />
+                            <label class="form-label" for="payment-cus-nic">Customer Email Address</label>
+                        </div>
+                    </section>
+
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-cus-tele" class="form-control" />
+                            <label class="form-label" for="payment-cus-driving-license">Customer Telephone No</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row"></section>
+            </section>
+
+            <section class="container" id="payment-order-detail-car-section">
+                <section class="row">
+                    <h5>Car Details</h5>
+                </section>
+
+                <section class="row">
+                    <section class="col-3">
+                        <div class="form-outline">
+                            <input type="text" id="payment-car-reg-id" class="form-control" />
+                            <label class="form-label" >Registration Number</label>
+                        </div>
+                    </section>
+                    <section class="col-3">
+                        <div class="form-outline">
+                            <input type="text" id="payment-car-brand" class="form-control" />
+                            <label class="form-label">Brand</label>
+                        </div>
+                    </section>
+                    <section class="col-3">
+                        <div class="form-outline">
+                            <input type="text" id="payment-car-daily-charge" class="form-control" />
+                            <label class="form-label" >Daily Charge</label>
+                        </div>
+                    </section>
+                    <section class="col-3">
+                        <div class="form-outline">
+                            <input type="text" id="payment-car-total-charge" class="form-control" />
+                            <label class="form-label" >Total Charge</label>
+                        </div>
+                    </section>
+                </section>
+            </section>
+
+            <section class="container" id="payment-damage-waiver-section">
+                <section class="row">
+                    <h5>Loss Damage Waiver Status</h5>
+                </section>
+                <section class="row">
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-paid-loss-damage" class="form-control" />
+                            <label class="form-label" >Paid Loss Damage Amount</label>
+                        </div>
+                    </section>
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-loss-damage" class="form-control" />
+                            <label class="form-label" >Loss Damage Charge</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input type="text" id="payment-return-loss-damage" class="form-control" />
+                            <label class="form-label" >Amount to Return</label>
+                        </div>
+                    </section>
+                </section>
+                <section class="row"></section>
+            </section>
+
+            <section class="container" id="extra-payment">
+                <section class="row">
+                    <section class="col-6"><h5>Extra Payments</h5></section>
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-driver-charge" class="form-control" />
+                            <label class="form-label">Driver Payments</label>
+                        </div>
+                    </section>
+                </section>
+                <section class="row">
+                    <section class="col-6">
+                        <select class="form-select" aria-label="Default select example" id="payment-select-car">
+                        </select>
+                    </section>
+
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-extra-km-charge" class="form-control" />
+                            <label class="form-label">Extra Charges</label>
+                        </div>
+                    </section>
+                </section>
+                <section class="row">
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-extra-km" class="form-control" />
+                            <label class="form-label">Extra Km</label>
+                        </div>
+                    </section>
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-extra-price" class="form-control" />
+                            <label class="form-label">Charge for Extra Km</label>
+                        </div>
+                    </section>
+                </section>
+                <section class="row"></section>
+            </section>
+
+            <section class="container" id="payment-cash">
+                <section class="row">
+                    <h5>Cash</h5>
+                </section>
+                <section class="row">
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-sub-total" class="form-control" />
+                            <label class="form-label" >Sub Total</label>
+                        </div>
+                    </section>
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-discount" class="form-control" />
+                            <label class="form-label" >Discount</label>
+                        </div>
+                    </section>
+                </section>
+                <section class="row">
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-given-cash" class="form-control" />
+                            <label class="form-label">Cash</label>
+                        </div>
+                    </section>
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input type="text" id="payment-balance" class="form-control" />
+                            <label class="form-label" >Balance</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row"></section>
+            </section>
+
+            <section class="container" id="payment-btn">
+                <button type="button" class="btn btn-success">Make Payment</button>
+            </section>
+
+        </section>
+
         <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
         <!--        <section class="main-content" id="search-order-section">-->
@@ -1564,5 +1794,6 @@
 <script src="../car-rental-spa/assets/controller/show-all-orders-form-controller.js"></script>
 <script src="../car-rental-spa/assets/controller/landing-page-styles.js"></script>
 <script src="../car-rental-spa/assets/controller/login-page-styles.js"></script>
+<script src="../car-rental-spa/assets/controller/payment-form-controller.js"></script>
 </body>
 </html>

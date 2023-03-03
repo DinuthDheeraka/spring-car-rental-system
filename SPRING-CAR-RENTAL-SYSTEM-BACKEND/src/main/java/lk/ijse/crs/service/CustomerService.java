@@ -9,4 +9,5 @@ public interface CustomerService {
     void addCustomer(CustomerDTO customerDTO);
     List<Integer> findLastCustomerId();
     List<CustomerDTO> findAllCustomers();
+    CustomerDTO findCustomerById(int customerId);
 }
