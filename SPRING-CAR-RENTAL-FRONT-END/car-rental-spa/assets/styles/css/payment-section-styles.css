@@ -161,3 +161,16 @@
     /*border: 1px solid red;*/
     color: black;
 }
+
+#payment-id-section{
+    /*border: 1px solid red;*/
+    position: absolute;
+    margin: auto;
+    top: 20px;
+    width: 300px;
+    left: 950px;
+}
+
+#payment-payment-id-h5{
+    color: black;
+}

@@ -1,27 +1,21 @@
 /**
  * @author :  Dinuth Dheeraka
- * Created : 3/4/2023 1:38 AM
+ * Created : 3/4/2023 1:51 AM
  */
-package lk.ijse.crs.entity;
+package lk.ijse.crs.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.util.Date;
 
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Payment {
-    @Id
+public class PaymentDTO {
     String paymentId;
     String orderId;
-    @CreationTimestamp
     Date date;
     double amount;
     String paymentType;

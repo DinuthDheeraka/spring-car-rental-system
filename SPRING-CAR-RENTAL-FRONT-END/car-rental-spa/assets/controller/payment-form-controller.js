@@ -1,21 +1,112 @@
 let searchedOrderId = '';
 let searchedOrder = {};
+let orderDriver = {};
 let searchedCars = [];
 let duration = 0;
 let total = 0;
 let paidLostDamage = 0;
+let newPaymentId = '';
 $('#payment-search-btn').click(function () {
     searchedOrderId = $('#payment-search-bar').val();
     searchOrder();
     setOrderDuration();
     setCustomerDetails();
     setCarDetails();
+    setDriverDetails();
     loadCarPaymentDetails();
     calculateTotal();
     loadCarsCmbx();
     setPaidLostDamageAmount();
+    updateDriver();
+    updateCar();
     // searchOrderDetail();
 });
+
+
+function updateDriver() {
+    let driver = {
+        driverId:orderDriver.driverId,
+        driverStatus:"Inactive",
+        drivingLicenseNumber:orderDriver.drivingLicenseNumber,
+        emailAddress:orderDriver.emailAddress,
+        fullName:orderDriver.fullName,
+        homeAddress:orderDriver.homeAddress,
+        nicNumber:orderDriver.nicNumber,
+        telephoneNumber:orderDriver.telephoneNumber
+    }
+
+    $.ajax({
+        url: baseUrl + 'driver/updateDriver',
+        // dataType:'json',
+        contentType: 'application/json',
+        data: JSON.stringify(driver),
+        async: false,
+        method: 'post',
+        success: function (resp) {
+        }
+    });
+}
+
+
+function updateCar() {
+    for(let c of searchedCars){
+        let car = {
+            brand:c.brand,
+            carId:c.carId,
+            colour:c.colour,
+            currentStatus:'Available',
+            dailyKm:c.dailyKm,
+            dailyRate:c.dailyRate,
+            fuelType:c.fuelType,
+            monthlyKm:c.monthlyKm,
+            monthlyRate:c.monthlyRate,
+            numberOfPassengers:c.numberOfPassengers,
+            priceForExtraKm:c.priceForExtraKm,
+            registrationId:c.registrationId,
+            transmissionType:c.transmissionType,
+            type:c.type
+        }
+
+        $.ajax({
+            url: baseUrl + 'car/updateCar',
+            // dataType:'json',
+            contentType: 'application/json',
+            data: JSON.stringify(car),
+            async: false,
+            method: 'post',
+            success: function (resp) {
+            }
+        });
+    }
+
+}
+
+function setDriverDetails() {
+    $.ajax({
+        url:baseUrl+'driver/findDriverById/'+searchedOrder.driverId,
+        async:false,
+        method:'get',
+        dataType:'json',
+        success:function (resp) {
+            console.log("driver "+resp.data[0]);
+            orderDriver = resp.data[0];
+        }
+    });
+}
+
+findNewPaymentId();
+function findNewPaymentId() {
+    $.ajax({
+        url:baseUrl+'payment/newPaymentId',
+        method:'get',
+        dataType:'json',
+        async:false,
+        success:function (resp) {
+             newPaymentId = (resp.data[0]);
+            $('#payment-payment-id-h5').text('Payment Id : '+resp.data[0]);
+        }
+    });
+}
 
 function setPaidLostDamageAmount() {
     for(let c of searchedCars){
@@ -188,3 +279,31 @@ $('#payment-loss-damage').on('keyup',function () {
     let charge = parseFloat($('#payment-loss-damage').val());
     $('#payment-return-loss-damage').val(paidLoss-charge);
 });
+
+$('#payment-make-payment-btn').click(function () {
+    let subTotal = parseFloat($('#payment-sub-total').val());
+    if($('#payment-loss-damage').val+=''){
+        subTotal+=parseFloat($('#payment-loss-damage').val());
+    }
+    let payment = {
+        paymentId:newPaymentId,
+        orderId:searchedOrder.orderId,
+        amount:subTotal,
+        paymentType:"order"
+    };
+    addPayment(payment);
+    findNewPaymentId();
+});
+
+function addPayment(payment) {
+    $.ajax({
+        url:baseUrl+'payment/addPayment',
+        method:'post',
+        data:JSON.stringify(payment),
+        contentType:'application/json',
+        async:false,
+        success:function () {
+            console.log("Payment Successful");
+        }
+    });
+}

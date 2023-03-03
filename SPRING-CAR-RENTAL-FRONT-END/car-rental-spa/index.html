@@ -19,6 +19,7 @@
     <link href="assets/styles/css/all-my-requests-section-styles.css" rel="stylesheet">
     <link href="assets/styles/css/landing-page-styles.css" rel="stylesheet">
     <link href="assets/styles/css/payment-section-styles.css" rel="stylesheet">
+    <link href="assets/styles/css/income-form-styles.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/css/normalize.css" rel="stylesheet">
 
@@ -1472,6 +1473,10 @@
                 <h2 id="payment-total-h2">Total Rs.2500.00</h2>
             </section>
 
+            <section class="container" id="payment-id-section">
+                <h5 id="payment-payment-id-h5">Payment Id : PM-0001</h5>
+            </section>
+
             <section class="container" id="payment-order-id">
                 <h5 id="payment-order-id-h5">Order Id : OR-0000</h5>
             </section>
@@ -1675,7 +1680,167 @@
             </section>
 
             <section class="container" id="payment-btn">
-                <button type="button" class="btn btn-success">Make Payment</button>
+                <button type="button" class="btn btn-success" id="payment-make-payment-btn">Make Payment</button>
+            </section>
+
+        </section>
+
+
+        <section class="main-content" id="report-section">
+            <section class="container" id="income-topic-section">
+                <h3 id="income-topic-h3">Income Reports</h3>
+            </section>
+
+            <section class="container" id="income-select-date-1">
+                <section class="row">
+                    <h5>Select Date</h5>
+                </section>
+                <section class="row">
+                    <section class="col-4">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select Year</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </section>
+                    <section class="col-4">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </section>
+                    <section class="col-4">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </section>
+                </section>
+                <section class="row"></section>
+            </section>
+
+            <section class="container" id="income-select-date-2">
+                <section class="row">
+                    <h5>Select Date</h5>
+                </section>
+                <section class="row">
+                    <section class="col-4">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select Year</option>
+                            <option value="2021">2021</option>
+                            <option value="2022">2022</option>
+                            <option value="2023">2023</option>
+                        </select>
+                    </section>
+                    <section class="col-4">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Select Month</option>
+                            <option value="01">January</option>
+                            <option value="02">February</option>
+                            <option value="03">March</option>
+                            <option value="04">April</option>
+                            <option value="05">May</option>
+                            <option value="06">June</option>
+                            <option value="07">July</option>
+                            <option value="08">August</option>
+                            <option value="09">September</option>
+                            <option value="10">October</option>
+                            <option value="11">November</option>
+                            <option value="12">December</option>
+                        </select>
+                    </section>
+                    <section class="col-4">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected>Open this select menu</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                            <option value="27">27</option>
+                            <option value="28">28</option>
+                            <option value="29">29</option>
+                            <option value="30">30</option>
+                            <option value="31">31</option>
+                        </select>
+                    </section>
+                </section>
+                <section class="row"></section>
+            </section>
+
+            <section class="container income-amount" id="income-amount-date-1">
+                <h2>Rs.100000</h2>
+            </section>
+
+            <section class="container income-amount" id="income-amount-date-2">
+                <h2>Rs.3400000</h2>
+            </section>
+
+            <section class="container" id="differ-1">
+                <h2>Different is Rs.14000</h2>
             </section>
 
         </section>
@@ -1783,17 +1948,17 @@
 ></script>
 <script src="assets/styles/js/jquery-3.6.1.min.js"></script>
 <script src="assets/styles/js/home.js"></script>
-<script src="../car-rental-spa/assets/controller/localDB.js"></script>
-<script src="../car-rental-spa/assets/controller/register-customer-form-controller.js"></script>
-<script src="../car-rental-spa/assets/controller/register-car-form-controller.js"></script>
-<script src="../car-rental-spa/assets/controller/request-order-form-controller.js"></script>
-<script src="../car-rental-spa/assets/controller/car-form-controller.js"></script>
-<script src="../car-rental-spa/assets/controller/driver-registration-form-controller.js"></script>
-<script src="../car-rental-spa/assets/controller/all-customers-form-controller.js"></script>
-<script src="../car-rental-spa/assets/controller/all-driver-form-controller.js"></script>
-<script src="../car-rental-spa/assets/controller/show-all-orders-form-controller.js"></script>
-<script src="../car-rental-spa/assets/controller/landing-page-styles.js"></script>
-<script src="../car-rental-spa/assets/controller/login-page-styles.js"></script>
-<script src="../car-rental-spa/assets/controller/payment-form-controller.js"></script>
+<!--<script src="../car-rental-spa/assets/controller/localDB.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/register-customer-form-controller.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/register-car-form-controller.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/request-order-form-controller.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/car-form-controller.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/driver-registration-form-controller.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/all-customers-form-controller.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/all-driver-form-controller.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/show-all-orders-form-controller.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/landing-page-styles.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/login-page-styles.js"></script>-->
+<!--<script src="../car-rental-spa/assets/controller/payment-form-controller.js"></script>-->
 </body>
 </html>

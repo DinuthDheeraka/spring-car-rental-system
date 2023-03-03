@@ -1,0 +1,83 @@
+#income-topic-section{
+    position: absolute;
+    margin: auto;
+    top: 20px;
+    left: 20px;
+}
+
+#income-select-date-1{
+    /*border: 1px solid #c4c3c3;*/
+    position: absolute;
+    margin: auto;
+    width: 45%;
+    top: 140px;
+    left: 20px;
+}
+
+#income-select-date-1>section{
+    margin-top: 10px;
+}
+
+#income-select-date-1 h5{
+    color: #868484;
+}
+
+#income-select-date-2{
+    /*border: 1px solid #c4c3c3;*/
+    position: absolute;
+    margin: auto;
+    width: 45%;
+    top: 140px;
+    right: 20px;
+}
+
+#income-select-date-2>section{
+    margin-top: 10px;
+}
+
+#income-select-date-2 h5{
+    color: #868484;
+}
+
+.income-amount h2{
+    font-family: 'Poppins', sans-serif;
+    color: black;
+    font-size: 60px;
+}
+
+
+#income-amount-date-1{
+    /*border: 1px solid red;*/
+    position: absolute;
+    margin: auto;
+    top: 300px;
+    left: 32px;
+    text-align: center;
+    width: 665px;
+}
+
+#income-amount-date-2{
+    /*border: 1px solid red;*/
+    position: absolute;
+    margin: auto;
+    top: 300px;
+    right: 32px;
+    text-align: center;
+    width: 665px;
+}
+
+#differ-1{
+    /*border: 1px solid red;*/
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    text-align: center;
+}
+
+#differ-1 h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: black;
+}
