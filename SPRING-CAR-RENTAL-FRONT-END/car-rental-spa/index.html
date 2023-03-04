@@ -1697,7 +1697,7 @@
                 </section>
                 <section class="row">
                     <section class="col-4">
-                        <select class="form-select" aria-label="Default select example">
+                        <select id="date-1-year" class="form-select" aria-label="Default select example">
                             <option selected>Select Year</option>
                             <option value="2021">2021</option>
                             <option value="2022">2022</option>
@@ -1705,8 +1705,8 @@
                         </select>
                     </section>
                     <section class="col-4">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Select Month</option>
+                        <select id="date-1-month" class="form-select" aria-label="Default select example">
+                            <option selected value="">Select Month</option>
                             <option value="01">January</option>
                             <option value="02">February</option>
                             <option value="03">March</option>
@@ -1722,8 +1722,8 @@
                         </select>
                     </section>
                     <section class="col-4">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
+                        <select id="date-1-date" class="form-select" aria-label="Default select example">
+                            <option selected value="">Select Date</option>
                             <option value="01">01</option>
                             <option value="02">02</option>
                             <option value="03">03</option>
@@ -1767,7 +1767,7 @@
                 </section>
                 <section class="row">
                     <section class="col-4">
-                        <select class="form-select" aria-label="Default select example">
+                        <select id="date-2-year" class="form-select" aria-label="Default select example">
                             <option selected>Select Year</option>
                             <option value="2021">2021</option>
                             <option value="2022">2022</option>
@@ -1775,7 +1775,7 @@
                         </select>
                     </section>
                     <section class="col-4">
-                        <select class="form-select" aria-label="Default select example">
+                        <select id="date-2-month" class="form-select" aria-label="Default select example">
                             <option selected>Select Month</option>
                             <option value="01">January</option>
                             <option value="02">February</option>
@@ -1792,8 +1792,8 @@
                         </select>
                     </section>
                     <section class="col-4">
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Open this select menu</option>
+                        <select id="date-2-date" class="form-select" aria-label="Default select example">
+                            <option selected>Select Date</option>
                             <option value="01">01</option>
                             <option value="02">02</option>
                             <option value="03">03</option>
@@ -1832,11 +1832,11 @@
             </section>
 
             <section class="container income-amount" id="income-amount-date-1">
-                <h2>Rs.100000</h2>
+                <h2 id="date-one-amount">Rs.100000</h2>
             </section>
 
             <section class="container income-amount" id="income-amount-date-2">
-                <h2>Rs.3400000</h2>
+                <h2 id="date-two-amount">Rs.3400000</h2>
             </section>
 
             <section class="container" id="differ-1">
@@ -1949,7 +1949,7 @@
 <script src="assets/styles/js/jquery-3.6.1.min.js"></script>
 <script src="assets/styles/js/home.js"></script>
 <!--<script src="../car-rental-spa/assets/controller/localDB.js"></script>-->
-<!--<script src="../car-rental-spa/assets/controller/register-customer-form-controller.js"></script>-->
+<script src="../car-rental-spa/assets/controller/register-customer-form-controller.js"></script>
 <!--<script src="../car-rental-spa/assets/controller/register-car-form-controller.js"></script>-->
 <!--<script src="../car-rental-spa/assets/controller/request-order-form-controller.js"></script>-->
 <!--<script src="../car-rental-spa/assets/controller/car-form-controller.js"></script>-->
@@ -1960,5 +1960,6 @@
 <!--<script src="../car-rental-spa/assets/controller/landing-page-styles.js"></script>-->
 <!--<script src="../car-rental-spa/assets/controller/login-page-styles.js"></script>-->
 <!--<script src="../car-rental-spa/assets/controller/payment-form-controller.js"></script>-->
+<script src="../car-rental-spa/assets/controller/income-form-controller.js"></script>
 </body>
 </html>

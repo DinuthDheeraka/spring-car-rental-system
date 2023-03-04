@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -39,6 +40,13 @@ public class PaymentController {
         }
         return new ResponseUtil<>(
                 "200","Done",lastId
+        );
+    }
+
+    @GetMapping(path = "findAll")
+    public ResponseUtil<PaymentDTO> searchPaymentByDate(){
+        return new ResponseUtil<PaymentDTO>(
+                "200","Done",paymentService.findAllPayments()
         );
     }
 }
