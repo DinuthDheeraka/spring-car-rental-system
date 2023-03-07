@@ -14,7 +14,12 @@ import lk.ijse.crs.util.ResponseUtil;
 import org.hibernate.criterion.Order;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -65,5 +70,29 @@ public class OrderController {
     public ResponseUtil<OrderDTO> findAllOrders() {
         List<OrderDTO> orderDTOS = orderService.getAllOrders();
         return new ResponseUtil<OrderDTO>("200","Done",orderDTOS);
+    }
+
+    @GetMapping(path = {"/findNewOrderByDriverId/{driverId}"})
+    public ResponseUtil<OrderDTO> findNewOrderByDriverId(@PathVariable String driverId) {
+        List<OrderDTO> orderDTOS = orderService.getAllOrders();
+        return new ResponseUtil<OrderDTO>("200","Done",orderDTOS);
+    }
+
+    @PostMapping(path = {"/upload/{orderId}"})
+    public void uploadCarViews(@RequestParam("img") List<MultipartFile> img,@PathVariable("orderId") String orderId) {
+
+        byte[] bytes = new byte[0];
+
+        int i = 0;
+        for(MultipartFile multipartFile : img){
+            try {
+                bytes = multipartFile.getBytes();
+                Path frontViewPath = Paths.get("E:\\upload\\damage-waiver\\" + orderId + "-" +(i++)+ "damageWaiver.png");
+                Files.write(frontViewPath, bytes);
+
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        }
     }
 }

@@ -51,4 +51,9 @@ public class OrderServiceImpl implements OrderService {
     public void updateOrder(OrderDTO orderDTO) {
         orderRepo.save(modelMapper.map(orderDTO,Orders.class));
     }
+
+    @Override
+    public List<OrderDTO> findNewOrderByDriverId(int driverId) {
+        return modelMapper.map(orderRepo.findByDriverIdAndOrderStatus(driverId,"New"),new TypeToken<ArrayList<OrderDTO>>(){}.getType());
+    }
 }

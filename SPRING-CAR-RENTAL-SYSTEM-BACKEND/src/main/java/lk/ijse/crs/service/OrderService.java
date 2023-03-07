@@ -13,4 +13,5 @@ public interface OrderService {
     List<OrderDTO> getAllOrders();
     OrderDTO findOrderById(String orderId);
     void updateOrder(OrderDTO orderDTO);
+    List<OrderDTO> findNewOrderByDriverId(int driverId);
 }

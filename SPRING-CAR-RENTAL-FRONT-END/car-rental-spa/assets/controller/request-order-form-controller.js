@@ -11,13 +11,13 @@ let clickedOrder = null;
 findNewOrderId();
 
 $('#main-request-order-btn').click(function () {
-    alert($('#order-note').val());
-    if($('#main-request-order-btn').html()=='Update Order'){
-        updateOrder();
-    }else{
-        requestOrder();
-    }
-    // uploadCustomerNicAndDrivingLicense();
+    // alert($('#order-note').val());
+    // if($('#main-request-order-btn').html()=='Update Order'){
+    //     updateOrder();
+    // }else{
+    //     requestOrder();
+    // }
+    uploadDamageWaivers();
 });
 
 
@@ -51,17 +51,15 @@ function updateOrder() {
     });
 }
 
-function uploadCustomerNicAndDrivingLicense() {
-    let nicImage = $("#inpNicImage").prop('files')[0];
-    let drivingLicenseImage = $("#inpDrivingLicenseImage").prop('files')[0];
-
+function uploadDamageWaivers() {
     let formData = new FormData();
-    formData.append("nic", nicImage);
-    formData.append("drivingLicense", drivingLicenseImage);
-
+    for(let i = 0; i<carsCart.length; i++){
+        let img = $("#customFile-"+i).prop('files')[0];
+        formData.append("img", img);
+    }
 
     $.ajax({
-        url: baseUrl + '/customer/upload/1',
+        url: baseUrl + '/order/upload/'+newOrderId,
         data: formData,
         type: 'POST',
         contentType: false,
@@ -78,13 +76,13 @@ function uploadCustomerNicAndDrivingLicense() {
 
 function requestOrder() {
 
-    // addOrder();
-    // addOrderDetail();
+    addOrder();
+    addOrderDetail();
     updateCarStatus();
     updateDriverStatus();
-    // findNewOrderId();
-    // emptyOrderCarDetailView();
-    // emptyOrderPaymentView();
+    findNewOrderId();
+    emptyOrderCarDetailView();
+    emptyOrderPaymentView();
 }
 
 function updateCarStatus() {
@@ -292,7 +290,7 @@ function setSelectedCarDetails(selectedCars) {
             '\n' +
             '                    <section class="col-5">\n' +
             '                        \n' +
-            '                            <input type="file" class="form-control" id="customFile" />\n' +
+            '                            <input type="file" class="form-control" id="customFile-'+i+'" />\n' +
             '                        \n' +
             '                    </section>\n' +
             '                </section>\n'

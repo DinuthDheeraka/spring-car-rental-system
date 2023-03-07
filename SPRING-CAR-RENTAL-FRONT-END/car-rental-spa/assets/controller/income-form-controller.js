@@ -86,4 +86,14 @@ function calTotal(side,dateParam) {
         }
     }
     $('#date-'+side+'-amount').text('RS.'+total);
+
+    calDiffer();
+}
+
+function calDiffer() {
+
+    let one = ($('#date-one-amount').text().substring(3,$('#date-one-amount').text().length));
+    let two = ($('#date-two-amount').text().substring(3,$('#date-two-amount').text().length));
+
+    $('#differ').text('Difference is Rs.'+Math.abs(one-two));
 }

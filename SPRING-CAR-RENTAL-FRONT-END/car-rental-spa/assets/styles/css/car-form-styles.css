@@ -221,4 +221,5 @@ h5{
     color: white;
     height: 35px;
     font-family: 'Poppins', sans-serif;
+    visibility: hidden;
 }

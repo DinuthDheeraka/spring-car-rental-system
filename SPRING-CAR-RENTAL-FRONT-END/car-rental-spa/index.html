@@ -20,6 +20,9 @@
     <link href="assets/styles/css/landing-page-styles.css" rel="stylesheet">
     <link href="assets/styles/css/payment-section-styles.css" rel="stylesheet">
     <link href="assets/styles/css/income-form-styles.css" rel="stylesheet">
+    <link href="assets/styles/css/driver-schedule-styles.css" rel="stylesheet">
+    <link href="assets/styles/css/dash-board-styles.css" rel="stylesheet">
+    <link href="assets/styles/css/show-my-reqs-form.css" rel="stylesheet">
     <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/styles/css/normalize.css" rel="stylesheet">
 
@@ -55,31 +58,31 @@
 <body>
 <main class="container-fluid">
     <header class="container-fluid" id="header-1">
-        <button class="register-cus">register</button>
-        <button class="login-btn-1">login</button>
-        <button class="all-cus">all-cus</button>
-        <button class="all-dri">all-dri</button>
-        <button class="car-reg">car-reg</button>
-        <button class="dri-reg">dri-reg</button>
-        <button class="req-order">req-order</button>
-        <button class="show-order-reqs">show-order-reqs</button>
-        <button class="landing-page-btn">landing</button>
+        <button id="register-cus">register</button>
+        <button id="login-btn-1">login</button>
+        <button id="all-cus">all-cus</button>
+        <button id="all-dri">all-dri</button>
+        <button id="car-reg">car-reg</button>
+        <button id="dri-reg">dri-reg</button>
+        <button id="req-order">req-order</button>
+        <button id="show-order-reqs">show-order-reqs</button>
+        <button id="landing-page-btn">landing</button>
     </header>
 
-    <header class="container-fluid" id="customer-header">
+    <header style="visibility: hidden" class="container-fluid" id="customer-header">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="customer-header-inner">
             <!-- Container wrapper -->
             <div class="container-fluid">
                 <!-- Toggle button -->
                 <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-mdb-toggle="collapse"
-                        data-mdb-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent"
                         aria-expanded="false"
                         aria-label="Toggle navigation"
+                        class="navbar-toggler"
+                        data-mdb-target="#navbarSupportedContent"
+                        data-mdb-toggle="collapse"
+                        type="button"
                 >
                     <i class="fas fa-bars"></i>
                 </button>
@@ -89,22 +92,23 @@
                     <!-- Navbar brand -->
                     <a class="navbar-brand mt-2 mt-lg-0" href="#">
                         <img
-                                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-                                height="15"
                                 alt="MDB Logo"
+                                height="15"
                                 loading="lazy"
+                                class="home"
+                                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
                         />
                     </a>
                     <!-- Left links -->
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#" id="cus-dash-board-nav">Dashboard</a>
+                            <a class="nav-link cus-dash" href="#" id="cus-dash-board-nav">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link all-cars" href="#" id="cus-cars-nav">Cars</a>
+                            <a class="nav-link cus-all-cars" href="#" id="cus-cars-nav">Cars</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" id="cus-orders-nav">My Orders</a>
+                            <a class="nav-link cus-my-orders" href="#" id="cus-orders-nav">My Orders</a>
                         </li>
                     </ul>
                     <!-- Left links -->
@@ -121,19 +125,19 @@
                     <!-- Notifications -->
                     <div class="dropdown">
                         <a
+                                aria-expanded="false"
                                 class="text-reset me-3 dropdown-toggle hidden-arrow"
+                                data-mdb-toggle="dropdown"
                                 href="#"
                                 id="navbarDropdownMenuLink"
                                 role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
                         >
                             <i class="fas fa-bell"></i>
                             <span class="badge rounded-pill badge-notification bg-danger">1</span>
                         </a>
                         <ul
-                                class="dropdown-menu dropdown-menu-end"
                                 aria-labelledby="navbarDropdownMenuLink"
+                                class="dropdown-menu dropdown-menu-end"
                         >
                             <li>
                                 <a class="dropdown-item" href="#">Some news</a>
@@ -149,24 +153,24 @@
                     <!-- Avatar -->
                     <div class="dropdown">
                         <a
+                                aria-expanded="false"
                                 class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                                data-mdb-toggle="dropdown"
                                 href="#"
                                 id="navbarDropdownMenuAvatar"
                                 role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
                         >
                             <img
-                                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                                    alt="Black and White Portrait of a Man"
                                     class="rounded-circle"
                                     height="25"
-                                    alt="Black and White Portrait of a Man"
                                     loading="lazy"
+                                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                             />
                         </a>
                         <ul
-                                class="dropdown-menu dropdown-menu-end"
                                 aria-labelledby="navbarDropdownMenuAvatar"
+                                class="dropdown-menu dropdown-menu-end"
                         >
                             <li>
                                 <a class="dropdown-item" href="#">My profile</a>
@@ -189,20 +193,138 @@
         <!--        <button id="all-cars">all-cars</button>-->
     </header>
 
-    <header class="container-fluid" id="admin-header">
+    <header style="visibility: visible" class="container-fluid" id="guest-header">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="customer-header-inner">
+            <!-- Container wrapper -->
+            <div class="container-fluid">
+                <!-- Toggle button -->
+                <button
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                        class="navbar-toggler"
+                        data-mdb-target="#navbarSupportedContent"
+                        data-mdb-toggle="collapse"
+                        type="button"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <!-- Collapsible wrapper -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- Navbar brand -->
+                    <a class="navbar-brand mt-2 mt-lg-0" href="#">
+                        <img
+                                alt="MDB Logo"
+                                height="15"
+                                loading="lazy"
+                                class="home"
+                                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+                        />
+                    </a>
+                    <!-- Left links -->
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link cus-all-cars" href="#" id="guest-cars-nav">Search Cars</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cus-my-orders" href="#" id="guest-register-nav">Register</a>
+                        </li>
+                    </ul>
+                    <!-- Left links -->
+                </div>
+                <!-- Collapsible wrapper -->
+
+                <!-- Right elements -->
+                <div class="d-flex align-items-center">
+                    <!-- Icon -->
+                    <a class="text-reset me-3" href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+
+                    <!-- Notifications -->
+                    <div class="dropdown">
+                        <a
+                                aria-expanded="false"
+                                class="text-reset me-3 dropdown-toggle hidden-arrow"
+                                data-mdb-toggle="dropdown"
+                                href="#"
+                                id="navbarDropdownMenuLink"
+                                role="button"
+                        >
+                            <i class="fas fa-bell"></i>
+                            <span class="badge rounded-pill badge-notification bg-danger">1</span>
+                        </a>
+                        <ul
+                                aria-labelledby="navbarDropdownMenuLink"
+                                class="dropdown-menu dropdown-menu-end"
+                        >
+                            <li>
+                                <a class="dropdown-item" href="#">Some news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Another news</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Avatar -->
+                    <div class="dropdown">
+                        <a
+                                aria-expanded="false"
+                                class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                                data-mdb-toggle="dropdown"
+                                href="#"
+                                id="navbarDropdownMenuAvatar"
+                                role="button"
+                        >
+                            <img
+                                    alt="Black and White Portrait of a Man"
+                                    class="rounded-circle"
+                                    height="25"
+                                    loading="lazy"
+                                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                            />
+                        </a>
+                        <ul
+                                aria-labelledby="navbarDropdownMenuAvatar"
+                                class="dropdown-menu dropdown-menu-end"
+                        >
+                            <li>
+                                <a class="dropdown-item" href="#">My profile</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Settings</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Right elements -->
+            </div>
+            <!-- Container wrapper -->
+        </nav>
+    </header>
+
+    <header style="visibility: hidden" class="container-fluid" id="admin-header">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="admin-header-inner">
             <!-- Container wrapper -->
             <div class="container-fluid">
                 <!-- Toggle button -->
                 <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-mdb-toggle="collapse"
-                        data-mdb-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent"
                         aria-expanded="false"
                         aria-label="Toggle navigation"
+                        class="navbar-toggler"
+                        data-mdb-target="#navbarSupportedContent"
+                        data-mdb-toggle="collapse"
+                        type="button"
                 >
                     <i class="fas fa-bars"></i>
                 </button>
@@ -212,10 +334,11 @@
                     <!-- Navbar brand -->
                     <a class="navbar-brand mt-2 mt-lg-0" href="#">
                         <img
-                                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-                                height="15"
                                 alt="MDB Logo"
+                                height="15"
                                 loading="lazy"
+                                class="home"
+                                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
                         />
                     </a>
                     <!-- Left links -->
@@ -224,28 +347,28 @@
                             <a class="nav-link" href="#">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link all-cars" href="#">Cars</a>
+                            <a class="nav-link admin-all-cars" href="#">Cars</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link show-order-reqs" href="#">Order Requests</a>
+                            <a class="nav-link admin-show-order-reqs" href="#">Order Requests</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link all-cus" href="#">Customers</a>
+                            <a class="nav-link admin-all-cus" href="#">Customers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link all-dri" href="#">drivers</a>
+                            <a class="nav-link admin-all-dri" href="#">drivers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link dri-reg" href="#">Register Driver</a>
+                            <a class="nav-link admin-dri-reg" href="#">Register Driver</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link car-reg" href="#">Register Car</a>
+                            <a class="nav-link admin-car-reg" href="#">Register Car</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Payments</a>
+                            <a class="nav-link admin-payments" href="#">Payments</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Reports</a>
+                            <a class="nav-link admin-reports" href="#">Reports</a>
                         </li>
                     </ul>
                     <!-- Left links -->
@@ -262,19 +385,19 @@
                     <!-- Notifications -->
                     <div class="dropdown">
                         <a
+                                aria-expanded="false"
                                 class="text-reset me-3 dropdown-toggle hidden-arrow"
+                                data-mdb-toggle="dropdown"
                                 href="#"
                                 id="navbarDropdownMenuLink"
                                 role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
                         >
                             <i class="fas fa-bell"></i>
                             <span class="badge rounded-pill badge-notification bg-danger">1</span>
                         </a>
                         <ul
-                                class="dropdown-menu dropdown-menu-end"
                                 aria-labelledby="navbarDropdownMenuLink"
+                                class="dropdown-menu dropdown-menu-end"
                         >
                             <li>
                                 <a class="dropdown-item" href="#">Some news</a>
@@ -290,24 +413,24 @@
                     <!-- Avatar -->
                     <div class="dropdown">
                         <a
+                                aria-expanded="false"
                                 class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                                data-mdb-toggle="dropdown"
                                 href="#"
                                 id="navbarDropdownMenuAvatar"
                                 role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
                         >
                             <img
-                                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                                    alt="Black and White Portrait of a Man"
                                     class="rounded-circle"
                                     height="25"
-                                    alt="Black and White Portrait of a Man"
                                     loading="lazy"
+                                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                             />
                         </a>
                         <ul
-                                class="dropdown-menu dropdown-menu-end"
                                 aria-labelledby="navbarDropdownMenuAvatar"
+                                class="dropdown-menu dropdown-menu-end"
                         >
                             <li>
                                 <a class="dropdown-item" href="#">My profile</a>
@@ -330,20 +453,20 @@
         <!--        <button id="all-cars">all-cars</button>-->
     </header>
 
-    <header class="container-fluid" id="driver-header">
+    <header style="visibility: hidden" class="container-fluid" id="driver-header">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light" id="driver-header-inner">
             <!-- Container wrapper -->
             <div class="container-fluid">
                 <!-- Toggle button -->
                 <button
-                        class="navbar-toggler"
-                        type="button"
-                        data-mdb-toggle="collapse"
-                        data-mdb-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent"
                         aria-expanded="false"
                         aria-label="Toggle navigation"
+                        class="navbar-toggler"
+                        data-mdb-target="#navbarSupportedContent"
+                        data-mdb-toggle="collapse"
+                        type="button"
                 >
                     <i class="fas fa-bars"></i>
                 </button>
@@ -353,10 +476,11 @@
                     <!-- Navbar brand -->
                     <a class="navbar-brand mt-2 mt-lg-0" href="#">
                         <img
-                                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-                                height="15"
                                 alt="MDB Logo"
+                                height="15"
                                 loading="lazy"
+                                class="home"
+                                src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
                         />
                     </a>
                     <!-- Left links -->
@@ -365,10 +489,10 @@
                             <a class="nav-link" href="#">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link all-cars" href="#">Cars</a>
+                            <a class="nav-link driver-all-cars" href="#">Cars</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Schedule</a>
+                            <a class="nav-link driver-my-schedule" href="#">My Schedule</a>
                         </li>
                     </ul>
                     <!-- Left links -->
@@ -385,19 +509,19 @@
                     <!-- Notifications -->
                     <div class="dropdown">
                         <a
+                                aria-expanded="false"
                                 class="text-reset me-3 dropdown-toggle hidden-arrow"
+                                data-mdb-toggle="dropdown"
                                 href="#"
                                 id="navbarDropdownMenuLink"
                                 role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
                         >
                             <i class="fas fa-bell"></i>
                             <span class="badge rounded-pill badge-notification bg-danger">1</span>
                         </a>
                         <ul
-                                class="dropdown-menu dropdown-menu-end"
                                 aria-labelledby="navbarDropdownMenuLink"
+                                class="dropdown-menu dropdown-menu-end"
                         >
                             <li>
                                 <a class="dropdown-item" href="#">Some news</a>
@@ -413,24 +537,24 @@
                     <!-- Avatar -->
                     <div class="dropdown">
                         <a
+                                aria-expanded="false"
                                 class="dropdown-toggle d-flex align-items-center hidden-arrow"
+                                data-mdb-toggle="dropdown"
                                 href="#"
                                 id="navbarDropdownMenuAvatar"
                                 role="button"
-                                data-mdb-toggle="dropdown"
-                                aria-expanded="false"
                         >
                             <img
-                                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                                    alt="Black and White Portrait of a Man"
                                     class="rounded-circle"
                                     height="25"
-                                    alt="Black and White Portrait of a Man"
                                     loading="lazy"
+                                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                             />
                         </a>
                         <ul
-                                class="dropdown-menu dropdown-menu-end"
                                 aria-labelledby="navbarDropdownMenuAvatar"
+                                class="dropdown-menu dropdown-menu-end"
                         >
                             <li>
                                 <a class="dropdown-item" href="#">My profile</a>
@@ -452,9 +576,6 @@
         <!--        <button id="search-order">my-requests</button>-->
         <!--        <button id="all-cars">all-cars</button>-->
     </header>
-
-
-
 
 
     <section class="container-fluid" id="main-content-container">
@@ -616,11 +737,14 @@
                         </div>
 
                         <!-- Submit button -->
-                        <button class="btn btn-primary btn-block mb-4" type="button" id="login-sign-btn">Sign in</button>
+                        <button class="btn btn-primary btn-block mb-4" id="login-sign-btn" type="button">Sign in
+                        </button>
 
                         <!-- Register buttons -->
                         <div class="text-center">
-                            <p>Not a member? <button type="button"  id="landing-cus-register-btn">Register</button></p>
+                            <p>Not a member?
+                                <button id="landing-cus-register-btn" type="button">Register</button>
+                            </p>
                             <p>or sign up with:</p>
                             <button class="btn btn-secondary btn-floating mx-1" type="button">
                                 <i class="fab fa-facebook-f"></i>
@@ -1111,7 +1235,8 @@
 
                 <section class="row">
                     <section class="col-12">
-                        <select aria-label="Default select example" class="form-select" id="filter-select-car-fuel-type">
+                        <select aria-label="Default select example" class="form-select"
+                                id="filter-select-car-fuel-type">
                             <option selected>Fuel Type</option>
                             <option value="Petrol">Petrol</option>
                             <option value="Diesel">Diesel</option>
@@ -1132,7 +1257,8 @@
 
                 <section class="row">
                     <section class="col-12">
-                        <select aria-label="Default select example" class="form-select" id="filter-select-car-transmission">
+                        <select aria-label="Default select example" class="form-select"
+                                id="filter-select-car-transmission">
                             <option selected>Transmission Type</option>
                             <option value="Auto">Auto</option>
                             <option value="Manual">Manual</option>
@@ -1352,7 +1478,7 @@
                     </section>
                 </section>
                 <section class="row">
-                    <section class="col-12"><textarea  cols="78" id="order-note" name="w3review" rows="4"></textarea>
+                    <section class="col-12"><textarea cols="78" id="order-note" name="w3review" rows="4"></textarea>
                     </section>
                 </section>
             </section>
@@ -1442,17 +1568,17 @@
             <section class="row" id="landing-page-btn-section">
 
                 <section class="col-6">
-                    <button id="landing-login-btn" class="btn btn-primary btn-rounded">Login</button>
+                    <button class="btn btn-primary btn-rounded" id="landing-login-btn">Login</button>
                 </section>
                 <section class="col-6">
-                    <button id="landing-check-car-btn" class="btn btn-outline-primary btn-rounded">Check Cars</button>
+                    <button class="btn btn-outline-primary btn-rounded" id="landing-check-car-btn">Check Cars</button>
                 </section>
 
             </section>
 
         </section>
 
-        <section class="main-content" id="payment-section">
+        <section class="main-content" id="payment-section" style="visibility: hidden">
             <section id="payment-topic-section">
                 <h3>Payments</h3>
             </section>
@@ -1460,10 +1586,10 @@
             <section class="container" id="payments-search-bar-section">
                 <div class="input-group">
                     <div class="form-outline">
-                        <input type="search" id="payment-search-bar" class="form-control" />
+                        <input class="form-control" id="payment-search-bar" type="search"/>
                         <label class="form-label" for="payment-search-bar">Search</label>
                     </div>
-                    <button type="button" class="btn btn-primary" id="payment-search-btn">
+                    <button class="btn btn-primary" id="payment-search-btn" type="button">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
@@ -1508,15 +1634,16 @@
                 <section class="row">
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-cus-nic" class="form-control" />
+                            <input class="form-control" id="payment-cus-nic" type="text"/>
                             <label class="form-label" for="payment-cus-nic">Customer Nic No</label>
                         </div>
                     </section>
 
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-cus-driving-license" class="form-control" />
-                            <label class="form-label" for="payment-cus-driving-license">Customer Driving License No</label>
+                            <input class="form-control" id="payment-cus-driving-license" type="text"/>
+                            <label class="form-label" for="payment-cus-driving-license">Customer Driving License
+                                No</label>
                         </div>
                     </section>
                 </section>
@@ -1524,14 +1651,14 @@
                 <section class="row">
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-cus-email" class="form-control" />
+                            <input class="form-control" id="payment-cus-email" type="text"/>
                             <label class="form-label" for="payment-cus-nic">Customer Email Address</label>
                         </div>
                     </section>
 
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-cus-tele" class="form-control" />
+                            <input class="form-control" id="payment-cus-tele" type="text"/>
                             <label class="form-label" for="payment-cus-driving-license">Customer Telephone No</label>
                         </div>
                     </section>
@@ -1548,26 +1675,26 @@
                 <section class="row">
                     <section class="col-3">
                         <div class="form-outline">
-                            <input type="text" id="payment-car-reg-id" class="form-control" />
-                            <label class="form-label" >Registration Number</label>
+                            <input class="form-control" id="payment-car-reg-id" type="text"/>
+                            <label class="form-label">Registration Number</label>
                         </div>
                     </section>
                     <section class="col-3">
                         <div class="form-outline">
-                            <input type="text" id="payment-car-brand" class="form-control" />
+                            <input class="form-control" id="payment-car-brand" type="text"/>
                             <label class="form-label">Brand</label>
                         </div>
                     </section>
                     <section class="col-3">
                         <div class="form-outline">
-                            <input type="text" id="payment-car-daily-charge" class="form-control" />
-                            <label class="form-label" >Daily Charge</label>
+                            <input class="form-control" id="payment-car-daily-charge" type="text"/>
+                            <label class="form-label">Daily Charge</label>
                         </div>
                     </section>
                     <section class="col-3">
                         <div class="form-outline">
-                            <input type="text" id="payment-car-total-charge" class="form-control" />
-                            <label class="form-label" >Total Charge</label>
+                            <input class="form-control" id="payment-car-total-charge" type="text"/>
+                            <label class="form-label">Total Charge</label>
                         </div>
                     </section>
                 </section>
@@ -1580,14 +1707,14 @@
                 <section class="row">
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-paid-loss-damage" class="form-control" />
-                            <label class="form-label" >Paid Loss Damage Amount</label>
+                            <input class="form-control" id="payment-paid-loss-damage" type="text"/>
+                            <label class="form-label">Paid Loss Damage Amount</label>
                         </div>
                     </section>
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-loss-damage" class="form-control" />
-                            <label class="form-label" >Loss Damage Charge</label>
+                            <input class="form-control" id="payment-loss-damage" type="text"/>
+                            <label class="form-label">Loss Damage Charge</label>
                         </div>
                     </section>
                 </section>
@@ -1595,8 +1722,8 @@
                 <section class="row">
                     <section class="col-12">
                         <div class="form-outline">
-                            <input type="text" id="payment-return-loss-damage" class="form-control" />
-                            <label class="form-label" >Amount to Return</label>
+                            <input class="form-control" id="payment-return-loss-damage" type="text"/>
+                            <label class="form-label">Amount to Return</label>
                         </div>
                     </section>
                 </section>
@@ -1608,20 +1735,20 @@
                     <section class="col-6"><h5>Extra Payments</h5></section>
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-driver-charge" class="form-control" />
+                            <input class="form-control" id="payment-driver-charge" type="text"/>
                             <label class="form-label">Driver Payments</label>
                         </div>
                     </section>
                 </section>
                 <section class="row">
                     <section class="col-6">
-                        <select class="form-select" aria-label="Default select example" id="payment-select-car">
+                        <select aria-label="Default select example" class="form-select" id="payment-select-car">
                         </select>
                     </section>
 
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-extra-km-charge" class="form-control" />
+                            <input class="form-control" id="payment-extra-km-charge" type="text"/>
                             <label class="form-label">Extra Charges</label>
                         </div>
                     </section>
@@ -1629,13 +1756,13 @@
                 <section class="row">
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-extra-km" class="form-control" />
+                            <input class="form-control" id="payment-extra-km" type="text"/>
                             <label class="form-label">Extra Km</label>
                         </div>
                     </section>
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-extra-price" class="form-control" />
+                            <input class="form-control" id="payment-extra-price" type="text"/>
                             <label class="form-label">Charge for Extra Km</label>
                         </div>
                     </section>
@@ -1650,28 +1777,28 @@
                 <section class="row">
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-sub-total" class="form-control" />
-                            <label class="form-label" >Sub Total</label>
+                            <input class="form-control" id="payment-sub-total" type="text"/>
+                            <label class="form-label">Sub Total</label>
                         </div>
                     </section>
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-discount" class="form-control" />
-                            <label class="form-label" >Discount</label>
+                            <input class="form-control" id="payment-discount" type="text"/>
+                            <label class="form-label">Discount</label>
                         </div>
                     </section>
                 </section>
                 <section class="row">
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-given-cash" class="form-control" />
+                            <input class="form-control" id="payment-given-cash" type="text"/>
                             <label class="form-label">Cash</label>
                         </div>
                     </section>
                     <section class="col-6">
                         <div class="form-outline">
-                            <input type="text" id="payment-balance" class="form-control" />
-                            <label class="form-label" >Balance</label>
+                            <input class="form-control" id="payment-balance" type="text"/>
+                            <label class="form-label">Balance</label>
                         </div>
                     </section>
                 </section>
@@ -1680,13 +1807,12 @@
             </section>
 
             <section class="container" id="payment-btn">
-                <button type="button" class="btn btn-success" id="payment-make-payment-btn">Make Payment</button>
+                <button class="btn btn-success" id="payment-make-payment-btn" type="button">Make Payment</button>
             </section>
 
         </section>
 
-
-        <section class="main-content" id="report-section">
+        <section class="main-content" id="report-section" style="visibility: hidden">
             <section class="container" id="income-topic-section">
                 <h3 id="income-topic-h3">Income Reports</h3>
             </section>
@@ -1697,7 +1823,7 @@
                 </section>
                 <section class="row">
                     <section class="col-4">
-                        <select id="date-1-year" class="form-select" aria-label="Default select example">
+                        <select aria-label="Default select example" class="form-select" id="date-1-year">
                             <option selected>Select Year</option>
                             <option value="2021">2021</option>
                             <option value="2022">2022</option>
@@ -1705,7 +1831,7 @@
                         </select>
                     </section>
                     <section class="col-4">
-                        <select id="date-1-month" class="form-select" aria-label="Default select example">
+                        <select aria-label="Default select example" class="form-select" id="date-1-month">
                             <option selected value="">Select Month</option>
                             <option value="01">January</option>
                             <option value="02">February</option>
@@ -1722,7 +1848,7 @@
                         </select>
                     </section>
                     <section class="col-4">
-                        <select id="date-1-date" class="form-select" aria-label="Default select example">
+                        <select aria-label="Default select example" class="form-select" id="date-1-date">
                             <option selected value="">Select Date</option>
                             <option value="01">01</option>
                             <option value="02">02</option>
@@ -1767,7 +1893,7 @@
                 </section>
                 <section class="row">
                     <section class="col-4">
-                        <select id="date-2-year" class="form-select" aria-label="Default select example">
+                        <select aria-label="Default select example" class="form-select" id="date-2-year">
                             <option selected>Select Year</option>
                             <option value="2021">2021</option>
                             <option value="2022">2022</option>
@@ -1775,7 +1901,7 @@
                         </select>
                     </section>
                     <section class="col-4">
-                        <select id="date-2-month" class="form-select" aria-label="Default select example">
+                        <select aria-label="Default select example" class="form-select" id="date-2-month">
                             <option selected>Select Month</option>
                             <option value="01">January</option>
                             <option value="02">February</option>
@@ -1792,7 +1918,7 @@
                         </select>
                     </section>
                     <section class="col-4">
-                        <select id="date-2-date" class="form-select" aria-label="Default select example">
+                        <select aria-label="Default select example" class="form-select" id="date-2-date">
                             <option selected>Select Date</option>
                             <option value="01">01</option>
                             <option value="02">02</option>
@@ -1840,11 +1966,240 @@
             </section>
 
             <section class="container" id="differ-1">
-                <h2>Different is Rs.14000</h2>
+                <h2 id="differ">Different is Rs.14000</h2>
             </section>
 
         </section>
 
+        <section class="main-content" id="driver-schedule" style="visibility: hidden">
+            <section class="container" id="driver-schedule-topic-section">
+                <h3>Current Schedule</h3>
+            </section>
+
+            <section class="container" id="driver-schedule-order-detail-section">
+                <section class="row">
+                    <h5>Order Detail</h5>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input class="form-control" id="sch-OrderId" type="text"/>
+                            <label class="form-label">Order Id</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input class="form-control" id="sch-pickDate" type="text"/>
+                            <label class="form-label">Pickup Date</label>
+                        </div>
+                    </section>
+
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input class="form-control" id="sch-pickTime" type="text"/>
+                            <label class="form-label">Pickup Time</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input class="form-control" id="sch-returnDate" type="text"/>
+                            <label class="form-label">Return Date</label>
+                        </div>
+                    </section>
+
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input class="form-control" id="sch-retrunTime" type="text"/>
+                            <label class="form-label">Return Time</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row"></section>
+
+            </section>
+
+            <section class="container-fluid" id="driver-schedule-car-details">
+                <section class="row">
+                    <h5>Assigned Vehicles Details</h5>
+                </section>
+
+                <section class="row">
+                    <section class="col-2">
+                        <input class="form-control" id="sch-carRegId" type="text"/>
+                    </section>
+                    <section class="col-2">
+                        <input class="form-control" id="sch-carBrand" type="text"/>
+                    </section>
+                    <section class="col-2">
+                        <input class="form-control" id="sch-CarTransmission" type="text"/>
+                    </section>
+                    <section class="col-2">
+                        <input class="form-control" id="sch-carPassengers" type="text"/>
+                    </section>
+                    <section class="col-2">
+                        <input class="form-control" id="sch-carFuel" type="text"/>
+                    </section>
+                    <section class="col-2">
+                        <input class="form-control" id="sch-CarType" type="text"/>
+                    </section>
+                </section>
+            </section>
+
+
+            <section class="container" id="driver-schedule-customer-section">
+                <section class="row">
+                    <h5>Customer Details</h5>
+                </section>
+
+                <section class="row">
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input class="form-control" id="sch-cusNic" type="text"/>
+                            <label class="form-label">Customer NIC No</label>
+                        </div>
+                    </section>
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input class="form-control" id="sch-cusDrivingNo" type="text"/>
+                            <label class="form-label">Driving License No</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input class="form-control" id="sch-cusCusEmail" type="text"/>
+                            <label class="form-label">Customer Email</label>
+                        </div>
+                    </section>
+                    <section class="col-6">
+                        <div class="form-outline">
+                            <input class="form-control" id="sch-cusTele" type="text"/>
+                            <label class="form-label">Customer Telephone No</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row">
+                    <section class="col-12">
+                        <div class="form-outline">
+                            <input class="form-control" id="sch-cusAddress" type="text"/>
+                            <label class="form-label">Customer Address</label>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="row"></section>
+            </section>
+
+            <section class="container" id="schedule-note">
+                <h5 id="sch-note" style="visibility: hidden">Note : You Haven't assign to a schedule yet!</h5>
+            </section>
+        </section>
+
+        <section style="visibility: hidden" class="main-content" id="admin-dash-board-section">
+
+            <section class="container" id="admin-dash-date-section">
+                <h3 id="admin-dash-date"></h3>
+            </section>
+
+            <section class="container" id="admin-dashboard-topic-section">
+                <h3>Admin Dashboard</h3>
+            </section>
+
+            <section class="row" id="data-1">
+                <section class="col-4" id="data-1-1">
+                    <img id="data-1-img" src="assets/images/cuss.webp">
+                    <div><h4>Total Registered Users</h4></div>
+                    <section><h1 id="dash-total-users">5</h1></section>
+                </section>
+                <section class="col-4" id="data-1-2">
+                    <img id="data-2-img" src="assets/images/car-5.png">
+                    <div><h4>Cars Status</h4></div>
+                    <section id="car-1">
+                        <span class="badge rounded-pill badge-success">Success</span>
+                        <h1 id="dash-free-cars">15</h1>
+                    </section>
+                    <section id="car-2">
+                        <span class="badge rounded-pill badge-danger">Booked</span>
+                        <h1 id="dash-booked-cars">30</h1>
+                    </section>
+                </section>
+                <section class="col-4" id="data-1-3">
+                    <div><h4>Drivers Status</h4></div>
+                    <img id="data-3-img" src="assets/images/dri.webp">
+                    <section id="driver-1">
+                        <span class="badge rounded-pill badge-success">Active</span>
+                        <h1 id="dash-active-dri">05</h1>
+                    </section>
+                    <section id="driver-2">
+                        <span class="badge rounded-pill badge-danger">Occupied</span>
+                        <h1 id="dash-order-dri">06</h1>
+                    </section>
+                </section>
+            </section>
+
+            <section class="row" id="data-2">
+                <section class="col-6" id="data-2-1">
+                    <img id="data-11-img" src="assets/images/caaaars.png">
+                    <div><h4>Cars Maintaining Status</h4></div>
+                    <section><h1 id="dash-maintain-cars">2</h1></section>
+                </section>
+                <section class="col-3" id="data-2-2">
+                    <img id="data-22-img" src="assets/images/books.webp">
+                    <div><h4>Active Bookings</h4></div>
+                    <section><h1 id="dash-active-booking">4</h1></section>
+                </section>
+                <section class="col-4" id="data-2-3">
+                    <img id="data-33-img" src="assets/images/boooks.webp">
+                    <div><h4>Total Booking for today</h4></div>
+                    <section><h1 id="dash-today-book">4</h1></section>
+                </section>
+            </section>
+        </section>
+
+
+        <section style="visibility:hidden;" class="main-content" id="show-cus-reqs">
+            <section class="container-fluid" id="my-reqs-search-bar-section">
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input class="form-control" id="inp-my-reqs-search-bar" type="search"/>
+                        <label class="form-label" for="inp-all-driver-search-bar">Search</label>
+                    </div>
+                    <button class="btn btn-primary" type="button">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </section>
+            <section class="container-fluid" id="my-requests-tbl-section">
+                <section class="container-fluid flex-container" id="my-requests-tbl-section-inner">
+                    <table class="table align-middle mb-0 bg-white" id="my-request-table">
+                        <thead class="bg-light">
+                        <tr>
+                            <th class="font-weight-bolder">Order Id</th>
+                            <th class="font-weight-bold">Customer Name</th>
+                            <th class="font-weight-bold">NIC Number</th>
+                            <th class="font-weight-bold">Driving License Number</th>
+                            <th class="font-weight-bold">E-mail Address</th>
+                            <th class="font-weight-bold">Contact Number</th>
+                            <th class="font-weight-bold">Order Placed Date</th>
+                            <th class="font-weight-bold">Action</th>
+                        </tr>
+                        </thead>
+                        <tbody id="my-requests-tbl-body">
+                        </tbody>
+                    </table>
+                </section>
+        </section>
         <!--        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-->
 
         <!--        <section class="main-content" id="search-order-section">-->
@@ -1948,18 +2303,21 @@
 ></script>
 <script src="assets/styles/js/jquery-3.6.1.min.js"></script>
 <script src="assets/styles/js/home.js"></script>
-<!--<script src="../car-rental-spa/assets/controller/localDB.js"></script>-->
+<script src="../car-rental-spa/assets/controller/localDB.js"></script>
 <script src="../car-rental-spa/assets/controller/register-customer-form-controller.js"></script>
-<!--<script src="../car-rental-spa/assets/controller/register-car-form-controller.js"></script>-->
-<!--<script src="../car-rental-spa/assets/controller/request-order-form-controller.js"></script>-->
-<!--<script src="../car-rental-spa/assets/controller/car-form-controller.js"></script>-->
-<!--<script src="../car-rental-spa/assets/controller/driver-registration-form-controller.js"></script>-->
-<!--<script src="../car-rental-spa/assets/controller/all-customers-form-controller.js"></script>-->
-<!--<script src="../car-rental-spa/assets/controller/all-driver-form-controller.js"></script>-->
-<!--<script src="../car-rental-spa/assets/controller/show-all-orders-form-controller.js"></script>-->
-<!--<script src="../car-rental-spa/assets/controller/landing-page-styles.js"></script>-->
-<!--<script src="../car-rental-spa/assets/controller/login-page-styles.js"></script>-->
-<!--<script src="../car-rental-spa/assets/controller/payment-form-controller.js"></script>-->
+<script src="../car-rental-spa/assets/controller/register-car-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/request-order-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/car-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/driver-registration-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/all-customers-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/all-driver-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/show-all-orders-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/landing-page-styles.js"></script>
+<script src="../car-rental-spa/assets/controller/login-page-styles.js"></script>
+<script src="../car-rental-spa/assets/controller/payment-form-controller.js"></script>
 <script src="../car-rental-spa/assets/controller/income-form-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/driver-schedule-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/dash-board-controller.js"></script>
+<script src="../car-rental-spa/assets/controller/my-orders-controller.js"></script>
 </body>
 </html>

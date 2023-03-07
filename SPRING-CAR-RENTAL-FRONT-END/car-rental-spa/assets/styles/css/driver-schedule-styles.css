@@ -1,0 +1,66 @@
+#driver-schedule-topic-section{
+    position: absolute;
+    margin: auto;
+    left: 20px;
+    top: 30px;
+}
+
+#driver-schedule-topic-section h3{
+    color: #4b4a4a;
+}
+
+#driver-schedule-order-detail-section{
+    border: 1px solid #aaa9a9;
+    position: absolute;
+    margin: auto;
+    left: 30px;
+    bottom: 30px;
+    width: 800px;
+}
+
+#driver-schedule-order-detail-section>section{
+    margin-top: 10px;
+}
+
+#driver-schedule-car-details{
+    border: 1px solid #aaa9a9;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 120px;
+    height: 300px;
+    width: 1476px;
+}
+
+#driver-schedule-car-details>section{
+    margin-top: 10px;
+}
+
+#driver-schedule-customer-section{
+    border: 1px solid #aaa9a9;
+    position: absolute;
+    margin: auto;
+    right: 30px;
+    bottom: 30px;
+    width: 667px;
+}
+
+#driver-schedule-customer-section>section{
+    margin-top: 10px;
+}
+
+#driver-schedule h5{
+    color: #686767;
+    font-family: 'Poppins', sans-serif;
+}
+
+#schedule-note{
+    position: absolute;
+    margin: auto;
+    top: 37px;
+    /*border: 1px solid red;*/
+    width: 480px;
+    right: 27px;
+    text-align: right;
+}

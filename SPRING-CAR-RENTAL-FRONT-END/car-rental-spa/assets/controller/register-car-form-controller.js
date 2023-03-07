@@ -29,7 +29,7 @@ $('#select-car-current-status').change(function (e) {
 $('#register-car-btn').click(function () {
     findLastCarId();
     registerCar();
-    // uploadCarViews()
+    uploadCarViews()
     console.log(newCarId);
 });
 

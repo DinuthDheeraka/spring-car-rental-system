@@ -3,10 +3,10 @@ let baseUrl = "http://localhost:8080/SPRING_CAR_RENTAL_SYSTEM_BACKEND_war_explod
 let newCustomerId = 0;
 
 $('#create-account-btn').click(function () {
-    // getCustomerLastId();
-    // registerCustomer();
+    getCustomerLastId();
+    registerCustomer();
     addNewSystemUser();
-    // uploadCustomerNicAndDrivingLicense();
+    uploadCustomerNicAndDrivingLicense();
 });
 
 function addNewSystemUser() {

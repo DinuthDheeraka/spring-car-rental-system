@@ -19,9 +19,38 @@ $('#payment-search-btn').click(function () {
     setPaidLostDamageAmount();
     updateDriver();
     updateCar();
+    updateOrderAfterPayment();
     // searchOrderDetail();
 });
 
+function updateOrderAfterPayment() {
+    let order = {
+        orderId:searchedOrder.orderId,
+        customerId:searchedOrder.customerId,
+        driverId:searchedOrder.driverId,
+        orderRequestedDate:searchedOrder.orderRequestedDate,
+        deniedReason:searchedOrder.deniedReason,
+        orderStatus:"Done",
+        confirmationStatus:searchedOrder.confirmationStatus,
+        pickupDate:searchedOrder.pickupDate,
+        pickupTime:searchedOrder.pickupTime,
+        returnDate:searchedOrder.returnDate,
+        returnTime:searchedOrder.returnTime,
+        pickupVenue:searchedOrder.pickupVenue,
+        returnVenue:searchedOrder.returnVenue,
+        note:searchedOrder.note
+    }
+
+    $.ajax({
+        url:baseUrl+'order/'+'update_order',
+        data:JSON.stringify(order),
+        contentType:'application/json',
+        async:false,
+        method:'post',
+        success:function (resp) {
+        }
+    });
+}
 
 function updateDriver() {
     let driver = {
