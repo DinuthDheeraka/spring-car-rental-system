@@ -150,7 +150,7 @@ $('.mySearchOrderBtn').click(function () {
                 $('#status').append(
                     '<span class="badge rounded-pill badge-info">Pending...</span>'
                 );
-            }a
+            }
         }
     });
 

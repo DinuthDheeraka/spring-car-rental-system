@@ -100,6 +100,7 @@ function registerCar() {
         async:false,
         method:'post',
         success:function (resp) {
+            alert('Added car Successfully');
         }
     });
 }

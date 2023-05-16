@@ -9,7 +9,7 @@ $('#select-driver-status').change(function (e) {
 $('#driver-create-account-btn').click(function () {
     getDriverLastId();
     registerDriver();
-    // uploadDriverNicAndDrivingLicense();
+    uploadDriverNicAndDrivingLicense();
 });
 
 function getDriverLastId() {
@@ -33,7 +33,7 @@ function uploadDriverNicAndDrivingLicense(){
 
 
     $.ajax({
-        url: baseUrl+'/driver/upload/1',
+        url: baseUrl+'/driver/upload/'+newDriverId,
         data: formData,
         type: 'POST',
         contentType: false,
@@ -69,6 +69,7 @@ function registerDriver() {
         async:false,
         method:'post',
         success:function (resp) {
+            alert('Added Driver Successfully');
         }
     });
 }

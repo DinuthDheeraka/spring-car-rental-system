@@ -13,7 +13,6 @@
 // });
 
 $('#login-sign-btn').click(function () {
-    alert(1111111111111111);
     let userName = $('#inp-sign-in-userName').val();
     let password = $('#inp-sign-in-password').val();
     $.ajax({
@@ -30,7 +29,6 @@ $('#login-sign-btn').click(function () {
 function searchUser(systemUsers, password, userName) {
     for (let i = 0; i < systemUsers.length; i++) {
         if (systemUsers[i].password == password && systemUsers[i].userName == userName) {
-            alert(true);
             return systemUsers[i];
         }
     }
@@ -85,12 +83,11 @@ function findActiveUser(user) {
 
     }
 
-    alert(activeUser.nicNumber);
+    alert("User "+activeUser.fullName+" Logging In");
 }
 
 
 function updateViews(userType) {
-    alert(11111111);
     switch (userType) {
         case "Driver":
             $('#driver-header').css('visibility','visible');

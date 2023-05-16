@@ -85,6 +85,7 @@ function registerCustomer() {
         async: false,
         method: 'post',
         success: function (resp) {
+            alert('Registration Successfully');
         }
     });
 }

@@ -1,22 +1,27 @@
 let newOrderId = '';
-let assignedDriver = '';
-
+let assignedDriver = {};
 let orderConfirmStatus = '';
-
 let carsCart = [];
-
 let clickedOrderId = '';
 let clickedOrder = null;
 
 findNewOrderId();
 
 $('#main-request-order-btn').click(function () {
-    // alert($('#order-note').val());
-    // if($('#main-request-order-btn').html()=='Update Order'){
-    //     updateOrder();
-    // }else{
-    //     requestOrder();
-    // }
+    if($('#main-request-order-btn').html()=='Update Order'){
+        // if(orderConfirmStatus==='denied'){
+            updateOrder();
+            alert('Updated Order Status');
+            // updateCarStatus('Available');
+            // updateDriverStatus('Inactive');
+        // }else{
+        //     updateOrder();
+        //     updateDriverStatus('Active');
+        // }
+
+    }else{
+        requestOrder();
+    }
     uploadDamageWaivers();
 });
 
@@ -35,7 +40,7 @@ function updateOrder() {
         pickupVenue: clickedOrder.pickupVenue,
         returnVenue: clickedOrder.returnVenue,
         orderRequestedDate: clickedOrder.orderRequestedDate,
-        orderStatus: "new"
+        orderStatus: "viewed"
     };
     console.log(order);
 
@@ -78,20 +83,21 @@ function requestOrder() {
 
     addOrder();
     addOrderDetail();
-    updateCarStatus();
-    updateDriverStatus();
+    updateCarStatus('Booked');
+    updateDriverStatus('Requested');
     findNewOrderId();
     emptyOrderCarDetailView();
     emptyOrderPaymentView();
+    alert('Order Requested Successfully');
 }
 
-function updateCarStatus() {
+function updateCarStatus(carStatus) {
     for(let c of carsCart){
         let car = {
             brand:c.brand,
             carId:c.carId,
             colour:c.colour,
-            currentStatus:'Booked',
+            currentStatus:carStatus,
             dailyKm:c.dailyKm,
             dailyRate:c.dailyRate,
             fuelType:c.fuelType,
@@ -117,11 +123,11 @@ function updateCarStatus() {
     }
 }
 
-function updateDriverStatus() {
+function updateDriverStatus(driverStatus) {
 
     let driver = {
         driverId:assignedDriver.driverId,
-        driverStatus:"Requested",
+        driverStatus:driverStatus,
         drivingLicenseNumber:assignedDriver.drivingLicenseNumber,
         emailAddress:assignedDriver.emailAddress,
         fullName:assignedDriver.fullName,
@@ -174,7 +180,6 @@ function addOrder() {
         }
     });
 
-    assignedDriver = null;
     $('#pickup-date').val("");
     $('#pickup-time').val("");
     $('#return-date').val("");
@@ -206,7 +211,6 @@ function addOrderDetail() {
             async: false,
             method: 'post',
             success: function (resp) {
-                alert('Requested Order Successfully');
             }
         });
     }
@@ -340,7 +344,7 @@ $('#check-assign-driver').change(function () {
             async: false,
             success: function (resp) {
                 assignedDriver = resp.data[0];
-                console.log(assignedDriver);
+                alert(assignedDriver.driverId);
                 $('#inp-req-driver-contact-no').val(assignedDriver.telephoneNumber);
                 $('#inp-req-driver-email').val(assignedDriver.emailAddress);
                 $('#inp-req-driver-name').val(assignedDriver.fullName);

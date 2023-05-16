@@ -38,24 +38,24 @@ $('#date-1-date').change(function (e) {
 
 $('#date-2-year').change(function (e) {
     dateTwoSelectedYear = e.target.value;
-    datePattern1 = '';
-    datePattern1=dateTwoSelectedYear;
+    datePattern2 = '';
+    datePattern2=dateTwoSelectedYear;
     searchPayment();
     calTotal("two",datePattern2);
 });
 
 $('#date-2-month').change(function (e) {
     dateTwoSelectedMonth = e.target.value;
-    datePattern1 = '';
-    datePattern1=dateTwoSelectedYear+'-'+dateTwoSelectedMonth;
+    datePattern2 = '';
+    datePattern2=dateTwoSelectedYear+'-'+dateTwoSelectedMonth;
     searchPayment();
     calTotal("two",datePattern2);
 });
 
 $('#date-2-date').change(function (e) {
     dateTwoSelectedDate = e.target.value;
-    datePattern1 = '';
-    datePattern1=dateTwoSelectedYear+'-'+dateTwoSelectedMonth+'-'+dateTwoSelectedDate;
+    datePattern2 = '';
+    datePattern2=dateTwoSelectedYear+'-'+dateTwoSelectedMonth+'-'+dateTwoSelectedDate;
     searchPayment();
     calTotal("two",datePattern2);
 });

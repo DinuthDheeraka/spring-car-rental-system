@@ -92,11 +92,11 @@ $('#filter-select-car-transmission').change(function (e) {
     loadFilterCarCards(filterCars);
 });
 
-$('#filter-select-car-brand').click(function (e) {
+$('#filter-select-car-brand').change(function (e) {
     let temp = [];
 
     for(let i = 0; i<filterCars.length; i++){
-        if((filterCars[i].brand==e.target.value)){
+        if((filterCars[i].brand.includes(e.target.value))){
             temp.push(filterCars[i]);
         }
     }
@@ -104,7 +104,7 @@ $('#filter-select-car-brand').click(function (e) {
     loadFilterCarCards(filterCars);
 });
 
-$('#filter-select-car-fuel-type').click(function (e) {
+$('#filter-select-car-fuel-type').change(function (e) {
     let temp = [];
     for(let i = 0; i<filterCars.length; i++){
         if((filterCars[i].fuelType==e.target.value)){
@@ -125,10 +125,6 @@ $('#filter-select-car-type').change(function (e) {
     }
 
     filterCars = temp;
-
-    for(let i = 0; i<filterCars.length; i++){
-        console.log(filterCars[i])
-    }
 
     loadFilterCarCards(filterCars);
 });

@@ -332,7 +332,7 @@ function addPayment(payment) {
         contentType:'application/json',
         async:false,
         success:function () {
-            console.log("Payment Successful");
+            alert("Payment Successful");
         }
     });
 }
